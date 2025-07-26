@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     title: 'Auditoria Brand Equity',
                     items: [
                         { text: 'Auditoria de pesquisa', number: 'R$ 300k', unit: 'investimento' },
-                        { text: 'Análise de respondentes', number: '3.000+', unit: 'participantes' },
+                        { text: 'Análise das 6 marcas de mídia do grupo', number: '6', unit: 'marcas' },
                         { text: 'Fundação para decisões estratégicas', number: 'Brand', unit: 'estratégia de marca' }
                     ]
                 },
@@ -201,8 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     title: 'Otimização Tributária',
                     items: [
                         { text: 'Economia em impostos', number: 'R$ 1,5M', unit: 'economia total' },
-                        { text: 'Redução na carga tributária', number: '18%', unit: 'redução' },
-                        { text: 'Análise de oportunidades fiscais', number: 'Análise', unit: 'aprofundada' }
+                        { text: 'Auditoria gerou ticket\'s para evolução da estrutura de banco de dados', number: 'DB', unit: 'evolução' }
                     ]
                 }
             ],
@@ -229,9 +228,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     ]
                 },
                 {
-                    title: 'Eficiência Operacional',
+                    title: 'Gestão de Crise',
                     items: [
-                        { text: 'Aumento da eficiência operacional', number: 'Maior', unit: 'produtividade' }
+                        { text: 'Dashboards construção/gestão de relatórios de produtos digitais no contexto de pandemia', number: 'COVID-19', unit: 'contexto pandemia' }
                     ]
                 }
             ],
@@ -241,15 +240,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     title: 'Transformação de Plataforma',
                     items: [
                         { text: 'Pioneiro na migração Oracle para Databricks', number: 'Databricks', unit: 'plataforma moderna' },
-                        { text: 'Aumento na capacidade de processamento', number: '300%', unit: 'de 2TB para 8TB/dia' },
-                        { text: 'Implementação de arquitetura moderna', number: '8TB', unit: 'dados/dia' }
+                        { text: 'Aumento expressivo na velocidade de consultas', number: 'Faster', unit: 'queries performance' }
                     ]
                 },
                 {
                     title: 'Performance e Inovação',
                     items: [
                         { text: 'Insights em tempo real', number: '< 2s', unit: 'latência' },
-                        { text: 'Modelo de segmentação', number: '7M+', unit: 'clientes em 15 clusters' },
+                        { text: 'Modelo de segmentação', number: '7M+', unit: 'clientes' },
                         { text: 'Aumento de conversão', number: '35%', unit: 'CTR: 2.1% → 2.8%' }
                     ]
                 },
@@ -257,16 +255,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     title: 'Framework Customer Centricity',
                     items: [
                         { text: 'Modelo de ciclo de vida do cliente', number: 'LTV', unit: 'framework completo' },
-                        { text: 'Algoritmos avançados de clusterização', number: 'ML', unit: 'Machine Learning' },
-                        { text: 'Dashboards estratégicos', number: 'Real-time', unit: 'tomada de decisão' }
-                    ]
-                },
-                {
-                    title: 'Resultados de Negócio',
-                    items: [
-                        { text: 'Economia em contratos', number: '10%', unit: 'mantendo qualidade' },
-                        { text: 'Crescimento incremental CRM', number: '+7 p.p', unit: 'YoY' },
-                        { text: 'Redução de churn', number: '23%', unit: 'aumento de 28% no consumo' }
+                        { text: 'Dashboards estratégicos', number: 'Real-time', unit: 'tomada de decisão' },
+                        { text: 'SQL, BigQuery, Python e Power BI', number: 'Multi', unit: 'stack técnico' }
                     ]
                 }
             ],
@@ -293,8 +283,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     title: 'Inovações Implementadas',
                     items: [
                         { text: 'Comunicações automatizadas', number: '80%', unit: 'automação' },
-                        { text: 'Segmentação avançada com ML', number: 'ML', unit: 'Machine Learning' },
-                        { text: 'Dashboard em tempo real', number: '24/7', unit: 'monitoramento' }
+                        { text: 'Construção de jornadas personalizadas com base em comportamento e perfil dos clientes', number: 'Jornadas', unit: 'personalizadas' },
+                        { text: 'Liderança de projetos e iniciativas estratégicas de expansão da base ativa', number: 'Projetos', unit: 'estratégicos' }
                     ]
                 },
                 {

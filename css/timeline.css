@@ -562,8 +562,8 @@ body {
   top: -240px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   align-items: flex-start;
   padding: 0 15px;
 }
