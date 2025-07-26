@@ -1,0 +1,150 @@
+/* Tira lateral para nova etapa */
+.side-pull-tab {
+  position: fixed;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.pull-tab-content {
+  background: linear-gradient(135deg, var(--salmao) 0%, var(--azul-royal) 100%);
+  padding: 15px 10px 15px 18px;
+  border-radius: 15px 0 0 15px;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.pull-tab-text {
+  color: var(--off-white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pull-tab-arrow {
+  color: var(--off-white);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transform: rotate(90deg);
+  animation: pulse-arrow 2s ease-in-out infinite;
+}
+
+/* Animação de movimento para chamar atenção */
+@keyframes pulse-arrow {
+  0%, 100% {
+    transform: rotate(90deg) translateX(0);
+  }
+  50% {
+    transform: rotate(90deg) translateX(3px);
+  }
+}
+
+@keyframes slide-attention {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-7px);
+  }
+}
+
+.side-pull-tab {
+  animation: slide-attention 3s ease-in-out infinite;
+}
+
+/* Hover effect */
+.side-pull-tab:hover .pull-tab-content {
+  transform: translateX(-7px);
+  box-shadow: -6px 0 30px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, var(--azul-royal) 0%, var(--salmao) 100%);
+}
+
+/* Overlay para nova página */
+.new-page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--azul-marinho);
+  z-index: 2000;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.new-page-overlay.active {
+  transform: translateX(0);
+}
+
+.overlay-close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: rgba(245, 241, 235, 0.1);
+  border: 2px solid var(--off-white);
+  color: var(--off-white);
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 2001;
+}
+
+.overlay-close-btn:hover {
+  background: var(--off-white);
+  color: var(--azul-marinho);
+  transform: scale(1.1);
+}
+
+.overlay-content {
+  padding: 100px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--off-white);
+}
+
+.overlay-content h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: var(--salmao);
+}
+
+.overlay-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pull-tab-content {
+    padding: 15px 10px 15px 20px;
+  }
+  
+  .pull-tab-text {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .overlay-content {
+    padding: 80px 30px;
+  }
+  
+  .overlay-content h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carreira - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/side-tab.css">
+</head>
+<body>
+    <section id="timeline">
+        
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url('assets/images/exp1.jpg')"></div>
+            
+            <div class="tl-year">
+                <p class="company">Grupo RBS</p>
+                <p class="position">Analista de mercado</p>
+                <p class="period">mar de 2019 - jul de 2020</p>
+            </div>
+
+            <div class="tl-content">
+                <p>Conduzi análises de Brand Equity, automatizei relatórios estratégicos e identifiquei oportunidades tributárias significativas. Transformei processos manuais em soluções automatizadas, liberando horas semanais para análises de maior valor agregado.</p>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url('assets/images/exp2.jpg')"></div>
+            
+            <div class="tl-year">
+                <p class="company">DBC Company</p>
+                <p class="position">Especialista em dados</p>
+                <p class="period">jul de 2020 - jul de 2021</p>
+            </div>
+
+            <div class="tl-content">
+                <p>Responsável por apoiar a reestruturação estratégica da área de CRM no cliente Realize, implementando metodologias ágeis (Kanban) e definindo processos que reduziram o time-to-market das campanhas e aumentaram a eficiência operacional.</p>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url('assets/images/exp3.jpg')"></div>
+            
+            <div class="tl-year">
+                <p class="company">Lojas Renner S.A</p>
+                <p class="position">Especialista em dados</p>
+                <p class="period">jul de 2021 - set de 2022</p>
+            </div>
+
+            <div class="tl-content">
+                <p>Liderei a transformação digital e migração para plataforma Databricks, desenvolvendo soluções analíticas avançadas e implementando framework de Customer Centricity. Produzi dashboards estratégicos e criei modelos de segmentação para otimizar estratégias de comunicação.</p>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url('assets/images/exp4.jpg')"></div>
+            
+            <div class="tl-year">
+                <p class="company">Lojas Renner S.A</p>
+                <p class="position">Coordenador de CRM</p>
+                <p class="period">set de 2022 - fev de 2025</p>
+            </div>
+
+            <div class="tl-content">
+                <p>Responsável por estratégias de CRM, gestão de orçamento e contratos, liderança de equipe e implementação de métricas de performance para maximizar resultados. Gerencio comunicação com mais de 7 milhões de clientes mensalmente, otimizando canais e mensagens para aumentar engajamento e conversão.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tira lateral para nova etapa -->
+    <div class="side-pull-tab">
+        <div class="pull-tab-content">
+            <span class="pull-tab-text">Vamos para uma nova etapa</span>
+            <div class="pull-tab-arrow">→</div>
+        </div>
+    </div>
+
+    <!-- Overlay para nova página -->
+    <div class="new-page-overlay" id="newPageOverlay">
+        <div class="overlay-close-btn" onclick="closeNewPage()">×</div>
+        <div class="overlay-content">
+            <h1>Nova Etapa</h1>
+            <p>Conteúdo da nova página aqui...</p>
+        </div>
+    </div>
+
+    <script src="js/timeline.js"></script>
+    <script src="js/dynamic-header.js"></script>
+    <script src="js/side-tab.js"></script>
+</body>
+</html>
