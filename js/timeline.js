@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.style.cursor = 'default';
         
         setTimeout(() => {
-            item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            item.style.transition = 'opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
             item.style.opacity = '1';
             item.style.transform = 'translateY(0)';
             
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Adiciona indicador visual de que é clicável
                 item.classList.add('clickable');
-            }, 800); // Aguarda o fim da animação
-        }, index * 200);
+            }, 400); // Aguarda o fim da animação
+        }, index * 150);
     });
     
     // Função para iniciar animação em fases
@@ -96,37 +96,45 @@ document.addEventListener('DOMContentLoaded', function() {
         // Fase 1: Deslizamento lateral
         clickedItem.classList.add('slide-phase');
         
-        // Após deslizamento (1s - mais rápido)
+        // Após deslizamento (800ms)
         setTimeout(() => {
             // Fase 2: Prepara para expansão
             clickedItem.classList.remove('slide-phase');
             clickedItem.classList.add('prepare-expand');
             
-            // Pequena pausa para estabilizar (50ms)
+            // Pequena pausa para estabilizar (30ms)
             setTimeout(() => {
                 // Fase 3: Expansão
                 clickedItem.classList.remove('prepare-expand');
                 clickedItem.classList.add('expanding');
                 
-                // Força um reflow e inicia a expansão
-                setTimeout(() => {
-                    clickedItem.classList.add('start-expand');
-                }, 50);
-                
-                // Após expansão completa (~1.2s)
-                setTimeout(() => {
-                    // Estado final
-                    clickedItem.classList.remove('expanding', 'start-expand');
-                    clickedItem.classList.add('expanded-full');
-                    
-                    // Adiciona timeline horizontal APENAS após animação terminar
-                    setTimeout(() => {
-                        console.log('Criando timeline horizontal para index:', index);
-                        createHorizontalTimeline(clickedItem, index);
-                    }, 100);
-                }, 1200);
-            }, 50);
-        }, 1000);
+                // Inicia expansão ultra-suave com 30 etapas
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        // Adiciona classe base para expansão suave
+                        clickedItem.classList.add('expanding-smooth');
+                        
+                        // Inicia expansão contínua com animação CSS
+                        setTimeout(() => {
+                            clickedItem.classList.add('expanding-smooth');
+                        }, 100);
+                        
+                        // Após animação completa (2.1s)
+                        setTimeout(() => {
+                            // Estado final
+                            clickedItem.classList.remove('expanding', 'expanding-smooth');
+                            clickedItem.classList.add('expanded-full');
+                            
+                            // Adiciona timeline horizontal
+                            setTimeout(() => {
+                                console.log('Criando timeline horizontal para index:', index);
+                                createHorizontalTimeline(clickedItem, index);
+                            }, 50);
+                        }, 2100);
+                    });
+                });
+            }, 30);
+        }, 800);
     }
     
     // Função para restaurar conteúdo original
@@ -328,10 +336,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         item.appendChild(timelineHorizontal);
         
-        // Animação de entrada
+        // Animação de entrada imediata
         setTimeout(() => {
             timelineHorizontal.classList.add('show');
-        }, 50);
+        }, 10);
         
         // Timeline sem funcionalidade de clique entre itens
         // Cada bloco terá seu próprio conteúdo específico

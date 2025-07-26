@@ -39,7 +39,7 @@ body {
   min-height: 600px;
   color: var(--off-white);
   overflow: hidden;
-  transition: width 0.5s ease;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   flex-shrink: 0;
   background: var(--azul-marinho); /* Garante fundo sólido sempre */
   box-sizing: border-box;
@@ -59,7 +59,7 @@ body {
 .tl-item:after {
   background: rgba(1, 30, 56, 0.85); /* azul-marinho com transparência */
   opacity: 1;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .tl-item:before {
@@ -67,11 +67,12 @@ body {
   z-index: 1;
   opacity: 0;
   transform: translate3d(0, 0, 0) translateY(50%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .tl-item:hover {
   width: 30% !important;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .tl-item:hover:after {
@@ -81,13 +82,13 @@ body {
 .tl-item:hover:before {
   opacity: 1;
   transform: translate3d(0, 0, 0) translateY(0);
-  transition: opacity 1s ease, transform 1s ease 0.25s;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
 }
 
 .tl-item:hover .tl-content {
   opacity: 1;
   transform: translateY(0);
-  transition: all 0.75s ease 0.5s;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
 }
 
 .tl-item:hover .tl-bg {
@@ -112,8 +113,8 @@ body {
 .tl-content p {
   font-weight: 400;
   color: var(--off-white);
-  font-size: 1.15rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.6;
   padding: 0 2rem;
   text-align: justify;
   text-align-last: center;
@@ -127,16 +128,16 @@ body {
   z-index: 1;
   border-top: 2px solid var(--salmao);
   border-bottom: 2px solid var(--salmao);
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.2rem;
   text-align: center;
-  min-width: 280px;
+  min-width: 240px;
   transition: none;
 }
 
 .tl-year .company {
   font-family: var(--font-primary);
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.2;
   margin: 0 0 0.3rem 0;
   color: var(--off-white);
@@ -147,7 +148,7 @@ body {
 .tl-year .position {
   font-family: var(--font-primary);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.85rem;
   line-height: 1.2;
   margin: 0 0 0.5rem 0;
   color: var(--salmao);
@@ -157,7 +158,7 @@ body {
 .tl-year .period {
   font-family: var(--font-primary);
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   line-height: 1.2;
   margin: 0;
   color: var(--off-white);
@@ -175,7 +176,7 @@ body {
   background-size: cover; /* Mantém proporção do gradiente */
   background-repeat: no-repeat;
   background-position: center center;
-  transition: filter 0.5s ease, width 0.5s, height 0.5s;
+  transition: filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   filter: grayscale(100%);
 }
 
@@ -222,7 +223,7 @@ body {
 /* Fase 1: Deslizamento lateral */
 .tl-item.slide-phase {
   transform: translateX(var(--slide-distance));
-  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   width: 25%;
   position: relative;
   z-index: 100;
@@ -241,28 +242,60 @@ body {
 .tl-item.expanding {
   position: fixed !important;
   left: 0 !important;
-  top: 0 !important; /* Tela cheia */
-  transform: none !important;
-  /* Começa com tamanho pequeno */
+  top: 0 !important;
+  transform: scale(0.95) !important; /* Começa ligeiramente menor - efeito respiração */
   width: 25vw !important;
-  height: 100vh !important; /* Altura total */
+  height: 100vh !important;
   z-index: 200;
-  /* Sem transition inicial */
-  transition: none;
+  /* Transição suave com respiração inicial */
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: breathe 0.2s ease-in-out;
 }
 
-/* Inicia a expansão gradual */
-.tl-item.expanding.start-expand {
-  /* Expande gradualmente para tela cheia */
-  width: 100vw !important;
-  /* Mantém outras propriedades */
+/* Animação de respiração inicial */
+@keyframes breathe {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(0.98); }
+}
+
+/* Expansão como região sendo tomada progressivamente */
+.tl-item.expanding-smooth {
+  transform: scale(1) !important;
+  width: 100vw !important; /* Já ocupa toda a largura */
   position: fixed !important;
   left: 0 !important;
-  top: 0 !important; /* Tela cheia */
-  height: 100vh !important; /* Altura total */
-  transform: none !important;
-  /* Transição apenas na largura */
-  transition: width 30s cubic-bezier(0.4, 0, 0.2, 1);
+  top: 0 !important;
+  height: 100vh !important;
+  z-index: 200;
+  /* Máscara circular que se expande do centro esquerdo */
+  clip-path: circle(12.5vw at 12.5% 50%); /* Começa pequeno no centro do bloco original */
+  animation: territoryExpansion 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Keyframes para efeito de conquista territorial com 20 fases ultra-suaves */
+@keyframes territoryExpansion {
+  0% { clip-path: circle(12.5vw at 12.5% 50%); }
+  5% { clip-path: circle(17vw at 12.5% 50%); }
+  10% { clip-path: circle(22vw at 12.5% 50%); }
+  15% { clip-path: circle(27vw at 12.5% 50%); }
+  20% { clip-path: circle(32vw at 12.5% 50%); }
+  25% { clip-path: circle(37vw at 12.5% 50%); }
+  30% { clip-path: circle(42vw at 12.5% 50%); }
+  35% { clip-path: circle(47vw at 12.5% 50%); }
+  40% { clip-path: circle(52vw at 12.5% 50%); }
+  45% { clip-path: circle(57vw at 12.5% 50%); }
+  50% { clip-path: circle(62vw at 12.5% 50%); }
+  55% { clip-path: circle(67vw at 12.5% 50%); }
+  60% { clip-path: circle(72vw at 12.5% 50%); }
+  65% { clip-path: circle(77vw at 12.5% 50%); }
+  70% { clip-path: circle(82vw at 12.5% 50%); }
+  75% { clip-path: circle(87vw at 12.5% 50%); }
+  80% { clip-path: circle(92vw at 12.5% 50%); }
+  85% { clip-path: circle(95vw at 12.5% 50%); }
+  90% { clip-path: circle(97vw at 12.5% 50%); }
+  95% { clip-path: circle(99vw at 12.5% 50%); }
+  100% { clip-path: circle(100vw at 12.5% 50%); }
 }
 
 /* Container interno para preservar conteúdo sem distorção */
@@ -321,8 +354,8 @@ body {
   margin: 0 !important;
   font-weight: 400 !important;
   color: var(--off-white) !important;
-  font-size: 1.15rem !important;
-  line-height: 1.7 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
   text-align: justify !important;
 }
 
@@ -338,8 +371,8 @@ body {
   text-align: left !important;
   border-top: 2px solid var(--salmao) !important;
   border-bottom: 2px solid var(--salmao) !important;
-  padding: 1rem 0 !important;
-  min-width: 280px !important;
+  padding: 0.8rem 0 !important;
+  min-width: 240px !important;
   width: auto !important;
   transition: none !important;
 }
@@ -352,7 +385,7 @@ body {
 .tl-item.expanded-full .tl-year .company {
   font-family: var(--font-primary) !important;
   font-weight: 500 !important;
-  font-size: 1.3rem !important;
+  font-size: 1.1rem !important;
   line-height: 1.2 !important;
   margin: 0 0 0.3rem 0 !important;
   color: var(--off-white) !important;
@@ -367,7 +400,7 @@ body {
 .tl-item.expanded-full .tl-year .position {
   font-family: var(--font-primary) !important;
   font-weight: 400 !important;
-  font-size: 1rem !important;
+  font-size: 0.85rem !important;
   line-height: 1.2 !important;
   margin: 0 0 0.5rem 0 !important;
   color: var(--salmao) !important;
@@ -381,7 +414,7 @@ body {
 .tl-item.expanded-full .tl-year .period {
   font-family: var(--font-primary) !important;
   font-weight: 400 !important;
-  font-size: 0.85rem !important;
+  font-size: 0.75rem !important;
   line-height: 1.2 !important;
   margin: 0 !important;
   color: var(--off-white) !important;
@@ -417,7 +450,7 @@ body {
 .timeline-animating .tl-item:not(.slide-phase):not(.prepare-expand):not(.expanding):not(.start-expand):not(.expanded-full) {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 /* Botão de fechar */
@@ -455,17 +488,17 @@ body {
 /* Timeline horizontal - Design estiloso sem fundo */
 .timeline-horizontal {
   position: absolute;
-  right: 150px;
-  bottom: 50px;
+  right: 100px;
+  bottom: 40px;
   transform: none;
-  width: 1300px;
-  height: 520px;
+  width: 1000px;
+  height: 400px;
   background: none;
   padding: 0;
   box-sizing: border-box;
   opacity: 0;
   transform: scale(0.8);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 150;
 }
 
@@ -477,10 +510,10 @@ body {
 .timeline-track {
   position: relative;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, var(--salmao) 0%, var(--azul-royal) 50%, var(--salmao) 100%);
   border-radius: 2px;
-  margin-top: 350px;
+  margin-top: 260px;
   box-shadow: 0 2px 8px rgba(255, 188, 130, 0.3);
 }
 
@@ -498,10 +531,10 @@ body {
 
 .timeline-point {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   background: var(--off-white);
-  border: 3px solid var(--azul-marinho);
+  border: 2px solid var(--azul-marinho);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
@@ -559,13 +592,13 @@ body {
 
 .timeline-bullets {
   position: absolute;
-  top: -240px;
+  top: -180px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
   align-items: flex-start;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .timeline-bullet {
@@ -573,9 +606,9 @@ body {
   opacity: 0.6;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  padding: 15px 10px;
+  padding: 10px 8px;
   position: relative;
-  min-height: 180px;
+  min-height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -613,13 +646,13 @@ body {
 }
 
 .timeline-bullet-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--off-white);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   line-height: 1.3;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -630,7 +663,7 @@ body {
 
 .timeline-bullet-items {
   width: 100%;
-  max-width: 320px;
+  max-width: 250px;
   margin: 0 auto;
 }
 
@@ -638,10 +671,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 12px;
-  padding: 8px 12px;
+  margin-bottom: 8px;
+  padding: 6px 10px;
   background: rgba(1, 30, 56, 0.3);
-  border-radius: 8px;
+  border-radius: 6px;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 188, 130, 0.1);
 }
@@ -658,22 +691,22 @@ body {
 }
 
 .timeline-item-text {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: rgba(245, 241, 235, 0.9);
   text-align: center;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   font-weight: 400;
   line-height: 1.3;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .timeline-item-number {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--salmao);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   margin: 2px 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
 .timeline-bullet.active .timeline-item-number {
@@ -682,7 +715,7 @@ body {
 }
 
 .timeline-item-unit {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   color: rgba(245, 241, 235, 0.7);
   text-align: center;
   font-weight: 400;
