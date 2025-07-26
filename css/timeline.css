@@ -1,0 +1,749 @@
+:root {
+  /* Paleta de cores do Grupo Boticário */
+  --azul-marinho: #011E38;
+  --off-white: #F5F1EB;
+  --azul-royal: #264FEC;
+  --salmao: #FFBC82;
+  
+  /* Tipografia */
+  --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0;
+  padding: 0;
+}
+
+#timeline {
+  display: flex;
+  background-color: var(--azul-marinho);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#timeline:hover .tl-item {
+  width: 23.3333%;
+}
+
+.tl-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  width: 25%;
+  height: 100vh;
+  min-height: 600px;
+  color: var(--off-white);
+  overflow: hidden;
+  transition: width 0.5s ease;
+  flex-shrink: 0;
+  background: var(--azul-marinho); /* Garante fundo sólido sempre */
+  box-sizing: border-box;
+}
+
+.tl-item:before,
+.tl-item:after {
+  transform: translate3d(0, 0, 0);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tl-item:after {
+  background: rgba(1, 30, 56, 0.85); /* azul-marinho com transparência */
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.tl-item:before {
+  background: linear-gradient(to bottom, rgba(1, 30, 56, 0) 0%, rgba(1, 30, 56, 1) 75%);
+  z-index: 1;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) translateY(50%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tl-item:hover {
+  width: 30% !important;
+}
+
+.tl-item:hover:after {
+  opacity: 0;
+}
+
+.tl-item:hover:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) translateY(0);
+  transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+
+.tl-item:hover .tl-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.75s ease 0.5s;
+}
+
+.tl-item:hover .tl-bg {
+  filter: grayscale(0);
+}
+
+.tl-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  margin: 0 1.618em;
+  top: 58%;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  transition: none;
+}
+
+/* Removido o h1 do tl-content */
+
+.tl-content p {
+  font-weight: 400;
+  color: var(--off-white);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  padding: 0 2rem;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.tl-year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  border-top: 2px solid var(--salmao);
+  border-bottom: 2px solid var(--salmao);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  min-width: 280px;
+  transition: none;
+}
+
+.tl-year .company {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin: 0 0 0.3rem 0;
+  color: var(--off-white);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tl-year .position {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  color: var(--salmao);
+  letter-spacing: 0.05em;
+}
+
+.tl-year .period {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--off-white);
+  opacity: 0.7;
+  letter-spacing: 0.03em;
+}
+
+.tl-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover; /* Mantém proporção do gradiente */
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: filter 0.5s ease, width 0.5s, height 0.5s;
+  filter: grayscale(100%);
+}
+
+.tl-item.expanded-full .tl-bg {
+  /* Gradiente especial ou cor sólida para expandido */
+  background-image: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+  background-size: cover;
+  filter: grayscale(0) !important;
+}
+
+
+/* Estados de clique */
+.tl-item.clickable {
+  cursor: pointer;
+}
+
+/* Mantém o item expandido quando tem a classe expanded */
+.tl-item.expanded {
+  width: 30% !important;
+}
+
+.tl-item.expanded:after {
+  opacity: 0;
+}
+
+.tl-item.expanded:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) translateY(0);
+  transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+
+.tl-item.expanded .tl-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.75s ease 0.5s;
+}
+
+.tl-item.expanded .tl-bg {
+  filter: grayscale(0);
+}
+
+/* Estados da animação separados para melhor controle */
+
+/* Fase 1: Deslizamento lateral */
+.tl-item.slide-phase {
+  transform: translateX(var(--slide-distance));
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 25%;
+  position: relative;
+  z-index: 100;
+}
+
+/* Fase 2: Preparação para expansão */
+.tl-item.prepare-expand {
+  transform: translateX(var(--slide-distance));
+  width: 25%;
+  position: relative;
+  z-index: 150;
+  transition: none; /* Sem transição para evitar pulos */
+}
+
+/* Fase 3: Expansão gradual do bloco inteiro */
+.tl-item.expanding {
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important; /* Tela cheia */
+  transform: none !important;
+  /* Começa com tamanho pequeno */
+  width: 25vw !important;
+  height: 100vh !important; /* Altura total */
+  z-index: 200;
+  /* Sem transition inicial */
+  transition: none;
+}
+
+/* Inicia a expansão gradual */
+.tl-item.expanding.start-expand {
+  /* Expande gradualmente para tela cheia */
+  width: 100vw !important;
+  /* Mantém outras propriedades */
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important; /* Tela cheia */
+  height: 100vh !important; /* Altura total */
+  transform: none !important;
+  /* Transição apenas na largura */
+  transition: width 30s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Container interno para preservar conteúdo sem distorção */
+.tl-item-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left center;
+}
+
+/* Mantém visual ativo durante todas as fases */
+.tl-item.slide-phase .tl-bg,
+.tl-item.prepare-expand .tl-bg,
+.tl-item.expanding .tl-bg {
+  filter: grayscale(0) !important;
+}
+
+.tl-item.slide-phase:after,
+.tl-item.prepare-expand:after,
+.tl-item.expanding:after {
+  opacity: 0 !important;
+}
+
+.tl-item.slide-phase:before,
+.tl-item.prepare-expand:before,
+.tl-item.expanding:before {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) translateY(0) !important;
+}
+
+/* Formatação consistente para todas as fases de animação e estado final */
+.tl-item.slide-phase .tl-content,
+.tl-item.prepare-expand .tl-content,
+.tl-item.expanding .tl-content,
+.tl-item.expanding.start-expand .tl-content,
+.tl-item.expanded-full .tl-content {
+  opacity: 1 !important;
+  position: absolute !important;
+  left: 15% !important;
+  width: auto !important;
+  max-width: 400px !important;
+  text-align: left !important;
+  top: 60% !important;
+  transform: translate3d(0, 0, 0) translateY(0) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: none !important;
+}
+
+.tl-item.slide-phase .tl-content p,
+.tl-item.prepare-expand .tl-content p,
+.tl-item.expanding .tl-content p,
+.tl-item.expanding.start-expand .tl-content p,
+.tl-item.expanded-full .tl-content p {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
+  color: var(--off-white) !important;
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+  text-align: justify !important;
+}
+
+.tl-item.slide-phase .tl-year,
+.tl-item.prepare-expand .tl-year,
+.tl-item.expanding .tl-year,
+.tl-item.expanding.start-expand .tl-year,
+.tl-item.expanded-full .tl-year {
+  position: absolute !important;
+  top: 50% !important;
+  left: 15% !important;
+  transform: translateY(-50%) !important;
+  text-align: left !important;
+  border-top: 2px solid var(--salmao) !important;
+  border-bottom: 2px solid var(--salmao) !important;
+  padding: 1rem 0 !important;
+  min-width: 280px !important;
+  width: auto !important;
+  transition: none !important;
+}
+
+/* Formatação específica dos elementos da empresa */
+.tl-item.slide-phase .tl-year .company,
+.tl-item.prepare-expand .tl-year .company,
+.tl-item.expanding .tl-year .company,
+.tl-item.expanding.start-expand .tl-year .company,
+.tl-item.expanded-full .tl-year .company {
+  font-family: var(--font-primary) !important;
+  font-weight: 500 !important;
+  font-size: 1.3rem !important;
+  line-height: 1.2 !important;
+  margin: 0 0 0.3rem 0 !important;
+  color: var(--off-white) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.tl-item.slide-phase .tl-year .position,
+.tl-item.prepare-expand .tl-year .position,
+.tl-item.expanding .tl-year .position,
+.tl-item.expanding.start-expand .tl-year .position,
+.tl-item.expanded-full .tl-year .position {
+  font-family: var(--font-primary) !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  line-height: 1.2 !important;
+  margin: 0 0 0.5rem 0 !important;
+  color: var(--salmao) !important;
+  letter-spacing: 0.05em !important;
+}
+
+.tl-item.slide-phase .tl-year .period,
+.tl-item.prepare-expand .tl-year .period,
+.tl-item.expanding .tl-year .period,
+.tl-item.expanding.start-expand .tl-year .period,
+.tl-item.expanded-full .tl-year .period {
+  font-family: var(--font-primary) !important;
+  font-weight: 400 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  color: var(--off-white) !important;
+  opacity: 0.7 !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Estado expandido final */
+.tl-item.expanded-full {
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important; /* Ocupa toda a tela */
+  width: 100vw !important;
+  height: 100vh !important; /* Altura total */
+  z-index: 200;
+  background: var(--azul-marinho); /* Mantém mesmo background */
+  box-sizing: border-box;
+  overflow: hidden; /* Sem scroll */
+  transition: none !important; /* Sem transições */
+}
+
+.tl-item.expanded-full:before {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) translateY(0) !important;
+}
+
+
+
+
+
+
+/* Ocultar outros quadrantes durante animação */
+.timeline-animating .tl-item:not(.slide-phase):not(.prepare-expand):not(.expanding):not(.start-expand):not(.expanded-full) {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Botão de fechar */
+.close-button {
+  position: absolute;
+  top: 22vh; /* Posicionado abaixo do header (20vh) */
+  right: 2rem;
+  background: rgba(245, 241, 235, 0.9);
+  color: var(--azul-marinho);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 201;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+}
+
+.close-button:hover {
+  background: var(--off-white);
+  transform: scale(1.1);
+}
+
+.close-button:active {
+  transform: scale(0.95);
+}
+
+/* Timeline horizontal - Design estiloso sem fundo */
+.timeline-horizontal {
+  position: absolute;
+  right: 150px;
+  bottom: 50px;
+  transform: none;
+  width: 1300px;
+  height: 520px;
+  background: none;
+  padding: 0;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 150;
+}
+
+.timeline-horizontal.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.timeline-track {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--salmao) 0%, var(--azul-royal) 50%, var(--salmao) 100%);
+  border-radius: 2px;
+  margin-top: 350px;
+  box-shadow: 0 2px 8px rgba(255, 188, 130, 0.3);
+}
+
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -2px;
+  right: -2px;
+  bottom: -1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 188, 130, 0.1) 50%, transparent 100%);
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.timeline-point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--off-white);
+  border: 3px solid var(--azul-marinho);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(1, 30, 56, 0.2);
+}
+
+.timeline-point::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--azul-marinho);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.timeline-point:hover {
+  transform: translateY(-50%) translateX(-50%) scale(1.3);
+  border-color: var(--salmao);
+  box-shadow: 0 6px 20px rgba(255, 188, 130, 0.4);
+}
+
+.timeline-point:hover::before {
+  background: var(--salmao);
+  width: 8px;
+  height: 8px;
+}
+
+.timeline-point.active {
+  background: var(--salmao);
+  border-color: var(--off-white);
+  transform: translateY(-50%) translateX(-50%) scale(1.4);
+  box-shadow: 
+    0 0 0 6px rgba(255, 188, 130, 0.2),
+    0 8px 25px rgba(255, 188, 130, 0.3);
+}
+
+.timeline-point.active::before {
+  background: var(--off-white);
+  width: 10px;
+  height: 10px;
+}
+
+/* Posições dos 4 pontos - mais espaçadas */
+.timeline-point:nth-child(1) { left: 10%; }
+.timeline-point:nth-child(2) { left: 35%; }
+.timeline-point:nth-child(3) { left: 65%; }
+.timeline-point:nth-child(4) { left: 90%; }
+
+.timeline-bullets {
+  position: absolute;
+  top: -240px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  align-items: flex-start;
+  padding: 0 15px;
+}
+
+.timeline-bullet {
+  text-align: center;
+  opacity: 0.6;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  padding: 15px 10px;
+  position: relative;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.timeline-bullet::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--salmao);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.timeline-bullet:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.timeline-bullet:hover::before {
+  width: 60%;
+}
+
+.timeline-bullet.active {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.timeline-bullet.active::before {
+  width: 80%;
+}
+
+.timeline-bullet-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--off-white);
+  margin-bottom: 15px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-bullet.active .timeline-bullet-title {
+  color: var(--salmao);
+  text-shadow: 0 0 8px rgba(255, 188, 130, 0.4);
+}
+
+.timeline-bullet-items {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.timeline-item-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: rgba(1, 30, 56, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 188, 130, 0.1);
+}
+
+.timeline-item-row:hover {
+  background: rgba(1, 30, 56, 0.5);
+  border-color: rgba(255, 188, 130, 0.3);
+  transform: translateY(-1px);
+}
+
+.timeline-bullet.active .timeline-item-row {
+  background: rgba(255, 188, 130, 0.15);
+  border-color: rgba(255, 188, 130, 0.3);
+}
+
+.timeline-item-text {
+  font-size: 0.95rem;
+  color: rgba(245, 241, 235, 0.9);
+  text-align: center;
+  margin-bottom: 4px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-item-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--salmao);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 2px 0;
+  letter-spacing: 0.5px;
+}
+
+.timeline-bullet.active .timeline-item-number {
+  color: var(--off-white);
+  text-shadow: 0 0 8px rgba(255, 188, 130, 0.6);
+}
+
+.timeline-item-unit {
+  font-size: 0.85rem;
+  color: rgba(245, 241, 235, 0.7);
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
+.timeline-bullet.active .timeline-item-text {
+  color: var(--off-white);
+}
+
+.timeline-bullet.active .timeline-item-unit {
+  color: rgba(245, 241, 235, 0.9);
+}
+
+
+/* Ajustes para tela cheia */
+.expand-right .tl-bg {
+  filter: grayscale(0) !important;
+}
+
+.expand-right:after {
+  opacity: 0 !important;
+}
+
+.expand-right:before {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) translateY(0) !important;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  #timeline {
+    flex-direction: column;
+  }
+  
+  .tl-item {
+    width: 100% !important;
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  #timeline:hover .tl-item {
+    width: 100% !important;
+  }
+  
+  .tl-item:hover {
+    height: 70vh;
+  }
+  
+  .tl-content {
+    top: 62%;
+  }
+  
+  /* Espaço para responsividade futura */
+}   height: 70vh;
+  }
+  
+  .tl-content {
+    top: 62%;
+  }
+  
+  /* Espaço para responsividade futura */
+}
