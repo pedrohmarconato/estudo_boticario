@@ -1,7 +1,15 @@
 {
-  "buildCommand": "echo 'Static build'",
-  "outputDirectory": "carreira",
-  "devCommand": "echo 'Static dev'",
-  "installCommand": "echo 'No install needed'",
-  "framework": null
+  "version": 2,
+  "builds": [
+    {
+      "src": "carreira/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/carreira/$1"
+    }
+  ]
 }
