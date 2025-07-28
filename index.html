@@ -3,123 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Boticário - Estudos e Análises</title>
-    <style>
-        :root {
-            --azul-marinho: #011E38;
-            --off-white: #F5F1EB;
-            --azul-royal: #264FEC;
-            --salmao: #FFBC82;
-            --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: var(--font-primary);
-            background: linear-gradient(135deg, var(--azul-marinho) 0%, var(--azul-royal) 100%);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 2rem 0;
-        }
-        
-        .project-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: white;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--salmao);
-        }
-        
-        .project-card p {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .projects-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Carreira - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/side-tab.css">
 </head>
 <body>
-    <h1>Grupo Boticário</h1>
-    <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.8;">Estudos, Análises e Projetos</p>
-    
-    <div class="projects-grid">
-        <a href="/carreira/" class="project-card">
-            <h3>🚀 Carreiras</h3>
-            <p>Portal de carreiras do Grupo Boticário com oportunidades e informações sobre nossa cultura organizacional.</p>
-        </a>
+    <section id="timeline">
         
-        <a href="/introducao.html" class="project-card">
-            <h3>📝 Introdução</h3>
-            <p>Página inicial do projeto com apresentação e visão geral dos estudos desenvolvidos.</p>
-        </a>
-        
-        <a href="/case-analise.html" class="project-card">
-            <h3>📊 Análise COVID-19</h3>
-            <p>Dashboard interativo com análise completa dos dados da pandemia COVID-19 no Brasil.</p>
-        </a>
-        
-        <a href="/mapa-epidemiologico.html" class="project-card">
-            <h3>🗺️ Mapa Epidemiológico</h3>
-            <p>Visualização geográfica dos dados epidemiológicos e impactos regionais da pandemia.</p>
-        </a>
-        
-        <a href="/contexto-historico.html" class="project-card">
-            <h3>📈 Contexto Histórico</h3>
-            <p>Análise temporal das medidas governamentais e seus impactos durante a pandemia.</p>
-        </a>
-        
-        <a href="/diagnostico-impactos.html" class="project-card">
-            <h3>🔍 Diagnóstico de Impactos</h3>
-            <p>Análise detalhada dos impactos socioeconômicos da pandemia.</p>
-        </a>
-        
-        <a href="/estrategias-resiliencia.html" class="project-card">
-            <h3>💡 Estratégias de Resiliência</h3>
-            <p>Propostas e estratégias para aumentar a resiliência diante de crises.</p>
-        </a>
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url('assets/images/exp1.jpg')"></div>
+            
+            <div class="tl-year">
+                <p class="company">Grupo RBS</p>
+                <p class="position">Analista de mercado</p>
+                <p class="period">mar de 2019 - jul de 2020</p>
+            </div>
+
+            <div class="tl-content">
+                <p>Conduzi análises de Brand Equity, automatizei relatórios estratégicos e identifiquei oportunidades tributárias significativas. Transformei processos manuais em soluções automatizadas, liberando horas semanais para análises de maior valor agregado.</p>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url('assets/images/exp2.jpg')"></div>
+            
+            <div class="tl-year">
+                <p class="company">DBC Company</p>
+                <p class="position">Especialista em dados</p>
+                <p class="period">jul de 2020 - jul de 2021</p>
+            </div>
+
+            <div class="tl-content">
+                <p>Responsável por apoiar a reestruturação estratégica da área de CRM no cliente Realize, implementando metodologias ágeis (Kanban) e definindo processos que reduziram o time-to-market das campanhas e aumentaram a eficiência operacional.</p>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url('assets/images/exp3.jpg')"></div>
+            
+            <div class="tl-year">
+                <p class="company">Lojas Renner S.A</p>
+                <p class="position">Especialista em dados</p>
+                <p class="period">jul de 2021 - set de 2022</p>
+            </div>
+
+            <div class="tl-content">
+                <p>Liderei a transformação digital e migração para plataforma Databricks, desenvolvendo soluções analíticas avançadas e implementando framework de Customer Centricity. Produzi dashboards estratégicos e criei modelos de segmentação para otimizar estratégias de comunicação.</p>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url('assets/images/exp4.jpg')"></div>
+            
+            <div class="tl-year">
+                <p class="company">Lojas Renner S.A</p>
+                <p class="position">Coordenador de CRM</p>
+                <p class="period">set de 2022 - fev de 2025</p>
+            </div>
+
+            <div class="tl-content">
+                <p>Responsável por estratégias de CRM, gestão de orçamento e contratos, liderança de equipe e implementação de métricas de performance para maximizar resultados. Gerencio comunicação com mais de 7 milhões de clientes mensalmente, otimizando canais e mensagens para aumentar engajamento e conversão.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tira lateral para nova etapa -->
+    <div class="side-pull-tab">
+        <div class="pull-tab-content">
+            <span class="pull-tab-text">Vamos para uma nova etapa</span>
+            <div class="pull-tab-arrow">→</div>
+        </div>
     </div>
+
+    <!-- Overlay para nova página -->
+    <div class="new-page-overlay" id="newPageOverlay">
+        <div class="overlay-close-btn" onclick="closeNewPage()">×</div>
+        <div class="overlay-content">
+            <h1>Nova Etapa</h1>
+            <p>Conteúdo da nova página aqui...</p>
+        </div>
+    </div>
+
+    <script src="js/timeline.js"></script>
+    <script src="js/dynamic-header.js"></script>
+    <script src="js/side-tab.js"></script>
 </body>
 </html>
