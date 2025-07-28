@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico: Impacto COVID-19 - Bain & Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Boticário Brand Colors */
+            --azul-marinho: #011E38;
+            --off-white: #F5F1EB;
+            --azul-royal: #264FEC;
+            --salmao: #FFBC82;
+            
+            /* Supporting colors */
+            --cinza-claro: #e2e8f0;
+            --cinza-medio: #64748b;
+            --cinza-escuro: #334155;
+            --verde-suave: #38a169;
+            --vermelho-suave: #e53e3e;
+            
+            /* Typography */
+            --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, var(--azul-marinho) 0%, #001a2e 100%);
+            color: var(--off-white);
+            line-height: 1.5;
+            font-size: 14px;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header - Bain Style with Boticário Colors */
+        .header {
+            background: var(--off-white);
+            backdrop-filter: blur(10px);
+            padding: 16px 40px;
+            border-bottom: 3px solid var(--salmao);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            height: 80px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .header-content h1 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--azul-marinho);
+            letter-spacing: 0.3px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .header-content p {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--azul-royal);
+            margin: 2px 0 0 0;
+            letter-spacing: 0.2px;
+        }
+
+        .header-right {
+            font-size: 12px;
+            color: var(--cinza-medio);
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .header-right span {
+            font-weight: 500;
+        }
+
+        /* Navigation */
+        .nav-lateral {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            background: var(--azul-royal);
+            color: white;
+            border: none;
+            padding: 20px 16px;
+            font-size: 28px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(38, 79, 236, 0.4);
+        }
+
+        .nav-lateral:hover {
+            background: var(--azul-marinho);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .nav-lateral.prev {
+            left: 20px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .nav-lateral.next {
+            right: 20px;
+            border-radius: 12px 0 0 12px;
+        }
+
+        /* Main Container */
+        .page-container {
+            max-width: 1300px;
+            width: 90%;
+            height: calc(100vh - 80px);
+            margin: 80px auto 0;
+            padding: 20px 40px;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 16px;
+            overflow: hidden;
+        }
+
+        /* Executive Summary */
+        .executive-summary {
+            background: rgba(245, 241, 235, 0.1);
+            border-left: 6px solid var(--salmao);
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--salmao);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .summary-content {
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--off-white);
+        }
+
+        .summary-highlight {
+            font-weight: 700;
+            color: var(--azul-royal);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        /* Impact Analysis */
+        .impact-section {
+            background: rgba(245, 241, 235, 0.1);
+            border: 1px solid rgba(245, 241, 235, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--off-white);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid var(--azul-royal);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-badge {
+            font-size: 10px;
+            background: var(--azul-royal);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+            text-transform: none;
+        }
+
+        /* Waterfall Chart */
+        .waterfall-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .waterfall-item {
+            display: grid;
+            grid-template-columns: 140px 1fr 70px;
+            align-items: center;
+            gap: 12px;
+            padding: 4px 0;
+        }
+
+        .waterfall-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--off-white);
+            text-align: right;
+        }
+
+        .waterfall-bar-container {
+            position: relative;
+            height: 28px;
+            background: rgba(100, 116, 139, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .waterfall-bar {
+            position: absolute;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            border-radius: 6px;
+            transition: all 0.6s ease;
+        }
+
+        .bar-negative {
+            background: linear-gradient(90deg, var(--vermelho-suave) 0%, #c53030 100%);
+            right: 50%;
+        }
+
+        .bar-positive {
+            background: linear-gradient(90deg, var(--verde-suave) 0%, #2f855a 100%);
+            left: 50%;
+        }
+
+        .waterfall-value {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--off-white);
+            text-align: center;
+        }
+
+        /* Insights Panel */
+        .insights-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            overflow: hidden;
+        }
+
+        .insight-card {
+            background: rgba(245, 241, 235, 0.1);
+            border: 1px solid rgba(245, 241, 235, 0.2);
+            border-radius: 8px;
+            padding: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .insight-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .insight-icon {
+            font-size: 18px;
+            color: var(--salmao);
+            margin-bottom: 6px;
+        }
+
+        .insight-title {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--off-white);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .insight-metric {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--azul-royal);
+            margin: 6px 0;
+            line-height: 1;
+        }
+
+        .insight-detail {
+            font-size: 9px;
+            color: rgba(245, 241, 235, 0.8);
+            line-height: 1.4;
+        }
+
+        /* Pattern Analysis */
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .pattern-item {
+            background: rgba(38, 79, 236, 0.1);
+            border: 2px solid rgba(38, 79, 236, 0.2);
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .pattern-number {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--azul-royal);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .pattern-label {
+            font-size: 8px;
+            color: rgba(245, 241, 235, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* Bottom Analysis Strip */
+        .analysis-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            padding: 12px;
+            background: rgba(245, 241, 235, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(245, 241, 235, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .strip-item {
+            text-align: center;
+            border-right: 1px solid var(--cinza-claro);
+            padding-right: 16px;
+        }
+
+        .strip-item:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .strip-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--salmao);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .strip-label {
+            font-size: 8px;
+            color: rgba(245, 241, 235, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            font-size: 10px;
+            color: rgba(245, 241, 235, 0.8);
+            border-top: 1px solid rgba(226, 232, 240, 0.3);
+        }
+
+        .footer .source {
+            font-weight: 400;
+        }
+
+        .footer .confidential {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <a href="mapa-epidemiologico.html" class="nav-lateral prev">‹</a>
+        <a href="estrategias-resiliencia.html" class="nav-lateral next">›</a>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="header-content">
+                    <h1>Diagnóstico: Impacto COVID-19 em Estabelecimentos Comerciais</h1>
+                    <p>Análise de Vulnerabilidades e Padrões de Resposta à Crise</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <span>Julho 2025</span>
+            </div>
+        </header>
+        
+        <div class="page-container">
+            <!-- Executive Summary -->
+            <div class="executive-summary">
+                <h2 class="summary-title">Síntese Executiva</h2>
+                <div class="summary-content">
+                    Análise de <span class="summary-highlight">12 meses de dados</span> revela padrão claro: estabelecimentos com 
+                    <span class="summary-highlight">dependência física extrema</span> sofreram impactos até <span class="summary-highlight">95% superiores</span> 
+                    aos com operações diversificadas. A <span class="summary-highlight">defasagem temporal de 30-45 dias</span> entre regiões 
+                    criou janelas estratégicas inexploradas pela maioria das empresas. Setor de e-commerce apresentou crescimento 
+                    exponencial de <span class="summary-highlight">+280%</span>, evidenciando aceleração digital irreversível.
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="main-grid">
+                <!-- Impact Analysis -->
+                <div class="impact-section">
+                    <div class="section-header">
+                        <span>Análise de Impacto por Categoria de Estabelecimento</span>
+                        <span class="section-badge">Mar/20 - Fev/21</span>
+                    </div>
+                    
+                    <div class="waterfall-chart">
+                        <div class="waterfall-item">
+                            <div class="waterfall-label">Shopping Centers</div>
+                            <div class="waterfall-bar-container">
+                                <div class="waterfall-bar bar-negative" style="width: 47.5%;">
+                                    <span>-95%</span>
+                                </div>
+                            </div>
+                            <div class="waterfall-value">-95%</div>
+                        </div>
+                        
+                        <div class="waterfall-item">
+                            <div class="waterfall-label">Serviços Pessoais</div>
+                            <div class="waterfall-bar-container">
+                                <div class="waterfall-bar bar-negative" style="width: 47.5%;">
+                                    <span>-95%</span>
+                                </div>
+                            </div>
+                            <div class="waterfall-value">-95%</div>
+                        </div>
+                        
+                        <div class="waterfall-item">
+                            <div class="waterfall-label">Lojas de Rua</div>
+                            <div class="waterfall-bar-container">
+                                <div class="waterfall-bar bar-negative" style="width: 42.5%;">
+                                    <span>-85%</span>
+                                </div>
+                            </div>
+                            <div class="waterfall-value">-85%</div>
+                        </div>
+                        
+                        <div class="waterfall-item">
+                            <div class="waterfall-label">Alimentação</div>
+                            <div class="waterfall-bar-container">
+                                <div class="waterfall-bar bar-negative" style="width: 30%;">
+                                    <span>-60%</span>
+                                </div>
+                            </div>
+                            <div class="waterfall-value">-60%</div>
+                        </div>
+                        
+                        <div class="waterfall-item">
+                            <div class="waterfall-label">Farmácias</div>
+                            <div class="waterfall-bar-container">
+                                <div class="waterfall-bar bar-negative" style="width: 17.5%;">
+                                    <span>-35%</span>
+                                </div>
+                            </div>
+                            <div class="waterfall-value">-35%</div>
+                        </div>
+                        
+                        <div class="waterfall-item">
+                            <div class="waterfall-label">Supermercados</div>
+                            <div class="waterfall-bar-container">
+                                <div class="waterfall-bar bar-positive" style="width: 10%;">
+                                    <span>+20%</span>
+                                </div>
+                            </div>
+                            <div class="waterfall-value">+20%</div>
+                        </div>
+                        
+                        <div class="waterfall-item">
+                            <div class="waterfall-label">E-commerce</div>
+                            <div class="waterfall-bar-container">
+                                <div class="waterfall-bar bar-positive" style="width: 50%;">
+                                    <span>+280%</span>
+                                </div>
+                            </div>
+                            <div class="waterfall-value">+280%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insights Panel -->
+                <div class="insights-panel">
+                    <!-- Regional Pattern -->
+                    <div class="insight-card">
+                        <div class="insight-icon">🗺️</div>
+                        <h3 class="insight-title">Padrão de Propagação Regional</h3>
+                        <div class="pattern-grid">
+                            <div class="pattern-item">
+                                <span class="pattern-number">30-45</span>
+                                <span class="pattern-label">Dias de defasagem</span>
+                            </div>
+                            <div class="pattern-item">
+                                <span class="pattern-number">4</span>
+                                <span class="pattern-label">Ondas distintas</span>
+                            </div>
+                        </div>
+                        <p class="insight-detail">
+                            Sequência identificada: SP/RJ → Nordeste → Sul → Nacional<br>
+                            <strong>Janela operacional</strong> para redistribuição estratégica de recursos e estoque
+                        </p>
+                    </div>
+
+                    <!-- Critical Factor -->
+                    <div class="insight-card">
+                        <div class="insight-icon">⚡</div>
+                        <h3 class="insight-title">Fator Crítico de Vulnerabilidade</h3>
+                        <div class="insight-metric">60%</div>
+                        <p class="insight-detail">
+                            <strong>Redução média de impacto</strong> para empresas com múltiplos canais vs. operação única física
+                        </p>
+                    </div>
+
+                    <!-- Response Speed -->
+                    <div class="insight-card">
+                        <div class="insight-icon">⏱️</div>
+                        <h3 class="insight-title">Velocidade de Resposta</h3>
+                        <div class="insight-metric">48h</div>
+                        <p class="insight-detail">
+                            <strong>Tempo médio</strong> para ativação de protocolos de contingência nas empresas de melhor performance
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Analysis Strip -->
+            <div class="analysis-strip">
+                <div class="strip-item">
+                    <span class="strip-value">12M</span>
+                    <span class="strip-label">Período Analisado</span>
+                </div>
+                <div class="strip-item">
+                    <span class="strip-value">27</span>
+                    <span class="strip-label">Estados Impactados</span>
+                </div>
+                <div class="strip-item">
+                    <span class="strip-value">7</span>
+                    <span class="strip-label">Setores Estudados</span>
+                </div>
+                <div class="strip-item">
+                    <span class="strip-value">95%</span>
+                    <span class="strip-label">Confiança Estatística</span>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="source">
+                    Fonte: Google BigQuery COVID-19 Public Datasets
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

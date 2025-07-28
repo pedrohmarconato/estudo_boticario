@@ -83,15 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Define a distância de deslizamento
         clickedItem.style.setProperty('--slide-distance', `-${index * 100}%`);
         
-        // Adiciona botão de fechar imediatamente
-        const closeButton = document.createElement('button');
-        closeButton.className = 'close-button';
-        closeButton.innerHTML = '×';
-        closeButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            closeExpandedView(clickedItem);
-        });
-        clickedItem.appendChild(closeButton);
+        // NÃO adiciona botões imediatamente - serão adicionados após a animação
         
         // Fase 1: Deslizamento lateral
         clickedItem.classList.add('slide-phase');
@@ -129,6 +121,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             setTimeout(() => {
                                 console.log('Criando timeline horizontal para index:', index);
                                 createHorizontalTimeline(clickedItem, index);
+                                
+                                // Adiciona botões de navegação APÓS a animação
+                                addNavigationButtons(clickedItem, index);
                             }, 50);
                         }, 2100);
                     });
@@ -148,17 +143,129 @@ document.addEventListener('DOMContentLoaded', function() {
         contentDiv.querySelector('p').textContent = originalContent[index].content;
     }
     
+    // Função para adicionar botões de navegação após animação
+    function addNavigationButtons(item, index) {
+        const navigationContainer = document.createElement('div');
+        navigationContainer.className = 'navigation-container';
+        navigationContainer.style.opacity = '0';
+        
+        // Botão de fechar
+        const closeButton = document.createElement('button');
+        closeButton.className = 'close-button';
+        closeButton.innerHTML = '×';
+        closeButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeExpandedView(item);
+        });
+        
+        // Botão próximo (só aparece se não for o último)
+        let nextButton = null;
+        if (index < timelineItems.length - 1) {
+            nextButton = document.createElement('button');
+            nextButton.className = 'next-button';
+            nextButton.innerHTML = '→';
+            nextButton.title = 'Próximo bloco';
+            nextButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigateToNext(index);
+            });
+        }
+        
+        // Botão anterior (só aparece se não for o primeiro)
+        let prevButton = null;
+        if (index > 0) {
+            prevButton = document.createElement('button');
+            prevButton.className = 'prev-button';
+            prevButton.innerHTML = '←';
+            prevButton.title = 'Bloco anterior';
+            prevButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigateToPrev(index);
+            });
+        }
+        
+        navigationContainer.appendChild(closeButton);
+        if (prevButton) navigationContainer.appendChild(prevButton);
+        if (nextButton) navigationContainer.appendChild(nextButton);
+        
+        item.appendChild(navigationContainer);
+        
+        // Fade in dos botões
+        setTimeout(() => {
+            navigationContainer.style.transition = 'opacity 0.5s ease';
+            navigationContainer.style.opacity = '1';
+        }, 100);
+    }
+
     // Função removida - não é mais necessária pois o texto só muda quando clicamos em outro bloco
 
+    // Função para navegar para próximo bloco (transição direta)
+    function navigateToNext(currentIndex) {
+        const currentItem = timelineItems[currentIndex];
+        const nextItem = timelineItems[currentIndex + 1];
+        
+        if (nextItem) {
+            // Remove elementos do atual
+            const navigationContainer = currentItem.querySelector('.navigation-container');
+            if (navigationContainer) navigationContainer.remove();
+            
+            const horizontalTimeline = currentItem.querySelector('.timeline-horizontal');
+            if (horizontalTimeline) horizontalTimeline.remove();
+            
+            // Transição direta: remove classes do atual e adiciona no próximo
+            currentItem.classList.remove('slide-phase', 'prepare-expand', 'expanding', 'start-expand', 'expanded-full');
+            currentItem.style.removeProperty('--slide-distance');
+            
+            // Imediatamente configura o próximo
+            nextItem.style.setProperty('--slide-distance', `-${(currentIndex + 1) * 100}%`);
+            nextItem.classList.add('expanded-full');
+            
+            // Cria conteúdo do próximo
+            setTimeout(() => {
+                createHorizontalTimeline(nextItem, currentIndex + 1);
+                addNavigationButtons(nextItem, currentIndex + 1);
+            }, 300);
+        }
+    }
+    
+    // Função para navegar para bloco anterior (transição direta)
+    function navigateToPrev(currentIndex) {
+        const currentItem = timelineItems[currentIndex];
+        const prevItem = timelineItems[currentIndex - 1];
+        
+        if (prevItem) {
+            // Remove elementos do atual
+            const navigationContainer = currentItem.querySelector('.navigation-container');
+            if (navigationContainer) navigationContainer.remove();
+            
+            const horizontalTimeline = currentItem.querySelector('.timeline-horizontal');
+            if (horizontalTimeline) horizontalTimeline.remove();
+            
+            // Transição direta: remove classes do atual e adiciona no anterior
+            currentItem.classList.remove('slide-phase', 'prepare-expand', 'expanding', 'start-expand', 'expanded-full');
+            currentItem.style.removeProperty('--slide-distance');
+            
+            // Imediatamente configura o anterior
+            prevItem.style.setProperty('--slide-distance', `-${(currentIndex - 1) * 100}%`);
+            prevItem.classList.add('expanded-full');
+            
+            // Cria conteúdo do anterior
+            setTimeout(() => {
+                createHorizontalTimeline(prevItem, currentIndex - 1);
+                addNavigationButtons(prevItem, currentIndex - 1);
+            }, 300);
+        }
+    }
+    
     // Função para fechar a visualização expandida
     function closeExpandedView(item) {
         const timeline = document.getElementById('timeline');
         const index = Array.from(timelineItems).indexOf(item);
         
-        // Remove botão de fechar
-        const closeButton = item.querySelector('.close-button');
-        if (closeButton) {
-            closeButton.remove();
+        // Remove container de navegação
+        const navigationContainer = item.querySelector('.navigation-container');
+        if (navigationContainer) {
+            navigationContainer.remove();
         }
         
         // Remove timeline horizontal se existir
@@ -366,9 +473,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
         const timeline = document.getElementById('timeline');
         const isAnimating = timeline.classList.contains('timeline-animating');
-        const isCloseButton = e.target.classList.contains('close-button');
+        const isNavigationButton = e.target.classList.contains('close-button') || 
+                                  e.target.classList.contains('next-button') || 
+                                  e.target.classList.contains('prev-button');
         
-        if (isAnimating && !isCloseButton) {
+        if (isAnimating && !isNavigationButton) {
             e.preventDefault();
             e.stopPropagation();
         }

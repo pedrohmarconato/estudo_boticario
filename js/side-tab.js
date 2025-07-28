@@ -24,22 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Função para abrir nova página
 function openNewPage() {
-    const overlay = document.getElementById('newPageOverlay');
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    
-    // Animar entrada do conteúdo
-    setTimeout(() => {
-        const content = overlay.querySelector('.overlay-content');
-        content.style.opacity = '0';
-        content.style.transform = 'translateY(50px)';
-        
-        setTimeout(() => {
-            content.style.transition = 'all 0.8s ease';
-            content.style.opacity = '1';
-            content.style.transform = 'translateY(0)';
-        }, 100);
-    }, 300);
+    // Navega para a página case-analise.html
+    window.location.href = 'case-analise.html';
 }
 
 // Função para fechar nova página

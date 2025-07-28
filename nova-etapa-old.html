@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Etapa - Case Especialista II</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nova-etapa.css">
+</head>
+<body>
+    <div class="case-container">
+        <!-- Header com navegação -->
+        <header class="case-header">
+            <button class="back-button" onclick="window.location.href='introducao.html'">
+                <span class="back-arrow">←</span>
+                <span class="back-text">Voltar</span>
+            </button>
+            <div class="header-title">
+                <h3>GERÊNCIA ESTRATÉGIA DE EXPOSIÇÃO</h3>
+            </div>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main class="case-content">
+            <!-- Seção Hero -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="main-title">CASE ESPECIALISTA II<br>EXPOSIÇÃO LOJA</h1>
+                    <p class="hero-subtitle">Julho 2025</p>
+                </div>
+            </section>
+
+            <!-- Seção Orientações -->
+            <section class="section-card orientacoes">
+                <div class="section-header">
+                    <h2 class="section-title">ORIENTAÇÕES</h2>
+                </div>
+                <div class="section-content">
+                    <p class="welcome-text">Obrigada pelo seu interesse em fazer parte do time de Estratégia de Exposição!</p>
+                    
+                    <div class="presentation-info">
+                        <h3>APRESENTAÇÃO DO CASE</h3>
+                        <div class="timing-grid">
+                            <div class="timing-item">
+                                <span class="timing-icon">👤</span>
+                                <div class="timing-details">
+                                    <strong>Apresentação pessoal e profissional:</strong>
+                                    <span class="timing-duration">15 minutos</span>
+                                </div>
+                            </div>
+                            <div class="timing-item">
+                                <span class="timing-icon">📊</span>
+                                <div class="timing-details">
+                                    <strong>Apresentação do case:</strong>
+                                    <span class="timing-duration">25 minutos</span>
+                                </div>
+                            </div>
+                            <div class="timing-item">
+                                <span class="timing-icon">❓</span>
+                                <div class="timing-details">
+                                    <strong>Perguntas e considerações finais:</strong>
+                                    <span class="timing-duration">10 minutos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="important-notes">
+                        <h4>Importante</h4>
+                        <ul>
+                            <li>Programe sua apresentação conforme orientações da agenda acima!</li>
+                            <li>Utilize as informações contidas nesta apresentação para embasar sua proposta.</li>
+                            <li>O case deve ser enviado ao recrutador em PDF, antes da reunião.</li>
+                            <li>Não existe um formato padrão de entrega, use os recursos que melhor defender sua proposta.</li>
+                        </ul>
+                        <p class="confidential-note">As informações são confidenciais e não deverão ser compartilhadas ou divulgadas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Contextualização -->
+            <section class="section-card contextualizacao">
+                <div class="section-header">
+                    <h2 class="section-title">CONTEXTUALIZAÇÃO</h2>
+                </div>
+                <div class="section-content">
+                    <h3>Saúde Pública: Análise de Dados da COVID-19</h3>
+                    <p class="subtitle">(Google BigQuery Public Datasets)</p>
+                    
+                    <div class="description-box">
+                        <p><strong>Descrição:</strong> O Google Cloud oferece um vasto conjunto de dados públicos sobre a pandemia de COVID-19, que pode ser acessado e consultado diretamente via BigQuery. Estes datasets incluem informações sobre casos, óbitos, mobilidade da população, dados demográficos, entre outros.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Problemática -->
+            <section class="section-card problematica">
+                <div class="section-header">
+                    <h2 class="section-title">PROBLEMÁTICA</h2>
+                </div>
+                <div class="section-content">
+                    <div class="scenario-box">
+                        <h3>Cenário de Case Proposto:</h3>
+                        <p>Uma organização não governamental precisa de um <strong>relatório analítico</strong> sobre o impacto das medidas de restrição de mobilidade na evolução da pandemia no Brasil em 2020 e 2021 e uma <strong>proposta de recomendação estratégica</strong> de como agir caso tenhamos um novo cenário pandêmico.</p>
+                    </div>
+
+                    <div class="steps-section">
+                        <h3>Passos Sugeridos:</h3>
+                        <div class="steps-grid">
+                            <div class="step-card">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Consulta em BigQuery:</h4>
+                                    <p>Utilizar SQL para consultar e cruzar diferentes tabelas públicas, como os dados de mobilidade do Google com os registros de casos e óbitos por estado.</p>
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Análise de Correlação:</h4>
+                                    <p>Investigar se há uma correlação temporal entre a diminuição da mobilidade em locais como "varejo e recreação" e uma subsequente queda no número de novos casos.</p>
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Análise Comparativa:</h4>
+                                    <p>Comparar a eficácia das medidas de restrição entre diferentes estados ou regiões metropolitanas.</p>
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Integração com BI:</h4>
+                                    <p>Conectar o resultado das suas consultas a uma ferramenta de Business Intelligence (como Looker Studio, Power BI ou Tableau) para criar visualizações interativas que permitam explorar os dados por período e localidade.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="source-info">
+                        <p><strong>Onde encontrar:</strong> <a href="#" class="source-link">COVID-19 Public Datasets no Google Cloud Marketplace</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Final -->
+            <section class="final-section">
+                <div class="final-content">
+                    <h2 class="final-title">BOA SORTE!</h2>
+                    <p class="final-subtitle">OBRIGADA!</p>
+                    <p class="final-department">GERÊNCIA ESTRATÉGIA DE EXPOSIÇÃO</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/nova-etapa.js"></script>
+</body>
+</html>

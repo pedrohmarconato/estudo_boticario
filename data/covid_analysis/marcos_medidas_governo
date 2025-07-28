@@ -1,0 +1,35 @@
+{"data_marco":"2021-03-11","medida":"Brasil registra maior número de mortes em 24h (2.841)","categoria":"SAUDE","tipo":"PICO"}
+{"data_marco":"2020-01-26","medida":"Primeiro caso confirmado no Brasil (São Paulo)","categoria":"SAUDE","tipo":"CONFIRMACAO"}
+{"data_marco":"2020-10-31","medida":"Fim da primeira fase do auxílio emergencial","categoria":"ECONOMIA","tipo":"TERMINO"}
+{"data_marco":"2020-04-01","medida":"Aprovação do auxílio emergencial de R$ 600","categoria":"ECONOMIA","tipo":"APROVACAO"}
+{"data_marco":"2021-03-24","medida":"Posse de Marcelo Queiroga como Ministro da Saúde","categoria":"GOVERNO","tipo":"NOMEACAO"}
+{"data_marco":"2020-03-11","medida":"OMS declara pandemia mundial","categoria":"INTERNACIONAL","tipo":"DECLARACAO"}
+{"data_marco":"2020-03-20","medida":"Reconhecimento de estado de calamidade pública","categoria":"GOVERNO","tipo":"DECRETO"}
+{"data_marco":"2020-07-29","medida":"Brasil atinge 100.000 mortes por COVID-19","categoria":"SAUDE","tipo":"MARCO"}
+{"data_marco":"2020-03-27","medida":"Sanção da Lei 13.979 (medidas emergenciais)","categoria":"LEGISLACAO","tipo":"APROVACAO"}
+{"data_marco":"2021-01-24","medida":"Início da vacinação com AstraZeneca/Oxford","categoria":"VACINA","tipo":"EXPANSAO"}
+{"data_marco":"2021-05-01","medida":"Início da vacinação da Pfizer no Brasil","categoria":"VACINA","tipo":"EXPANSAO"}
+{"data_marco":"2021-03-23","medida":"Demissão do General Pazuello da Saúde","categoria":"GOVERNO","tipo":"DEMISSAO"}
+{"data_marco":"2022-04-18","medida":"Fim da emergência de saúde pública de importância nacional","categoria":"GOVERNO","tipo":"DECRETO"}
+{"data_marco":"2020-03-17","medida":"Primeira morte por COVID-19 no Brasil (São Paulo)","categoria":"SAUDE","tipo":"OBITO"}
+{"data_marco":"2020-06-01","medida":"Início da flexibilização em alguns estados","categoria":"ABERTURA","tipo":"INICIO"}
+{"data_marco":"2020-03-18","medida":"Fechamento de fronteiras terrestres com países sul-americanos","categoria":"FRONTEIRAS","tipo":"FECHAMENTO"}
+{"data_marco":"2020-05-20","medida":"Posse do General Pazuello como Ministro interino da Saúde","categoria":"GOVERNO","tipo":"NOMEACAO"}
+{"data_marco":"2020-03-24","medida":"São Paulo decreta quarentena estadual","categoria":"LOCKDOWN","tipo":"DECRETO"}
+{"data_marco":"2021-01-17","medida":"Início da vacinação no Brasil (CoronaVac)","categoria":"VACINA","tipo":"INICIO"}
+{"data_marco":"2020-03-22","medida":"Primeiro estado a decretar lockdown (Maranhão)","categoria":"LOCKDOWN","tipo":"DECRETO"}
+{"data_marco":"2022-06-01","medida":"Reabertura completa de eventos e atividades econômicas","categoria":"ECONOMIA","tipo":"ABERTURA"}
+{"data_marco":"2021-04-17","medida":"Brasil atinge 400.000 mortes por COVID-19","categoria":"SAUDE","tipo":"MARCO"}
+{"data_marco":"2022-01-01","medida":"Variante Ômicron torna-se predominante","categoria":"SAUDE","tipo":"VARIANTE"}
+{"data_marco":"2020-05-15","medida":"Demissão do Ministro da Saúde Nelson Teich","categoria":"GOVERNO","tipo":"DEMISSAO"}
+{"data_marco":"2021-04-01","medida":"Retorno do auxílio emergencial com valores menores","categoria":"ECONOMIA","tipo":"RETORNO"}
+{"data_marco":"2020-03-16","medida":"Suspensão de aulas presenciais em escolas e universidades","categoria":"EDUCACAO","tipo":"FECHAMENTO"}
+{"data_marco":"2021-08-01","medida":"Brasil atinge 100 milhões de vacinados com 1ª dose","categoria":"VACINA","tipo":"MARCO"}
+{"data_marco":"2022-03-01","medida":"Maioria dos estados remove obrigatoriedade de máscaras","categoria":"ABERTURA","tipo":"FLEXIBILIZACAO"}
+{"data_marco":"2020-08-01","medida":"Redução do auxílio emergencial para R$ 300","categoria":"ECONOMIA","tipo":"REDUCAO"}
+{"data_marco":"2020-02-29","medida":"Primeiro caso de transmissão comunitária (São Paulo)","categoria":"SAUDE","tipo":"TRANSMISSAO"}
+{"data_marco":"2021-02-16","medida":"Posse oficial do General Pazuello como Ministro da Saúde","categoria":"GOVERNO","tipo":"NOMEACAO"}
+{"data_marco":"2022-05-01","medida":"Fim da obrigatoriedade de máscaras em aviões","categoria":"TRANSPORTE","tipo":"FLEXIBILIZACAO"}
+{"data_marco":"2020-04-16","medida":"Demissão do Ministro da Saúde Luiz Henrique Mandetta","categoria":"GOVERNO","tipo":"DEMISSAO"}
+{"data_marco":"2021-10-31","medida":"Fim da segunda fase do auxílio emergencial","categoria":"ECONOMIA","tipo":"TERMINO"}
+{"data_marco":"2021-06-15","medida":"Suspensão da vacina AstraZeneca para gestantes","categoria":"VACINA","tipo":"SUSPENSAO"}

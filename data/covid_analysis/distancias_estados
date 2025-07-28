@@ -1,0 +1,702 @@
+{"estado_a":"Acre","estado_b":"Rondônia","distancia_km":622.6398204532095,"categoria_distancia":"Proximo"}
+{"estado_a":"Acre","estado_b":"Amazonas","distancia_km":1150.3469357380015,"categoria_distancia":"Medio"}
+{"estado_a":"Acre","estado_b":"Mato Grosso","distancia_km":1226.0865980585013,"categoria_distancia":"Medio"}
+{"estado_a":"Acre","estado_b":"Roraima","distancia_km":1508.4041172761158,"categoria_distancia":"Medio"}
+{"estado_a":"Acre","estado_b":"Pará","distancia_km":1780.3217184105065,"categoria_distancia":"Medio"}
+{"estado_a":"Acre","estado_b":"Mato Grosso do Sul","distancia_km":1840.6875485421838,"categoria_distancia":"Medio"}
+{"estado_a":"Acre","estado_b":"Goiás","distancia_km":2054.1023360847835,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Amapá","distancia_km":2128.0529473501883,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Tocantins","distancia_km":2144.6940647366937,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Federal District","distancia_km":2250.8401545759684,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Paraná","distancia_km":2389.0676691709482,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Maranhão","distancia_km":2546.83009278617,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Santa Catarina","distancia_km":2626.5180881336419,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Rio Grande do Sul","distancia_km":2638.597966995751,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Minas Gerais","distancia_km":2677.9466520605765,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"São Paulo","distancia_km":2709.2912031397955,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Piauí","distancia_km":2749.2289578783298,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Bahia","distancia_km":2862.17912336775,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Rio de Janeiro","distancia_km":2986.6506138326545,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Espírito Santo","distancia_km":3127.7066712452734,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Ceará","distancia_km":3187.8292863417964,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Pernambuco","distancia_km":3387.8481292572324,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Sergipe","distancia_km":3389.2306370466708,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Alagoas","distancia_km":3400.7077524715455,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Paraíba","distancia_km":3425.014953487545,"categoria_distancia":"Distante"}
+{"estado_a":"Acre","estado_b":"Rio Grande do Norte","distancia_km":3469.6115458523086,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Sergipe","distancia_km":71.56851802811552,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Alagoas","estado_b":"Pernambuco","distancia_km":86.333378991251678,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Alagoas","estado_b":"Paraíba","distancia_km":258.67386980253838,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Alagoas","estado_b":"Rio Grande do Norte","distancia_km":418.772077854392,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Alagoas","estado_b":"Ceará","distancia_km":558.88886067842077,"categoria_distancia":"Proximo"}
+{"estado_a":"Alagoas","estado_b":"Bahia","distancia_km":632.39280996892967,"categoria_distancia":"Proximo"}
+{"estado_a":"Alagoas","estado_b":"Piauí","distancia_km":669.70885210222264,"categoria_distancia":"Proximo"}
+{"estado_a":"Alagoas","estado_b":"Maranhão","distancia_km":1067.591130684976,"categoria_distancia":"Medio"}
+{"estado_a":"Alagoas","estado_b":"Espírito Santo","distancia_km":1134.1420188839952,"categoria_distancia":"Medio"}
+{"estado_a":"Alagoas","estado_b":"Tocantins","distancia_km":1258.7370396542019,"categoria_distancia":"Medio"}
+{"estado_a":"Alagoas","estado_b":"Minas Gerais","distancia_km":1299.8875785594892,"categoria_distancia":"Medio"}
+{"estado_a":"Alagoas","estado_b":"Federal District","distancia_km":1394.2586972963486,"categoria_distancia":"Medio"}
+{"estado_a":"Alagoas","estado_b":"Goiás","distancia_km":1576.8154739779045,"categoria_distancia":"Medio"}
+{"estado_a":"Alagoas","estado_b":"Rio de Janeiro","distancia_km":1633.2843841742845,"categoria_distancia":"Medio"}
+{"estado_a":"Alagoas","estado_b":"Pará","distancia_km":1767.7265109040807,"categoria_distancia":"Medio"}
+{"estado_a":"Alagoas","estado_b":"São Paulo","distancia_km":1874.1483513819553,"categoria_distancia":"Medio"}
+{"estado_a":"Alagoas","estado_b":"Amapá","distancia_km":2048.4185769228693,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Mato Grosso","distancia_km":2223.6103143531864,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Mato Grosso do Sul","distancia_km":2295.1085621266398,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Paraná","distancia_km":2311.1152766794976,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Santa Catarina","distancia_km":2481.6360403989297,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Amazonas","distancia_km":2665.0129554459286,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Rondônia","distancia_km":2792.7687723141712,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Rio Grande do Sul","distancia_km":2855.4913498269,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Roraima","distancia_km":2991.6180186794081,"categoria_distancia":"Distante"}
+{"estado_a":"Alagoas","estado_b":"Acre","distancia_km":3400.7077524715455,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Pará","distancia_km":715.8477120594963,"categoria_distancia":"Proximo"}
+{"estado_a":"Amapá","estado_b":"Maranhão","distancia_km":991.69954844764311,"categoria_distancia":"Proximo"}
+{"estado_a":"Amapá","estado_b":"Amazonas","distancia_km":997.05564524936267,"categoria_distancia":"Proximo"}
+{"estado_a":"Amapá","estado_b":"Roraima","distancia_km":1030.4498193203747,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Tocantins","distancia_km":1224.3878702881088,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Piauí","distancia_km":1468.9287652501941,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Ceará","distancia_km":1566.5293981033308,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Mato Grosso","distancia_km":1604.8915731968766,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Rondônia","distancia_km":1761.9328712332854,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Rio Grande do Norte","distancia_km":1866.9107655059079,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Goiás","distancia_km":1875.2465449272593,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Bahia","distancia_km":1881.3569724973302,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Federal District","distancia_km":1913.0384087493053,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Paraíba","distancia_km":1916.0766062547311,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Pernambuco","distancia_km":1986.6714733015908,"categoria_distancia":"Medio"}
+{"estado_a":"Amapá","estado_b":"Alagoas","distancia_km":2048.4185769228693,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Sergipe","distancia_km":2082.3991325080356,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Acre","distancia_km":2128.0529473501883,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Minas Gerais","distancia_km":2307.1027595883852,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Mato Grosso do Sul","distancia_km":2428.9025352972167,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Espírito Santo","distancia_km":2572.4284268913962,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"São Paulo","distancia_km":2781.2371708927722,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Rio de Janeiro","distancia_km":2814.27152883447,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Paraná","distancia_km":2868.2567712911696,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Santa Catarina","distancia_km":3154.5104687580215,"categoria_distancia":"Distante"}
+{"estado_a":"Amapá","estado_b":"Rio Grande do Sul","distancia_km":3413.5372833688607,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Roraima","distancia_km":572.69296709966875,"categoria_distancia":"Proximo"}
+{"estado_a":"Amazonas","estado_b":"Pará","distancia_km":897.46695843908628,"categoria_distancia":"Proximo"}
+{"estado_a":"Amazonas","estado_b":"Rondônia","distancia_km":934.27450820141769,"categoria_distancia":"Proximo"}
+{"estado_a":"Amazonas","estado_b":"Amapá","distancia_km":997.05564524936267,"categoria_distancia":"Proximo"}
+{"estado_a":"Amazonas","estado_b":"Mato Grosso","distancia_km":1116.692125941373,"categoria_distancia":"Medio"}
+{"estado_a":"Amazonas","estado_b":"Acre","distancia_km":1150.3469357380015,"categoria_distancia":"Medio"}
+{"estado_a":"Amazonas","estado_b":"Tocantins","distancia_km":1478.1961974774194,"categoria_distancia":"Medio"}
+{"estado_a":"Amazonas","estado_b":"Maranhão","distancia_km":1648.3739395369319,"categoria_distancia":"Medio"}
+{"estado_a":"Amazonas","estado_b":"Goiás","distancia_km":1799.7142699696037,"categoria_distancia":"Medio"}
+{"estado_a":"Amazonas","estado_b":"Federal District","distancia_km":1935.8035014014408,"categoria_distancia":"Medio"}
+{"estado_a":"Amazonas","estado_b":"Piauí","distancia_km":1999.2014708827537,"categoria_distancia":"Medio"}
+{"estado_a":"Amazonas","estado_b":"Mato Grosso do Sul","distancia_km":2043.2042450981037,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Bahia","distancia_km":2273.4935344721566,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Ceará","distancia_km":2310.4370883344441,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Minas Gerais","distancia_km":2400.72013794369,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Paraná","distancia_km":2585.2739028532874,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Paraíba","distancia_km":2613.3878453794655,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Rio Grande do Norte","distancia_km":2614.3500633839867,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Pernambuco","distancia_km":2627.2253990727654,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Alagoas","distancia_km":2665.0129554459286,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Sergipe","distancia_km":2675.5639527821186,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"São Paulo","distancia_km":2690.6664233699939,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Espírito Santo","distancia_km":2789.2396483252896,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Rio de Janeiro","distancia_km":2850.53043112216,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Santa Catarina","distancia_km":2872.0559827130292,"categoria_distancia":"Distante"}
+{"estado_a":"Amazonas","estado_b":"Rio Grande do Sul","distancia_km":3033.5887132308735,"categoria_distancia":"Distante"}
+{"estado_a":"Bahia","estado_b":"Piauí","distancia_km":457.56190741030372,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Bahia","estado_b":"Sergipe","distancia_km":590.26785160634881,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Alagoas","distancia_km":632.39280996892967,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Pernambuco","distancia_km":666.49905248019445,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Minas Gerais","distancia_km":727.01369312942143,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Espírito Santo","distancia_km":749.21314162970089,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Federal District","distancia_km":762.18013473077258,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Tocantins","distancia_km":795.42740059184257,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Paraíba","distancia_km":801.19684832551786,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Ceará","distancia_km":861.7282442866458,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Maranhão","distancia_km":933.64506537908494,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Rio Grande do Norte","distancia_km":938.58523702926357,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Goiás","distancia_km":948.22937727450312,"categoria_distancia":"Proximo"}
+{"estado_a":"Bahia","estado_b":"Rio de Janeiro","distancia_km":1159.8843578166191,"categoria_distancia":"Medio"}
+{"estado_a":"Bahia","estado_b":"São Paulo","distancia_km":1326.7399540767969,"categoria_distancia":"Medio"}
+{"estado_a":"Bahia","estado_b":"Pará","distancia_km":1402.2099090420838,"categoria_distancia":"Medio"}
+{"estado_a":"Bahia","estado_b":"Mato Grosso","distancia_km":1651.278439275249,"categoria_distancia":"Medio"}
+{"estado_a":"Bahia","estado_b":"Mato Grosso do Sul","distancia_km":1663.5688540487386,"categoria_distancia":"Medio"}
+{"estado_a":"Bahia","estado_b":"Paraná","distancia_km":1715.6883995140365,"categoria_distancia":"Medio"}
+{"estado_a":"Bahia","estado_b":"Amapá","distancia_km":1881.3569724973302,"categoria_distancia":"Medio"}
+{"estado_a":"Bahia","estado_b":"Santa Catarina","distancia_km":1913.1990474789627,"categoria_distancia":"Medio"}
+{"estado_a":"Bahia","estado_b":"Rondônia","distancia_km":2242.57409296722,"categoria_distancia":"Distante"}
+{"estado_a":"Bahia","estado_b":"Amazonas","distancia_km":2273.4935344721566,"categoria_distancia":"Distante"}
+{"estado_a":"Bahia","estado_b":"Rio Grande do Sul","distancia_km":2279.470984787697,"categoria_distancia":"Distante"}
+{"estado_a":"Bahia","estado_b":"Roraima","distancia_km":2689.378816761191,"categoria_distancia":"Distante"}
+{"estado_a":"Bahia","estado_b":"Acre","distancia_km":2862.17912336775,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Rio Grande do Norte","distancia_km":306.49200391346028,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Ceará","estado_b":"Paraíba","distancia_km":358.38323173917871,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Ceará","estado_b":"Pernambuco","distancia_km":477.09495679526179,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Ceará","estado_b":"Piauí","distancia_km":541.92598485690382,"categoria_distancia":"Proximo"}
+{"estado_a":"Ceará","estado_b":"Alagoas","distancia_km":558.88886067842077,"categoria_distancia":"Proximo"}
+{"estado_a":"Ceará","estado_b":"Sergipe","distancia_km":618.1007343263218,"categoria_distancia":"Proximo"}
+{"estado_a":"Ceará","estado_b":"Maranhão","distancia_km":663.2119287486272,"categoria_distancia":"Proximo"}
+{"estado_a":"Ceará","estado_b":"Bahia","distancia_km":861.7282442866458,"categoria_distancia":"Proximo"}
+{"estado_a":"Ceará","estado_b":"Tocantins","distancia_km":1096.2607902590569,"categoria_distancia":"Medio"}
+{"estado_a":"Ceará","estado_b":"Pará","distancia_km":1440.1330428169083,"categoria_distancia":"Medio"}
+{"estado_a":"Ceará","estado_b":"Federal District","distancia_km":1511.2695863353431,"categoria_distancia":"Medio"}
+{"estado_a":"Ceará","estado_b":"Espírito Santo","distancia_km":1558.3405470287466,"categoria_distancia":"Medio"}
+{"estado_a":"Ceará","estado_b":"Amapá","distancia_km":1566.5293981033308,"categoria_distancia":"Medio"}
+{"estado_a":"Ceará","estado_b":"Minas Gerais","distancia_km":1586.259667238488,"categoria_distancia":"Medio"}
+{"estado_a":"Ceará","estado_b":"Goiás","distancia_km":1649.2356577935338,"categoria_distancia":"Medio"}
+{"estado_a":"Ceará","estado_b":"Rio de Janeiro","distancia_km":2013.3497262382882,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Mato Grosso","distancia_km":2105.93970762577,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"São Paulo","distancia_km":2186.9948649544772,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Amazonas","distancia_km":2310.4370883344441,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Mato Grosso do Sul","distancia_km":2407.0485854261638,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Paraná","distancia_km":2550.126767162179,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Roraima","distancia_km":2560.2975174678463,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Rondônia","distancia_km":2614.3459315690579,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Santa Catarina","distancia_km":2764.3546535342989,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Rio Grande do Sul","distancia_km":3124.4717983057471,"categoria_distancia":"Distante"}
+{"estado_a":"Ceará","estado_b":"Acre","distancia_km":3187.8292863417964,"categoria_distancia":"Distante"}
+{"estado_a":"Espírito Santo","estado_b":"Minas Gerais","distancia_km":453.00468500762719,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Espírito Santo","estado_b":"Rio de Janeiro","distancia_km":511.82368453747279,"categoria_distancia":"Proximo"}
+{"estado_a":"Espírito Santo","estado_b":"Bahia","distancia_km":749.21314162970089,"categoria_distancia":"Proximo"}
+{"estado_a":"Espírito Santo","estado_b":"São Paulo","distancia_km":814.913023426944,"categoria_distancia":"Proximo"}
+{"estado_a":"Espírito Santo","estado_b":"Federal District","distancia_km":889.98227298950394,"categoria_distancia":"Proximo"}
+{"estado_a":"Espírito Santo","estado_b":"Sergipe","distancia_km":1064.4761105587622,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Goiás","distancia_km":1076.780789949941,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Alagoas","distancia_km":1134.1420188839952,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Piauí","distancia_km":1206.045296989555,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Pernambuco","distancia_km":1208.3582620030545,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Paraná","distancia_km":1320.1591560152845,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Tocantins","distancia_km":1378.6365367328638,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Paraíba","distancia_km":1381.0781500940134,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Santa Catarina","distancia_km":1421.9400365592978,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Mato Grosso do Sul","distancia_km":1522.572118794697,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Rio Grande do Norte","distancia_km":1540.6076270519031,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Ceará","distancia_km":1558.3405470287466,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Maranhão","distancia_km":1670.5854679953786,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Rio Grande do Sul","distancia_km":1796.9123519577531,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Mato Grosso","distancia_km":1916.1771901920224,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Pará","distancia_km":1997.6708502899776,"categoria_distancia":"Medio"}
+{"estado_a":"Espírito Santo","estado_b":"Rondônia","distancia_km":2514.27121855887,"categoria_distancia":"Distante"}
+{"estado_a":"Espírito Santo","estado_b":"Amapá","distancia_km":2572.4284268913962,"categoria_distancia":"Distante"}
+{"estado_a":"Espírito Santo","estado_b":"Amazonas","distancia_km":2789.2396483252896,"categoria_distancia":"Distante"}
+{"estado_a":"Espírito Santo","estado_b":"Acre","distancia_km":3127.7066712452734,"categoria_distancia":"Distante"}
+{"estado_a":"Espírito Santo","estado_b":"Roraima","distancia_km":3272.5904435703878,"categoria_distancia":"Distante"}
+{"estado_a":"Federal District","estado_b":"Goiás","distancia_km":204.00970288894661,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Federal District","estado_b":"Minas Gerais","distancia_km":466.5695946173837,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Federal District","estado_b":"Tocantins","distancia_km":708.775153551307,"categoria_distancia":"Proximo"}
+{"estado_a":"Federal District","estado_b":"Bahia","distancia_km":762.18013473077258,"categoria_distancia":"Proximo"}
+{"estado_a":"Federal District","estado_b":"São Paulo","distancia_km":870.58789769138275,"categoria_distancia":"Proximo"}
+{"estado_a":"Federal District","estado_b":"Espírito Santo","distancia_km":889.98227298950394,"categoria_distancia":"Proximo"}
+{"estado_a":"Federal District","estado_b":"Mato Grosso do Sul","distancia_km":908.78204392779867,"categoria_distancia":"Proximo"}
+{"estado_a":"Federal District","estado_b":"Rio de Janeiro","distancia_km":930.92659901841716,"categoria_distancia":"Proximo"}
+{"estado_a":"Federal District","estado_b":"Piauí","distancia_km":976.5492569337415,"categoria_distancia":"Proximo"}
+{"estado_a":"Federal District","estado_b":"Mato Grosso","distancia_km":1030.0135475664865,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Paraná","distancia_km":1076.0382206903973,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Pará","distancia_km":1240.0437577643538,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Maranhão","distancia_km":1242.4331158309776,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Santa Catarina","distancia_km":1329.5199719066291,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Sergipe","distancia_km":1351.9910308825858,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Alagoas","distancia_km":1394.2586972963486,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Pernambuco","distancia_km":1423.82104785715,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Ceará","distancia_km":1511.2695863353431,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Paraíba","distancia_km":1543.4015097593442,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Rondônia","distancia_km":1632.1418552394355,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Rio Grande do Sul","distancia_km":1659.5604776030264,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Rio Grande do Norte","distancia_km":1664.2240879842459,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Amapá","distancia_km":1913.0384087493053,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Amazonas","distancia_km":1935.8035014014408,"categoria_distancia":"Medio"}
+{"estado_a":"Federal District","estado_b":"Acre","distancia_km":2250.8401545759684,"categoria_distancia":"Distante"}
+{"estado_a":"Federal District","estado_b":"Roraima","distancia_km":2452.4413998481805,"categoria_distancia":"Distante"}
+{"estado_a":"Goiás","estado_b":"Federal District","distancia_km":204.00970288894661,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Goiás","estado_b":"Minas Gerais","distancia_km":635.498921794981,"categoria_distancia":"Proximo"}
+{"estado_a":"Goiás","estado_b":"Tocantins","distancia_km":728.31622061594237,"categoria_distancia":"Proximo"}
+{"estado_a":"Goiás","estado_b":"Mato Grosso do Sul","distancia_km":758.35743229446371,"categoria_distancia":"Proximo"}
+{"estado_a":"Goiás","estado_b":"Mato Grosso","distancia_km":839.697521817132,"categoria_distancia":"Proximo"}
+{"estado_a":"Goiás","estado_b":"São Paulo","distancia_km":922.98859932791061,"categoria_distancia":"Proximo"}
+{"estado_a":"Goiás","estado_b":"Bahia","distancia_km":948.22937727450312,"categoria_distancia":"Proximo"}
+{"estado_a":"Goiás","estado_b":"Paraná","distancia_km":1023.4281343066232,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Rio de Janeiro","distancia_km":1050.9409528567969,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Espírito Santo","distancia_km":1076.780789949941,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Piauí","distancia_km":1107.8050589198776,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Pará","distancia_km":1176.0072762320935,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Santa Catarina","distancia_km":1297.5098189751827,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Maranhão","distancia_km":1306.8973322430531,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Rondônia","distancia_km":1438.0124497604686,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Sergipe","distancia_km":1538.1026702630613,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Alagoas","distancia_km":1576.8154739779045,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Rio Grande do Sul","distancia_km":1599.7227373491783,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Pernambuco","distancia_km":1601.0615692334623,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Ceará","distancia_km":1649.2356577935338,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Paraíba","distancia_km":1711.3712012752837,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Amazonas","distancia_km":1799.7142699696037,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Rio Grande do Norte","distancia_km":1824.1205130147266,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Amapá","distancia_km":1875.2465449272593,"categoria_distancia":"Medio"}
+{"estado_a":"Goiás","estado_b":"Acre","distancia_km":2054.1023360847835,"categoria_distancia":"Distante"}
+{"estado_a":"Goiás","estado_b":"Roraima","distancia_km":2333.7787269163673,"categoria_distancia":"Distante"}
+{"estado_a":"Maranhão","estado_b":"Piauí","distancia_km":488.93409902945558,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Maranhão","estado_b":"Tocantins","distancia_km":598.9116590508529,"categoria_distancia":"Proximo"}
+{"estado_a":"Maranhão","estado_b":"Ceará","distancia_km":663.2119287486272,"categoria_distancia":"Proximo"}
+{"estado_a":"Maranhão","estado_b":"Pará","distancia_km":780.06026511560037,"categoria_distancia":"Proximo"}
+{"estado_a":"Maranhão","estado_b":"Bahia","distancia_km":933.64506537908494,"categoria_distancia":"Proximo"}
+{"estado_a":"Maranhão","estado_b":"Rio Grande do Norte","distancia_km":966.00653958553528,"categoria_distancia":"Proximo"}
+{"estado_a":"Maranhão","estado_b":"Paraíba","distancia_km":972.63149257083853,"categoria_distancia":"Proximo"}
+{"estado_a":"Maranhão","estado_b":"Amapá","distancia_km":991.69954844764311,"categoria_distancia":"Proximo"}
+{"estado_a":"Maranhão","estado_b":"Pernambuco","distancia_km":1013.32316241392,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Alagoas","distancia_km":1067.591130684976,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Sergipe","distancia_km":1096.1350232674467,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Federal District","distancia_km":1242.4331158309776,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Goiás","distancia_km":1306.8973322430531,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Minas Gerais","distancia_km":1508.8591800282879,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Mato Grosso","distancia_km":1540.1337928833591,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Amazonas","distancia_km":1648.3739395369319,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Espírito Santo","distancia_km":1670.5854679953786,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Roraima","distancia_km":1928.2284202602605,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Rondônia","distancia_km":1995.2129139757385,"categoria_distancia":"Medio"}
+{"estado_a":"Maranhão","estado_b":"Rio de Janeiro","distancia_km":2008.5609418016422,"categoria_distancia":"Distante"}
+{"estado_a":"Maranhão","estado_b":"Mato Grosso do Sul","distancia_km":2036.1875652871875,"categoria_distancia":"Distante"}
+{"estado_a":"Maranhão","estado_b":"São Paulo","distancia_km":2073.0432346534672,"categoria_distancia":"Distante"}
+{"estado_a":"Maranhão","estado_b":"Paraná","distancia_km":2315.1139434397551,"categoria_distancia":"Distante"}
+{"estado_a":"Maranhão","estado_b":"Acre","distancia_km":2546.83009278617,"categoria_distancia":"Distante"}
+{"estado_a":"Maranhão","estado_b":"Santa Catarina","distancia_km":2571.9002009172882,"categoria_distancia":"Distante"}
+{"estado_a":"Maranhão","estado_b":"Rio Grande do Sul","distancia_km":2897.6070020004186,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso","estado_b":"Rondônia","distancia_km":604.1326175511997,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso","estado_b":"Goiás","distancia_km":839.697521817132,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso","estado_b":"Mato Grosso do Sul","distancia_km":927.84978751102312,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso","estado_b":"Pará","distancia_km":943.36282993219709,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso","estado_b":"Tocantins","distancia_km":1010.6079202964764,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Federal District","distancia_km":1030.0135475664865,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Amazonas","distancia_km":1116.692125941373,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Acre","distancia_km":1226.0865980585013,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Paraná","distancia_km":1469.9644347247784,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Minas Gerais","distancia_km":1473.7704443994519,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Maranhão","distancia_km":1540.1337928833591,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Amapá","distancia_km":1604.8915731968766,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Piauí","distancia_km":1607.3898139779888,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"São Paulo","distancia_km":1625.3281383001809,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Bahia","distancia_km":1651.278439275249,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Roraima","distancia_km":1688.3908920935555,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Santa Catarina","distancia_km":1755.7034799436376,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Rio de Janeiro","distancia_km":1842.86662884748,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Espírito Santo","distancia_km":1916.1771901920224,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Rio Grande do Sul","distancia_km":1925.4453182923689,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso","estado_b":"Ceará","distancia_km":2105.93970762577,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso","estado_b":"Sergipe","distancia_km":2203.5282493082791,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso","estado_b":"Pernambuco","distancia_km":2222.4516316796776,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso","estado_b":"Alagoas","distancia_km":2223.6103143531864,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso","estado_b":"Paraíba","distancia_km":2285.7407804952313,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso","estado_b":"Rio Grande do Norte","distancia_km":2356.8936230895924,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Paraná","distancia_km":565.24632599027893,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Goiás","distancia_km":758.35743229446371,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Santa Catarina","distancia_km":838.20779352454622,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"São Paulo","distancia_km":895.40862886183606,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Federal District","distancia_km":908.78204392779867,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Mato Grosso","distancia_km":927.84978751102312,"categoria_distancia":"Proximo"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Rio Grande do Sul","distancia_km":1003.4858832845304,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Minas Gerais","distancia_km":1100.1805072772293,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Rio de Janeiro","distancia_km":1218.7877751152114,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Rondônia","distancia_km":1329.0337875212547,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Tocantins","distancia_km":1439.0546183546835,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Espírito Santo","distancia_km":1522.572118794697,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Bahia","distancia_km":1663.5688540487386,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Pará","distancia_km":1716.0068017412793,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Acre","distancia_km":1840.6875485421838,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Piauí","distancia_km":1865.9811973111657,"categoria_distancia":"Medio"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Maranhão","distancia_km":2036.1875652871875,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Amazonas","distancia_km":2043.2042450981037,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Sergipe","distancia_km":2248.5214703485167,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Alagoas","distancia_km":2295.1085621266398,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Pernambuco","distancia_km":2329.1542158163461,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Ceará","distancia_km":2407.0485854261638,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Amapá","distancia_km":2428.9025352972167,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Paraíba","distancia_km":2452.0237061229764,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Rio Grande do Norte","distancia_km":2572.4410422336978,"categoria_distancia":"Distante"}
+{"estado_a":"Mato Grosso do Sul","estado_b":"Roraima","distancia_km":2615.5536539559885,"categoria_distancia":"Distante"}
+{"estado_a":"Minas Gerais","estado_b":"Espírito Santo","distancia_km":453.00468500762719,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Minas Gerais","estado_b":"Federal District","distancia_km":466.5695946173837,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Minas Gerais","estado_b":"Rio de Janeiro","distancia_km":509.20319638302055,"categoria_distancia":"Proximo"}
+{"estado_a":"Minas Gerais","estado_b":"São Paulo","distancia_km":600.82777337730579,"categoria_distancia":"Proximo"}
+{"estado_a":"Minas Gerais","estado_b":"Goiás","distancia_km":635.498921794981,"categoria_distancia":"Proximo"}
+{"estado_a":"Minas Gerais","estado_b":"Bahia","distancia_km":727.01369312942143,"categoria_distancia":"Proximo"}
+{"estado_a":"Minas Gerais","estado_b":"Paraná","distancia_km":1012.0863405726324,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Tocantins","distancia_km":1082.8544541252863,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Mato Grosso do Sul","distancia_km":1100.1805072772293,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Piauí","distancia_km":1117.1880035664919,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Santa Catarina","distancia_km":1189.4870457599839,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Sergipe","distancia_km":1240.4260481915314,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Alagoas","distancia_km":1299.8875785594892,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Pernambuco","distancia_km":1354.8138367166778,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Mato Grosso","distancia_km":1473.7704443994519,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Maranhão","distancia_km":1508.8591800282879,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Paraíba","distancia_km":1508.9331458084248,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Rio Grande do Sul","distancia_km":1559.7266135837265,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Ceará","distancia_km":1586.259667238488,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Rio Grande do Norte","distancia_km":1655.587573498552,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Pará","distancia_km":1670.0665477084242,"categoria_distancia":"Medio"}
+{"estado_a":"Minas Gerais","estado_b":"Rondônia","distancia_km":2067.4630848969832,"categoria_distancia":"Distante"}
+{"estado_a":"Minas Gerais","estado_b":"Amapá","distancia_km":2307.1027595883852,"categoria_distancia":"Distante"}
+{"estado_a":"Minas Gerais","estado_b":"Amazonas","distancia_km":2400.72013794369,"categoria_distancia":"Distante"}
+{"estado_a":"Minas Gerais","estado_b":"Acre","distancia_km":2677.9466520605765,"categoria_distancia":"Distante"}
+{"estado_a":"Minas Gerais","estado_b":"Roraima","distancia_km":2910.3747530828491,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Santa Catarina","distancia_km":290.88668683308265,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Paraná","estado_b":"São Paulo","distancia_km":520.84921595890273,"categoria_distancia":"Proximo"}
+{"estado_a":"Paraná","estado_b":"Mato Grosso do Sul","distancia_km":565.24632599027893,"categoria_distancia":"Proximo"}
+{"estado_a":"Paraná","estado_b":"Rio Grande do Sul","distancia_km":583.53458024526935,"categoria_distancia":"Proximo"}
+{"estado_a":"Paraná","estado_b":"Rio de Janeiro","distancia_km":876.64734544223927,"categoria_distancia":"Proximo"}
+{"estado_a":"Paraná","estado_b":"Minas Gerais","distancia_km":1012.0863405726324,"categoria_distancia":"Medio"}
+{"estado_a":"Paraná","estado_b":"Goiás","distancia_km":1023.4281343066232,"categoria_distancia":"Medio"}
+{"estado_a":"Paraná","estado_b":"Federal District","distancia_km":1076.0382206903973,"categoria_distancia":"Medio"}
+{"estado_a":"Paraná","estado_b":"Espírito Santo","distancia_km":1320.1591560152845,"categoria_distancia":"Medio"}
+{"estado_a":"Paraná","estado_b":"Mato Grosso","distancia_km":1469.9644347247784,"categoria_distancia":"Medio"}
+{"estado_a":"Paraná","estado_b":"Bahia","distancia_km":1715.6883995140365,"categoria_distancia":"Medio"}
+{"estado_a":"Paraná","estado_b":"Tocantins","distancia_km":1750.7037435864515,"categoria_distancia":"Medio"}
+{"estado_a":"Paraná","estado_b":"Rondônia","distancia_km":1893.802965781091,"categoria_distancia":"Medio"}
+{"estado_a":"Paraná","estado_b":"Piauí","distancia_km":2033.906710856387,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Pará","distancia_km":2154.2041001089874,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Sergipe","distancia_km":2252.3626230145319,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Alagoas","distancia_km":2311.1152766794976,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Maranhão","distancia_km":2315.1139434397551,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Pernambuco","distancia_km":2363.6587560380749,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Acre","distancia_km":2389.0676691709482,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Paraíba","distancia_km":2512.738980143909,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Ceará","distancia_km":2550.126767162179,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Amazonas","distancia_km":2585.2739028532874,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Rio Grande do Norte","distancia_km":2654.0738540331545,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Amapá","distancia_km":2868.2567712911696,"categoria_distancia":"Distante"}
+{"estado_a":"Paraná","estado_b":"Roraima","distancia_km":3155.0834736914,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Rio Grande do Norte","distancia_km":160.96716475014728,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Paraíba","estado_b":"Pernambuco","distancia_km":175.45874762519486,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Paraíba","estado_b":"Alagoas","distancia_km":258.67386980253838,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Paraíba","estado_b":"Sergipe","distancia_km":329.900427636688,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Paraíba","estado_b":"Ceará","distancia_km":358.38323173917871,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Paraíba","estado_b":"Piauí","distancia_km":680.27693824788423,"categoria_distancia":"Proximo"}
+{"estado_a":"Paraíba","estado_b":"Bahia","distancia_km":801.19684832551786,"categoria_distancia":"Proximo"}
+{"estado_a":"Paraíba","estado_b":"Maranhão","distancia_km":972.63149257083853,"categoria_distancia":"Proximo"}
+{"estado_a":"Paraíba","estado_b":"Tocantins","distancia_km":1286.4274005649477,"categoria_distancia":"Medio"}
+{"estado_a":"Paraíba","estado_b":"Espírito Santo","distancia_km":1381.0781500940134,"categoria_distancia":"Medio"}
+{"estado_a":"Paraíba","estado_b":"Minas Gerais","distancia_km":1508.9331458084248,"categoria_distancia":"Medio"}
+{"estado_a":"Paraíba","estado_b":"Federal District","distancia_km":1543.4015097593442,"categoria_distancia":"Medio"}
+{"estado_a":"Paraíba","estado_b":"Goiás","distancia_km":1711.3712012752837,"categoria_distancia":"Medio"}
+{"estado_a":"Paraíba","estado_b":"Pará","distancia_km":1724.8117802884724,"categoria_distancia":"Medio"}
+{"estado_a":"Paraíba","estado_b":"Rio de Janeiro","distancia_km":1872.5540650790504,"categoria_distancia":"Medio"}
+{"estado_a":"Paraíba","estado_b":"Amapá","distancia_km":1916.0766062547311,"categoria_distancia":"Medio"}
+{"estado_a":"Paraíba","estado_b":"São Paulo","distancia_km":2096.3210779337446,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Mato Grosso","distancia_km":2285.7407804952313,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Mato Grosso do Sul","distancia_km":2452.0237061229764,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Paraná","distancia_km":2512.738980143909,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Amazonas","distancia_km":2613.3878453794655,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Santa Catarina","distancia_km":2697.6690363125913,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Rondônia","distancia_km":2830.9262223184323,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Roraima","distancia_km":2895.4814737496977,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Rio Grande do Sul","distancia_km":3068.6567677138437,"categoria_distancia":"Distante"}
+{"estado_a":"Paraíba","estado_b":"Acre","distancia_km":3425.014953487545,"categoria_distancia":"Distante"}
+{"estado_a":"Pará","estado_b":"Tocantins","distancia_km":623.58769103217276,"categoria_distancia":"Proximo"}
+{"estado_a":"Pará","estado_b":"Amapá","distancia_km":715.8477120594963,"categoria_distancia":"Proximo"}
+{"estado_a":"Pará","estado_b":"Maranhão","distancia_km":780.06026511560037,"categoria_distancia":"Proximo"}
+{"estado_a":"Pará","estado_b":"Amazonas","distancia_km":897.46695843908628,"categoria_distancia":"Proximo"}
+{"estado_a":"Pará","estado_b":"Mato Grosso","distancia_km":943.36282993219709,"categoria_distancia":"Proximo"}
+{"estado_a":"Pará","estado_b":"Piauí","distancia_km":1101.9261304326258,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Goiás","distancia_km":1176.0072762320935,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Federal District","distancia_km":1240.0437577643538,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Rondônia","distancia_km":1266.1378954349116,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Roraima","distancia_km":1289.5835244779857,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Bahia","distancia_km":1402.2099090420838,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Ceará","distancia_km":1440.1330428169083,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Minas Gerais","distancia_km":1670.0665477084242,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Mato Grosso do Sul","distancia_km":1716.0068017412793,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Paraíba","distancia_km":1724.8117802884724,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Pernambuco","distancia_km":1731.2149422873615,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Rio Grande do Norte","distancia_km":1738.1065965629389,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Alagoas","distancia_km":1767.7265109040807,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Sergipe","distancia_km":1778.1742715809667,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Acre","distancia_km":1780.3217184105065,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"Espírito Santo","distancia_km":1997.6708502899776,"categoria_distancia":"Medio"}
+{"estado_a":"Pará","estado_b":"São Paulo","distancia_km":2094.6739158637547,"categoria_distancia":"Distante"}
+{"estado_a":"Pará","estado_b":"Paraná","distancia_km":2154.2041001089874,"categoria_distancia":"Distante"}
+{"estado_a":"Pará","estado_b":"Rio de Janeiro","distancia_km":2165.249750931338,"categoria_distancia":"Distante"}
+{"estado_a":"Pará","estado_b":"Santa Catarina","distancia_km":2441.5488265781905,"categoria_distancia":"Distante"}
+{"estado_a":"Pará","estado_b":"Rio Grande do Sul","distancia_km":2697.7130651774892,"categoria_distancia":"Distante"}
+{"estado_a":"Pernambuco","estado_b":"Alagoas","distancia_km":86.333378991251678,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Pernambuco","estado_b":"Sergipe","distancia_km":155.75919471573076,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Pernambuco","estado_b":"Paraíba","distancia_km":175.45874762519486,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Pernambuco","estado_b":"Rio Grande do Norte","distancia_km":336.40102107519232,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Pernambuco","estado_b":"Ceará","distancia_km":477.09495679526179,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Pernambuco","estado_b":"Piauí","distancia_km":643.30050984500156,"categoria_distancia":"Proximo"}
+{"estado_a":"Pernambuco","estado_b":"Bahia","distancia_km":666.49905248019445,"categoria_distancia":"Proximo"}
+{"estado_a":"Pernambuco","estado_b":"Maranhão","distancia_km":1013.32316241392,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"Espírito Santo","distancia_km":1208.3582620030545,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"Tocantins","distancia_km":1243.2285153636499,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"Minas Gerais","distancia_km":1354.8138367166778,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"Federal District","distancia_km":1423.82104785715,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"Goiás","distancia_km":1601.0615692334623,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"Rio de Janeiro","distancia_km":1703.3449745309324,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"Pará","distancia_km":1731.2149422873615,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"São Paulo","distancia_km":1935.7493397964502,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"Amapá","distancia_km":1986.6714733015908,"categoria_distancia":"Medio"}
+{"estado_a":"Pernambuco","estado_b":"Mato Grosso","distancia_km":2222.4516316796776,"categoria_distancia":"Distante"}
+{"estado_a":"Pernambuco","estado_b":"Mato Grosso do Sul","distancia_km":2329.1542158163461,"categoria_distancia":"Distante"}
+{"estado_a":"Pernambuco","estado_b":"Paraná","distancia_km":2363.6587560380749,"categoria_distancia":"Distante"}
+{"estado_a":"Pernambuco","estado_b":"Santa Catarina","distancia_km":2540.6730843452956,"categoria_distancia":"Distante"}
+{"estado_a":"Pernambuco","estado_b":"Amazonas","distancia_km":2627.2253990727654,"categoria_distancia":"Distante"}
+{"estado_a":"Pernambuco","estado_b":"Rondônia","distancia_km":2784.0580211249685,"categoria_distancia":"Distante"}
+{"estado_a":"Pernambuco","estado_b":"Rio Grande do Sul","distancia_km":2913.3673115610927,"categoria_distancia":"Distante"}
+{"estado_a":"Pernambuco","estado_b":"Roraima","distancia_km":2940.8739284186968,"categoria_distancia":"Distante"}
+{"estado_a":"Pernambuco","estado_b":"Acre","distancia_km":3387.8481292572324,"categoria_distancia":"Distante"}
+{"estado_a":"Piauí","estado_b":"Bahia","distancia_km":457.56190741030372,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Piauí","estado_b":"Maranhão","distancia_km":488.93409902945558,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Piauí","estado_b":"Ceará","distancia_km":541.92598485690382,"categoria_distancia":"Proximo"}
+{"estado_a":"Piauí","estado_b":"Tocantins","distancia_km":606.61499418138783,"categoria_distancia":"Proximo"}
+{"estado_a":"Piauí","estado_b":"Pernambuco","distancia_km":643.30050984500156,"categoria_distancia":"Proximo"}
+{"estado_a":"Piauí","estado_b":"Alagoas","distancia_km":669.70885210222264,"categoria_distancia":"Proximo"}
+{"estado_a":"Piauí","estado_b":"Sergipe","distancia_km":676.44428553788885,"categoria_distancia":"Proximo"}
+{"estado_a":"Piauí","estado_b":"Paraíba","distancia_km":680.27693824788423,"categoria_distancia":"Proximo"}
+{"estado_a":"Piauí","estado_b":"Rio Grande do Norte","distancia_km":752.76340204376561,"categoria_distancia":"Proximo"}
+{"estado_a":"Piauí","estado_b":"Federal District","distancia_km":976.5492569337415,"categoria_distancia":"Proximo"}
+{"estado_a":"Piauí","estado_b":"Pará","distancia_km":1101.9261304326258,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"Goiás","distancia_km":1107.8050589198776,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"Minas Gerais","distancia_km":1117.1880035664919,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"Espírito Santo","distancia_km":1206.045296989555,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"Amapá","distancia_km":1468.9287652501941,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"Rio de Janeiro","distancia_km":1590.9733198921717,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"Mato Grosso","distancia_km":1607.3898139779888,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"São Paulo","distancia_km":1711.2862528388605,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"Mato Grosso do Sul","distancia_km":1865.9811973111657,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"Amazonas","distancia_km":1999.2014708827537,"categoria_distancia":"Medio"}
+{"estado_a":"Piauí","estado_b":"Paraná","distancia_km":2033.906710856387,"categoria_distancia":"Distante"}
+{"estado_a":"Piauí","estado_b":"Rondônia","distancia_km":2151.4129126785137,"categoria_distancia":"Distante"}
+{"estado_a":"Piauí","estado_b":"Santa Catarina","distancia_km":2263.1094727111295,"categoria_distancia":"Distante"}
+{"estado_a":"Piauí","estado_b":"Roraima","distancia_km":2351.6819803554486,"categoria_distancia":"Distante"}
+{"estado_a":"Piauí","estado_b":"Rio Grande do Sul","distancia_km":2614.052416182376,"categoria_distancia":"Distante"}
+{"estado_a":"Piauí","estado_b":"Acre","distancia_km":2749.2289578783298,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Paraíba","distancia_km":160.96716475014728,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Ceará","distancia_km":306.49200391346028,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Pernambuco","distancia_km":336.40102107519232,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Alagoas","distancia_km":418.772077854392,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Sergipe","distancia_km":490.23168097607623,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Piauí","distancia_km":752.76340204376561,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Bahia","distancia_km":938.58523702926357,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Maranhão","distancia_km":966.00653958553528,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Tocantins","distancia_km":1348.40267658138,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Espírito Santo","distancia_km":1540.6076270519031,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Minas Gerais","distancia_km":1655.587573498552,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Federal District","distancia_km":1664.2240879842459,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Pará","distancia_km":1738.1065965629389,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Goiás","distancia_km":1824.1205130147266,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Amapá","distancia_km":1866.9107655059079,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Rio de Janeiro","distancia_km":2029.5701854626925,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"São Paulo","distancia_km":2246.906069038198,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Mato Grosso","distancia_km":2356.8936230895924,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Mato Grosso do Sul","distancia_km":2572.4410422336978,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Amazonas","distancia_km":2614.3500633839867,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Paraná","distancia_km":2654.0738540331545,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Santa Catarina","distancia_km":2845.0666649096643,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Roraima","distancia_km":2865.9138614850294,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Rondônia","distancia_km":2885.754507374882,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Rio Grande do Sul","distancia_km":3214.4765663780327,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Norte","estado_b":"Acre","distancia_km":3469.6115458523086,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Santa Catarina","distancia_km":376.341962474706,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Paraná","distancia_km":583.53458024526935,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio Grande do Sul","estado_b":"São Paulo","distancia_km":989.104439414627,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Mato Grosso do Sul","distancia_km":1003.4858832845304,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Rio de Janeiro","distancia_km":1298.592227387976,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Minas Gerais","distancia_km":1559.7266135837265,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Goiás","distancia_km":1599.7227373491783,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Federal District","distancia_km":1659.5604776030264,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Espírito Santo","distancia_km":1796.9123519577531,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Mato Grosso","distancia_km":1925.4453182923689,"categoria_distancia":"Medio"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Rondônia","distancia_km":2240.1788341912688,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Bahia","distancia_km":2279.470984787697,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Tocantins","distancia_km":2328.0375153023269,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Piauí","distancia_km":2614.052416182376,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Acre","distancia_km":2638.597966995751,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Pará","distancia_km":2697.7130651774892,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Sergipe","distancia_km":2793.4188142350408,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Alagoas","distancia_km":2855.4913498269,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Maranhão","distancia_km":2897.6070020004186,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Pernambuco","distancia_km":2913.3673115610927,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Amazonas","distancia_km":3033.5887132308735,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Paraíba","distancia_km":3068.6567677138437,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Ceará","distancia_km":3124.4717983057471,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Rio Grande do Norte","distancia_km":3214.4765663780327,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Amapá","distancia_km":3413.5372833688607,"categoria_distancia":"Distante"}
+{"estado_a":"Rio Grande do Sul","estado_b":"Roraima","distancia_km":3606.0953708791617,"categoria_distancia":"Distante"}
+{"estado_a":"Rio de Janeiro","estado_b":"São Paulo","distancia_km":357.20297183114741,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Rio de Janeiro","estado_b":"Minas Gerais","distancia_km":509.20319638302055,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio de Janeiro","estado_b":"Espírito Santo","distancia_km":511.82368453747279,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio de Janeiro","estado_b":"Paraná","distancia_km":876.64734544223927,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio de Janeiro","estado_b":"Santa Catarina","distancia_km":928.420829651294,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio de Janeiro","estado_b":"Federal District","distancia_km":930.92659901841716,"categoria_distancia":"Proximo"}
+{"estado_a":"Rio de Janeiro","estado_b":"Goiás","distancia_km":1050.9409528567969,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Bahia","distancia_km":1159.8843578166191,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Mato Grosso do Sul","distancia_km":1218.7877751152114,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Rio Grande do Sul","distancia_km":1298.592227387976,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Sergipe","distancia_km":1565.2236598218517,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Tocantins","distancia_km":1589.9488189311171,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Piauí","distancia_km":1590.9733198921717,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Alagoas","distancia_km":1633.2843841742845,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Pernambuco","distancia_km":1703.3449745309324,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Mato Grosso","distancia_km":1842.86662884748,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Paraíba","distancia_km":1872.5540650790504,"categoria_distancia":"Medio"}
+{"estado_a":"Rio de Janeiro","estado_b":"Maranhão","distancia_km":2008.5609418016422,"categoria_distancia":"Distante"}
+{"estado_a":"Rio de Janeiro","estado_b":"Ceará","distancia_km":2013.3497262382882,"categoria_distancia":"Distante"}
+{"estado_a":"Rio de Janeiro","estado_b":"Rio Grande do Norte","distancia_km":2029.5701854626925,"categoria_distancia":"Distante"}
+{"estado_a":"Rio de Janeiro","estado_b":"Pará","distancia_km":2165.249750931338,"categoria_distancia":"Distante"}
+{"estado_a":"Rio de Janeiro","estado_b":"Rondônia","distancia_km":2403.7239252676104,"categoria_distancia":"Distante"}
+{"estado_a":"Rio de Janeiro","estado_b":"Amapá","distancia_km":2814.27152883447,"categoria_distancia":"Distante"}
+{"estado_a":"Rio de Janeiro","estado_b":"Amazonas","distancia_km":2850.53043112216,"categoria_distancia":"Distante"}
+{"estado_a":"Rio de Janeiro","estado_b":"Acre","distancia_km":2986.6506138326545,"categoria_distancia":"Distante"}
+{"estado_a":"Rio de Janeiro","estado_b":"Roraima","distancia_km":3379.2239192880506,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Mato Grosso","distancia_km":604.1326175511997,"categoria_distancia":"Proximo"}
+{"estado_a":"Rondônia","estado_b":"Acre","distancia_km":622.6398204532095,"categoria_distancia":"Proximo"}
+{"estado_a":"Rondônia","estado_b":"Amazonas","distancia_km":934.27450820141769,"categoria_distancia":"Proximo"}
+{"estado_a":"Rondônia","estado_b":"Pará","distancia_km":1266.1378954349116,"categoria_distancia":"Medio"}
+{"estado_a":"Rondônia","estado_b":"Mato Grosso do Sul","distancia_km":1329.0337875212547,"categoria_distancia":"Medio"}
+{"estado_a":"Rondônia","estado_b":"Goiás","distancia_km":1438.0124497604686,"categoria_distancia":"Medio"}
+{"estado_a":"Rondônia","estado_b":"Roraima","distancia_km":1462.3820927828908,"categoria_distancia":"Medio"}
+{"estado_a":"Rondônia","estado_b":"Tocantins","distancia_km":1544.7979551743472,"categoria_distancia":"Medio"}
+{"estado_a":"Rondônia","estado_b":"Federal District","distancia_km":1632.1418552394355,"categoria_distancia":"Medio"}
+{"estado_a":"Rondônia","estado_b":"Amapá","distancia_km":1761.9328712332854,"categoria_distancia":"Medio"}
+{"estado_a":"Rondônia","estado_b":"Paraná","distancia_km":1893.802965781091,"categoria_distancia":"Medio"}
+{"estado_a":"Rondônia","estado_b":"Maranhão","distancia_km":1995.2129139757385,"categoria_distancia":"Medio"}
+{"estado_a":"Rondônia","estado_b":"Minas Gerais","distancia_km":2067.4630848969832,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"São Paulo","distancia_km":2150.1324367249845,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Piauí","distancia_km":2151.4129126785137,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Santa Catarina","distancia_km":2157.3502244329311,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Rio Grande do Sul","distancia_km":2240.1788341912688,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Bahia","distancia_km":2242.57409296722,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Rio de Janeiro","distancia_km":2403.7239252676104,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Espírito Santo","distancia_km":2514.27121855887,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Ceará","distancia_km":2614.3459315690579,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Sergipe","distancia_km":2778.2629752322532,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Pernambuco","distancia_km":2784.0580211249685,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Alagoas","distancia_km":2792.7687723141712,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Paraíba","distancia_km":2830.9262223184323,"categoria_distancia":"Distante"}
+{"estado_a":"Rondônia","estado_b":"Rio Grande do Norte","distancia_km":2885.754507374882,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Amazonas","distancia_km":572.69296709966875,"categoria_distancia":"Proximo"}
+{"estado_a":"Roraima","estado_b":"Amapá","distancia_km":1030.4498193203747,"categoria_distancia":"Medio"}
+{"estado_a":"Roraima","estado_b":"Pará","distancia_km":1289.5835244779857,"categoria_distancia":"Medio"}
+{"estado_a":"Roraima","estado_b":"Rondônia","distancia_km":1462.3820927828908,"categoria_distancia":"Medio"}
+{"estado_a":"Roraima","estado_b":"Acre","distancia_km":1508.4041172761158,"categoria_distancia":"Medio"}
+{"estado_a":"Roraima","estado_b":"Mato Grosso","distancia_km":1688.3908920935555,"categoria_distancia":"Medio"}
+{"estado_a":"Roraima","estado_b":"Tocantins","distancia_km":1911.4344689657828,"categoria_distancia":"Medio"}
+{"estado_a":"Roraima","estado_b":"Maranhão","distancia_km":1928.2284202602605,"categoria_distancia":"Medio"}
+{"estado_a":"Roraima","estado_b":"Goiás","distancia_km":2333.7787269163673,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Piauí","distancia_km":2351.6819803554486,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Federal District","distancia_km":2452.4413998481805,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Ceará","distancia_km":2560.2975174678463,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Mato Grosso do Sul","distancia_km":2615.5536539559885,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Bahia","distancia_km":2689.378816761191,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Rio Grande do Norte","distancia_km":2865.9138614850294,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Paraíba","distancia_km":2895.4814737496977,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Minas Gerais","distancia_km":2910.3747530828491,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Pernambuco","distancia_km":2940.8739284186968,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Alagoas","distancia_km":2991.6180186794081,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Sergipe","distancia_km":3014.0179450461087,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Paraná","distancia_km":3155.0834736914,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"São Paulo","distancia_km":3240.5508126567029,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Espírito Santo","distancia_km":3272.5904435703878,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Rio de Janeiro","distancia_km":3379.2239192880506,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Santa Catarina","distancia_km":3442.7087219297732,"categoria_distancia":"Distante"}
+{"estado_a":"Roraima","estado_b":"Rio Grande do Sul","distancia_km":3606.0953708791617,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Paraná","distancia_km":290.88668683308265,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Santa Catarina","estado_b":"Rio Grande do Sul","distancia_km":376.341962474706,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Santa Catarina","estado_b":"São Paulo","distancia_km":612.77019824499553,"categoria_distancia":"Proximo"}
+{"estado_a":"Santa Catarina","estado_b":"Mato Grosso do Sul","distancia_km":838.20779352454622,"categoria_distancia":"Proximo"}
+{"estado_a":"Santa Catarina","estado_b":"Rio de Janeiro","distancia_km":928.420829651294,"categoria_distancia":"Proximo"}
+{"estado_a":"Santa Catarina","estado_b":"Minas Gerais","distancia_km":1189.4870457599839,"categoria_distancia":"Medio"}
+{"estado_a":"Santa Catarina","estado_b":"Goiás","distancia_km":1297.5098189751827,"categoria_distancia":"Medio"}
+{"estado_a":"Santa Catarina","estado_b":"Federal District","distancia_km":1329.5199719066291,"categoria_distancia":"Medio"}
+{"estado_a":"Santa Catarina","estado_b":"Espírito Santo","distancia_km":1421.9400365592978,"categoria_distancia":"Medio"}
+{"estado_a":"Santa Catarina","estado_b":"Mato Grosso","distancia_km":1755.7034799436376,"categoria_distancia":"Medio"}
+{"estado_a":"Santa Catarina","estado_b":"Bahia","distancia_km":1913.1990474789627,"categoria_distancia":"Medio"}
+{"estado_a":"Santa Catarina","estado_b":"Tocantins","distancia_km":2020.1989846278943,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Rondônia","distancia_km":2157.3502244329311,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Piauí","distancia_km":2263.1094727111295,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Sergipe","distancia_km":2419.0053016518686,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Pará","distancia_km":2441.5488265781905,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Alagoas","distancia_km":2481.6360403989297,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Pernambuco","distancia_km":2540.6730843452956,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Maranhão","distancia_km":2571.9002009172882,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Acre","distancia_km":2626.5180881336419,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Paraíba","distancia_km":2697.6690363125913,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Ceará","distancia_km":2764.3546535342989,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Rio Grande do Norte","distancia_km":2845.0666649096643,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Amazonas","distancia_km":2872.0559827130292,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Amapá","distancia_km":3154.5104687580215,"categoria_distancia":"Distante"}
+{"estado_a":"Santa Catarina","estado_b":"Roraima","distancia_km":3442.7087219297732,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Alagoas","distancia_km":71.56851802811552,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Sergipe","estado_b":"Pernambuco","distancia_km":155.75919471573076,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Sergipe","estado_b":"Paraíba","distancia_km":329.900427636688,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Sergipe","estado_b":"Rio Grande do Norte","distancia_km":490.23168097607623,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"Sergipe","estado_b":"Bahia","distancia_km":590.26785160634881,"categoria_distancia":"Proximo"}
+{"estado_a":"Sergipe","estado_b":"Ceará","distancia_km":618.1007343263218,"categoria_distancia":"Proximo"}
+{"estado_a":"Sergipe","estado_b":"Piauí","distancia_km":676.44428553788885,"categoria_distancia":"Proximo"}
+{"estado_a":"Sergipe","estado_b":"Espírito Santo","distancia_km":1064.4761105587622,"categoria_distancia":"Medio"}
+{"estado_a":"Sergipe","estado_b":"Maranhão","distancia_km":1096.1350232674467,"categoria_distancia":"Medio"}
+{"estado_a":"Sergipe","estado_b":"Minas Gerais","distancia_km":1240.4260481915314,"categoria_distancia":"Medio"}
+{"estado_a":"Sergipe","estado_b":"Tocantins","distancia_km":1252.3544264509696,"categoria_distancia":"Medio"}
+{"estado_a":"Sergipe","estado_b":"Federal District","distancia_km":1351.9910308825858,"categoria_distancia":"Medio"}
+{"estado_a":"Sergipe","estado_b":"Goiás","distancia_km":1538.1026702630613,"categoria_distancia":"Medio"}
+{"estado_a":"Sergipe","estado_b":"Rio de Janeiro","distancia_km":1565.2236598218517,"categoria_distancia":"Medio"}
+{"estado_a":"Sergipe","estado_b":"Pará","distancia_km":1778.1742715809667,"categoria_distancia":"Medio"}
+{"estado_a":"Sergipe","estado_b":"São Paulo","distancia_km":1810.3063785188328,"categoria_distancia":"Medio"}
+{"estado_a":"Sergipe","estado_b":"Amapá","distancia_km":2082.3991325080356,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Mato Grosso","distancia_km":2203.5282493082791,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Mato Grosso do Sul","distancia_km":2248.5214703485167,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Paraná","distancia_km":2252.3626230145319,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Santa Catarina","distancia_km":2419.0053016518686,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Amazonas","distancia_km":2675.5639527821186,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Rondônia","distancia_km":2778.2629752322532,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Rio Grande do Sul","distancia_km":2793.4188142350408,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Roraima","distancia_km":3014.0179450461087,"categoria_distancia":"Distante"}
+{"estado_a":"Sergipe","estado_b":"Acre","distancia_km":3389.2306370466708,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Rio de Janeiro","distancia_km":357.20297183114741,"categoria_distancia":"Muito_Proximo"}
+{"estado_a":"São Paulo","estado_b":"Paraná","distancia_km":520.84921595890273,"categoria_distancia":"Proximo"}
+{"estado_a":"São Paulo","estado_b":"Minas Gerais","distancia_km":600.82777337730579,"categoria_distancia":"Proximo"}
+{"estado_a":"São Paulo","estado_b":"Santa Catarina","distancia_km":612.77019824499553,"categoria_distancia":"Proximo"}
+{"estado_a":"São Paulo","estado_b":"Espírito Santo","distancia_km":814.913023426944,"categoria_distancia":"Proximo"}
+{"estado_a":"São Paulo","estado_b":"Federal District","distancia_km":870.58789769138275,"categoria_distancia":"Proximo"}
+{"estado_a":"São Paulo","estado_b":"Mato Grosso do Sul","distancia_km":895.40862886183606,"categoria_distancia":"Proximo"}
+{"estado_a":"São Paulo","estado_b":"Goiás","distancia_km":922.98859932791061,"categoria_distancia":"Proximo"}
+{"estado_a":"São Paulo","estado_b":"Rio Grande do Sul","distancia_km":989.104439414627,"categoria_distancia":"Proximo"}
+{"estado_a":"São Paulo","estado_b":"Bahia","distancia_km":1326.7399540767969,"categoria_distancia":"Medio"}
+{"estado_a":"São Paulo","estado_b":"Tocantins","distancia_km":1577.3030098122078,"categoria_distancia":"Medio"}
+{"estado_a":"São Paulo","estado_b":"Mato Grosso","distancia_km":1625.3281383001809,"categoria_distancia":"Medio"}
+{"estado_a":"São Paulo","estado_b":"Piauí","distancia_km":1711.2862528388605,"categoria_distancia":"Medio"}
+{"estado_a":"São Paulo","estado_b":"Sergipe","distancia_km":1810.3063785188328,"categoria_distancia":"Medio"}
+{"estado_a":"São Paulo","estado_b":"Alagoas","distancia_km":1874.1483513819553,"categoria_distancia":"Medio"}
+{"estado_a":"São Paulo","estado_b":"Pernambuco","distancia_km":1935.7493397964502,"categoria_distancia":"Medio"}
+{"estado_a":"São Paulo","estado_b":"Maranhão","distancia_km":2073.0432346534672,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Pará","distancia_km":2094.6739158637547,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Paraíba","distancia_km":2096.3210779337446,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Rondônia","distancia_km":2150.1324367249845,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Ceará","distancia_km":2186.9948649544772,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Rio Grande do Norte","distancia_km":2246.906069038198,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Amazonas","distancia_km":2690.6664233699939,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Acre","distancia_km":2709.2912031397955,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Amapá","distancia_km":2781.2371708927722,"categoria_distancia":"Distante"}
+{"estado_a":"São Paulo","estado_b":"Roraima","distancia_km":3240.5508126567029,"categoria_distancia":"Distante"}
+{"estado_a":"Tocantins","estado_b":"Maranhão","distancia_km":598.9116590508529,"categoria_distancia":"Proximo"}
+{"estado_a":"Tocantins","estado_b":"Piauí","distancia_km":606.61499418138783,"categoria_distancia":"Proximo"}
+{"estado_a":"Tocantins","estado_b":"Pará","distancia_km":623.58769103217276,"categoria_distancia":"Proximo"}
+{"estado_a":"Tocantins","estado_b":"Federal District","distancia_km":708.775153551307,"categoria_distancia":"Proximo"}
+{"estado_a":"Tocantins","estado_b":"Goiás","distancia_km":728.31622061594237,"categoria_distancia":"Proximo"}
+{"estado_a":"Tocantins","estado_b":"Bahia","distancia_km":795.42740059184257,"categoria_distancia":"Proximo"}
+{"estado_a":"Tocantins","estado_b":"Mato Grosso","distancia_km":1010.6079202964764,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Minas Gerais","distancia_km":1082.8544541252863,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Ceará","distancia_km":1096.2607902590569,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Amapá","distancia_km":1224.3878702881088,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Pernambuco","distancia_km":1243.2285153636499,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Sergipe","distancia_km":1252.3544264509696,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Alagoas","distancia_km":1258.7370396542019,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Paraíba","distancia_km":1286.4274005649477,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Rio Grande do Norte","distancia_km":1348.40267658138,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Espírito Santo","distancia_km":1378.6365367328638,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Mato Grosso do Sul","distancia_km":1439.0546183546835,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Amazonas","distancia_km":1478.1961974774194,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Rondônia","distancia_km":1544.7979551743472,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"São Paulo","distancia_km":1577.3030098122078,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Rio de Janeiro","distancia_km":1589.9488189311171,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Paraná","distancia_km":1750.7037435864515,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Roraima","distancia_km":1911.4344689657828,"categoria_distancia":"Medio"}
+{"estado_a":"Tocantins","estado_b":"Santa Catarina","distancia_km":2020.1989846278943,"categoria_distancia":"Distante"}
+{"estado_a":"Tocantins","estado_b":"Acre","distancia_km":2144.6940647366937,"categoria_distancia":"Distante"}
+{"estado_a":"Tocantins","estado_b":"Rio Grande do Sul","distancia_km":2328.0375153023269,"categoria_distancia":"Distante"}

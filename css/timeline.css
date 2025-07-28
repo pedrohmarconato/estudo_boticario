@@ -453,11 +453,21 @@ body {
   transition: opacity 0.3s ease;
 }
 
-/* Botão de fechar */
-.close-button {
+/* Container de navegação */
+.navigation-container {
   position: absolute;
-  top: 22vh; /* Posicionado abaixo do header (20vh) */
+  top: 22vh;
   right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 201;
+}
+
+/* Estilo base para todos os botões */
+.close-button,
+.next-button,
+.prev-button {
   background: rgba(245, 241, 235, 0.9);
   color: var(--azul-marinho);
   border: none;
@@ -467,7 +477,6 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  z-index: 201;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -476,12 +485,34 @@ body {
   transform: scale(1);
 }
 
+/* Botão de fechar */
+.close-button {
+  background: rgba(255, 75, 75, 0.9);
+  color: white;
+}
+
 .close-button:hover {
-  background: var(--off-white);
+  background: rgba(255, 75, 75, 1);
   transform: scale(1.1);
 }
 
-.close-button:active {
+/* Botões de navegação */
+.next-button,
+.prev-button {
+  background: rgba(255, 188, 130, 0.9); /* Cor salmão */
+  color: var(--azul-marinho);
+}
+
+.next-button:hover,
+.prev-button:hover {
+  background: var(--salmao);
+  transform: scale(1.1);
+  color: white;
+}
+
+.close-button:active,
+.next-button:active,
+.prev-button:active {
   transform: scale(0.95);
 }
 

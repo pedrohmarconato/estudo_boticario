@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "title": "Conexões COVID-19 - Análise de Correlações",
+    "description": "Arestas representando correlações epidemiológicas entre estados brasileiros",
+    "period": "2020-2021",
+    "source": "Análise BigQuery ML - Correlações baseadas em clusters e proximidade",
+    "total_edges": 32,
+    "last_updated": "2025-07-27"
+  },
+  "edges": [
+    {
+      "source": "São Paulo",
+      "target": "Rio de Janeiro", 
+      "weight": 0.85,
+      "corr_casos_simultaneos": 0.78,
+      "cluster_match": false,
+      "distance_km": 358
+    },
+    {
+      "source": "São Paulo",
+      "target": "Minas Gerais",
+      "weight": 0.72,
+      "corr_casos_simultaneos": 0.65,
+      "cluster_match": false,
+      "distance_km": 446
+    },
+    {
+      "source": "Rio de Janeiro",
+      "target": "Minas Gerais",
+      "weight": 0.68,
+      "corr_casos_simultaneos": 0.71,
+      "cluster_match": false,
+      "distance_km": 356
+    },
+    {
+      "source": "Rio Grande do Sul",
+      "target": "Santa Catarina",
+      "weight": 0.91,
+      "corr_casos_simultaneos": 0.87,
+      "cluster_match": true,
+      "distance_km": 254
+    },
+    {
+      "source": "Rio Grande do Sul",
+      "target": "Paraná",
+      "weight": 0.83,
+      "corr_casos_simultaneos": 0.79,
+      "cluster_match": true,
+      "distance_km": 285
+    },
+    {
+      "source": "Santa Catarina",
+      "target": "Paraná",
+      "weight": 0.88,
+      "corr_casos_simultaneos": 0.84,
+      "cluster_match": true,
+      "distance_km": 156
+    },
+    {
+      "source": "Paraná",
+      "target": "São Paulo",
+      "weight": 0.76,
+      "corr_casos_simultaneos": 0.69,
+      "cluster_match": false,
+      "distance_km": 408
+    },
+    {
+      "source": "Minas Gerais",
+      "target": "Ceará",
+      "weight": 0.74,
+      "corr_casos_simultaneos": 0.68,
+      "cluster_match": true,
+      "distance_km": 1189
+    },
+    {
+      "source": "Minas Gerais",
+      "target": "Bahia",
+      "weight": 0.79,
+      "corr_casos_simultaneos": 0.73,
+      "cluster_match": true,
+      "distance_km": 754
+    },
+    {
+      "source": "Minas Gerais",
+      "target": "Pernambuco",
+      "weight": 0.71,
+      "corr_casos_simultaneos": 0.66,
+      "cluster_match": true,
+      "distance_km": 1065
+    },
+    {
+      "source": "Ceará",
+      "target": "Pernambuco",
+      "weight": 0.82,
+      "corr_casos_simultaneos": 0.77,
+      "cluster_match": true,
+      "distance_km": 624
+    },
+    {
+      "source": "Ceará",
+      "target": "Bahia",
+      "weight": 0.75,
+      "corr_casos_simultaneos": 0.70,
+      "cluster_match": true,
+      "distance_km": 906
+    },
+    {
+      "source": "Bahia",
+      "target": "Pernambuco",
+      "weight": 0.77,
+      "corr_casos_simultaneos": 0.72,
+      "cluster_match": true,
+      "distance_km": 592
+    },
+    {
+      "source": "Maranhão",
+      "target": "Pará",
+      "weight": 0.89,
+      "corr_casos_simultaneos": 0.86,
+      "cluster_match": true,
+      "distance_km": 512
+    },
+    {
+      "source": "Maranhão",
+      "target": "Ceará",
+      "weight": 0.65,
+      "corr_casos_simultaneos": 0.58,
+      "cluster_match": false,
+      "distance_km": 634
+    },
+    {
+      "source": "Pará",
+      "target": "Amazonas",
+      "weight": 0.58,
+      "corr_casos_simultaneos": 0.52,
+      "cluster_match": false,
+      "distance_km": 1378
+    },
+    {
+      "source": "Rio de Janeiro",
+      "target": "Rio Grande do Sul",
+      "weight": 0.69,
+      "corr_casos_simultaneos": 0.63,
+      "cluster_match": true,
+      "distance_km": 1110
+    },
+    {
+      "source": "Rio de Janeiro",
+      "target": "Paraná",
+      "weight": 0.73,
+      "corr_casos_simultaneos": 0.67,
+      "cluster_match": true,
+      "distance_km": 676
+    },
+    {
+      "source": "Rio de Janeiro",
+      "target": "Santa Catarina",
+      "weight": 0.71,
+      "corr_casos_simultaneos": 0.65,
+      "cluster_match": true,
+      "distance_km": 834
+    },
+    {
+      "source": "Distrito Federal",
+      "target": "Goiás",
+      "weight": 0.93,
+      "corr_casos_simultaneos": 0.91,
+      "cluster_match": true,
+      "distance_km": 147
+    },
+    {
+      "source": "Distrito Federal",
+      "target": "Minas Gerais",
+      "weight": 0.66,
+      "corr_casos_simultaneos": 0.59,
+      "cluster_match": false,
+      "distance_km": 714
+    },
+    {
+      "source": "Goiás",
+      "target": "Minas Gerais",
+      "weight": 0.63,
+      "corr_casos_simultaneos": 0.56,
+      "cluster_match": false,
+      "distance_km": 586
+    },
+    {
+      "source": "Goiás",
+      "target": "São Paulo",
+      "weight": 0.67,
+      "corr_casos_simultaneos": 0.61,
+      "cluster_match": false,
+      "distance_km": 808
+    },
+    {
+      "source": "Goiás",
+      "target": "Rio Grande do Sul",
+      "weight": 0.64,
+      "corr_casos_simultaneos": 0.57,
+      "cluster_match": true,
+      "distance_km": 1187
+    },
+    {
+      "source": "Distrito Federal",
+      "target": "Rio Grande do Sul",
+      "weight": 0.62,
+      "corr_casos_simultaneos": 0.55,
+      "cluster_match": true,
+      "distance_km": 1040
+    },
+    {
+      "source": "Distrito Federal",
+      "target": "Paraná",
+      "weight": 0.68,
+      "corr_casos_simultaneos": 0.62,
+      "cluster_match": true,
+      "distance_km": 832
+    },
+    {
+      "source": "Distrito Federal",
+      "target": "Santa Catarina",
+      "weight": 0.66,
+      "corr_casos_simultaneos": 0.60,
+      "cluster_match": true,
+      "distance_km": 966
+    },
+    {
+      "source": "Goiás",
+      "target": "Paraná",
+      "weight": 0.65,
+      "corr_casos_simultaneos": 0.58,
+      "cluster_match": true,
+      "distance_km": 685
+    },
+    {
+      "source": "Goiás",
+      "target": "Santa Catarina",
+      "weight": 0.63,
+      "corr_casos_simultaneos": 0.56,
+      "cluster_match": true,
+      "distance_km": 819
+    },
+    {
+      "source": "Bahia",
+      "target": "Maranhão",
+      "weight": 0.59,
+      "corr_casos_simultaneos": 0.53,
+      "cluster_match": false,
+      "distance_km": 976
+    },
+    {
+      "source": "Pernambuco",
+      "target": "Maranhão",
+      "weight": 0.61,
+      "corr_casos_simultaneos": 0.54,
+      "cluster_match": false,
+      "distance_km": 798
+    },
+    {
+      "source": "São Paulo",
+      "target": "Distrito Federal",
+      "weight": 0.69,
+      "corr_casos_simultaneos": 0.63,
+      "cluster_match": false,
+      "distance_km": 872
+    }
+  ]
+}
