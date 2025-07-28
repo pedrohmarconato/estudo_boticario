@@ -284,23 +284,28 @@
             display: flex;
             gap: 15px;
             margin-bottom: 10px;
-            justify-content: center;
+            position: relative;
         }
 
         .legend-item {
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 11px;
-            color: var(--off-white);
+            gap: 8px;
+            font-size: 12px;
+            color: #FFFFFF;
             font-weight: 600;
-            opacity: 0.9;
+            opacity: 1;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            background: rgba(1, 30, 56, 0.7);
+            padding: 4px 12px;
+            border-radius: 4px;
         }
 
         .legend-color {
-            width: 12px;
-            height: 12px;
-            border-radius: 2px;
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .legend-casos { background: var(--covid-casos); }
@@ -319,6 +324,9 @@
             border-radius: 0;
             box-shadow: none;
             border: none;
+            margin-top: -30px;
+            position: relative;
+            z-index: 1;
         }
 
         /* Estilos para gráfico de fundo */
@@ -491,30 +499,41 @@
             transform-origin: center;
         }
 
-        .milestone-dot:hover {
-            transform: scale(1.2);
+        .milestone-group:hover .milestone-dot {
+            transform: scale(1.12);
             filter: drop-shadow(0 0 8px rgba(255, 188, 130, 0.8));
+            z-index: 1;
         }
 
-        .milestone-dot.marco-importante:hover {
+        .milestone-group:hover .milestone-dot.marco-importante {
             filter: drop-shadow(0 0 12px rgba(255, 105, 180, 1));
         }
 
-        .milestone-dot.vacinacao:hover {
+        .milestone-group:hover .milestone-dot.vacinacao {
             filter: drop-shadow(0 0 10px rgba(10, 104, 71, 0.8));
         }
 
-        .milestone-dot.flexibilizacao:hover {
+        .milestone-group:hover .milestone-dot.flexibilizacao {
             filter: drop-shadow(0 0 10px rgba(38, 79, 236, 0.8));
+        }
+
+        .milestone-group:hover .milestone-label {
+            opacity: 1 !important;
+            font-weight: 700;
+        }
+
+        .milestone-group:hover .milestone-label-bg {
+            fill: rgba(1, 30, 56, 0.95);
         }
 
         .milestone-label {
             font-size: 11px;
             font-weight: 600;
             fill: var(--off-white);
-            opacity: 0.95;
+            opacity: 0.7;
             text-shadow: 1px 1px 2px rgba(1, 30, 56, 0.9);
             letter-spacing: 0.3px;
+            transition: opacity 0.3s ease, font-weight 0.3s ease;
         }
 
         .milestone-label-bg {
@@ -823,7 +842,7 @@
     <!-- Container Principal -->
     <div class="slide-container">
         <!-- Botões laterais de navegação -->
-        <a href="case-analise.html" class="nav-lateral prev">‹</a>
+        <a href="index.html" class="nav-lateral prev">‹</a>
         <!-- Título Principal -->
         <h1 class="slide-main-title">Evolução Temporal da Pandemia COVID-19 no Brasil</h1>
         <p class="slide-subtitle">Contágios, Mortes e Marcos das Ações Governamentais</p>
@@ -831,7 +850,7 @@
         <!-- Texto Explicativo -->
         <div class="executive-summary">
             <p class="summary-text">
-                <strong>Análise executiva:</strong> A pandemia apresentou três ondas distintas com picos em julho/2020, janeiro/2021 e abril/2021, atingindo até 4.000 óbitos/dia. As medidas governamentais (lockdowns, vacinação, auxílio emergencial) foram implementadas de forma reativa, com defasagem temporal que impactou a eficácia. A correlação entre intensificação de restrições e redução de casos evidencia a importância do timing nas políticas públicas de saúde.
+                A pandemia apresentou três ondas distintas com picos em julho/2020, janeiro/2021 e abril/2021, atingindo até 4.000 óbitos/dia. As medidas governamentais (lockdowns, vacinação, auxílio emergencial) foram implementadas de forma reativa, com defasagem temporal que impactou a eficácia. A correlação entre intensificação de restrições e redução de casos evidencia a importância do timing nas políticas públicas de saúde.
             </p>
         </div>
 
@@ -883,10 +902,6 @@
                 <div class="legend-item legend-mortes">
                     <div class="legend-color legend-mortes"></div>
                     <span>Óbitos (Média 7 dias)</span>
-                </div>
-                <div class="legend-item legend-marcos">
-                    <div class="legend-color legend-marcos"></div>
-                    <span>Ações Governamentais</span>
                 </div>
             </div>
 
@@ -1050,6 +1065,9 @@
             }
         ];
 
+        // Variáveis globais para o gráfico
+        let g, lineCasos, lineMortes;
+        
         // === CONFIGURAÇÕES DO GRÁFICO ===
         const margin = { top: 60, right: 100, bottom: 80, left: 100 };
         const width = window.innerWidth * 0.9 - margin.left - margin.right;
@@ -1073,7 +1091,7 @@
             .attr('width', width + margin.left + margin.right)
             .attr('height', height + margin.top + margin.bottom);
 
-        const g = svg.append('g')
+        g = svg.append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
 
         // === ESCALAS PARA GRÁFICO DE FUNDO ===
@@ -1126,12 +1144,12 @@
             .curve(d3.curveMonotoneX);
 
         // === LINHAS E ÁREAS PARA GRÁFICO OVERLAY ===
-        const lineCasos = d3.line()
+        lineCasos = d3.line()
             .x(d => xScale(d.date))
             .y(d => yScaleCasos(d.casos_media7d))
             .curve(d3.curveMonotoneX);
 
-        const lineMortes = d3.line()
+        lineMortes = d3.line()
             .x(d => xScale(d.date))
             .y(d => yScaleMortes(d.obitos_media7d))
             .curve(d3.curveMonotoneX);
@@ -1281,7 +1299,7 @@
             .attr('text-anchor', 'middle')
             .attr('x', width / 2)
             .attr('y', height + 60)
-            .text('Período (2020 - 2021)');
+            .text('');
 
         const yAxisCasosLabel = g.append('text')
             .attr('class', 'axis-label y-label-casos')
@@ -1360,8 +1378,13 @@
                               milestone.type === 'vacinacao' ? 8 :
                               6;
                 
+                // Criar grupo individual para cada milestone
+                const individualGroup = milestoneGroup.append('g')
+                    .attr('class', 'milestone-group')
+                    .style('cursor', 'pointer');
+                
                 // Linha vertical até o ponto
-                milestoneGroup.append('line')
+                individualGroup.append('line')
                     .attr('class', 'milestone-line')
                     .attr('x1', x)
                     .attr('x2', x)
@@ -1371,7 +1394,7 @@
                     .style('opacity', 0.3);
                 
                 // Ponto posicionado na altura calculada
-                milestoneGroup.append('circle')
+                individualGroup.append('circle')
                     .attr('class', `milestone-dot ${milestone.type}`)
                     .attr('cx', x)
                     .attr('cy', lineHeight)
@@ -1379,10 +1402,7 @@
                     .style('fill', dotColor)
                     .style('stroke', 'var(--off-white)')
                     .style('stroke-width', 2)
-                    .style('opacity', 1)
-                    .style('cursor', 'pointer')
-                    .on('mouseover', (event) => showTooltip(event, milestone))
-                    .on('mouseout', hideTooltip);
+                    .style('opacity', 1);
 
                 // Label posicionado próximo ao ponto
                 const labelText = milestone.title;
@@ -1391,21 +1411,25 @@
                 
                 // Background do label para melhor legibilidade
                 const textWidth = labelText.length * 6.5;
-                milestoneGroup.append('rect')
+                individualGroup.append('rect')
+                    .attr('class', 'milestone-label-bg')
                     .attr('x', labelX - 2)
                     .attr('y', labelY - 12)
                     .attr('width', textWidth + 10)
-                    .attr('height', 16)
-                    .style('fill', 'rgba(1, 30, 56, 0.8)')
-                    .style('rx', 2);
+                    .attr('height', 16);
                 
-                milestoneGroup.append('text')
+                individualGroup.append('text')
                     .attr('class', 'milestone-label')
                     .attr('x', labelX)
                     .attr('y', labelY)
                     .attr('text-anchor', 'start')
                     .text(labelText)
                     .style('pointer-events', 'none');
+                
+                // Adicionar evento de hover no grupo todo
+                individualGroup
+                    .on('mouseover', (event) => showTooltip(event, milestone))
+                    .on('mouseout', hideTooltip);
             });
         });
 
@@ -1541,6 +1565,10 @@
         // Função para atualizar o gráfico com acumulação de dados
         function updateTimeRange(progress) {
             console.log('updateTimeRange chamada com progress:', progress);
+            console.log('g existe?', !!g);
+            console.log('lineCasos existe?', !!lineCasos);
+            console.log('lineMortes existe?', !!lineMortes);
+            
             const totalPoints = covidData.length;
             currentEndIndex = Math.max(1, Math.floor(progress * totalPoints));
             
@@ -1557,18 +1585,22 @@
             // Apenas atualizar as linhas e pontos
             
             // Atualizar linhas de casos
-            g.select('.line-casos')
-                .datum(filteredData)
-                .transition()
-                .duration(100)
-                .attr('d', lineCasos);
+            if (g && lineCasos) {
+                g.select('.line-casos')
+                    .datum(filteredData)
+                    .transition()
+                    .duration(100)
+                    .attr('d', lineCasos);
+            }
 
             // Atualizar linhas de mortes
-            g.select('.line-mortes')
-                .datum(filteredData)
-                .transition()
-                .duration(100)
-                .attr('d', lineMortes);
+            if (g && lineMortes) {
+                g.select('.line-mortes')
+                    .datum(filteredData)
+                    .transition()
+                    .duration(100)
+                    .attr('d', lineMortes);
+            }
 
             // Atualizar pontos de casos
             const updatedCasosPoints = g.selectAll('.data-point-casos')
@@ -1652,8 +1684,13 @@
                     currentHeightIndex = (currentHeightIndex + 1) % heightPercentages.length;
                     const yPosition = height * heightPercentages[currentHeightIndex];
                     
+                    // Criar grupo individual para cada milestone
+                    const individualGroup = milestoneGroup.append('g')
+                        .attr('class', 'milestone-group')
+                        .style('cursor', 'pointer');
+                    
                     // Linha vertical do ponto até a base
-                    milestoneGroup.append('line')
+                    individualGroup.append('line')
                         .attr('class', 'milestone-line')
                         .attr('x1', x)
                         .attr('x2', x)
@@ -1677,7 +1714,7 @@
                                   6;
                     
                     // Ponto do marco na altura calculada
-                    milestoneGroup.append('circle')
+                    individualGroup.append('circle')
                         .attr('class', `milestone-dot ${milestone.type}`)
                         .attr('cx', x)
                         .attr('cy', yPosition)
@@ -1686,9 +1723,6 @@
                         .style('stroke', 'var(--off-white)')
                         .style('stroke-width', 2)
                         .style('opacity', 1)
-                        .style('cursor', 'pointer')
-                        .on('mouseover', (event) => showTooltip(event, milestone))
-                        .on('mouseout', hideTooltip)
                         .transition()
                         .duration(300)
                         .attr('r', dotSize);
@@ -1699,13 +1733,12 @@
                     const labelY = yPosition - 5;
                     const textWidth = labelText.length * 6.5;
                     
-                    milestoneGroup.append('rect')
+                    individualGroup.append('rect')
+                        .attr('class', 'milestone-label-bg')
                         .attr('x', labelX - 2)
                         .attr('y', labelY - 12)
                         .attr('width', textWidth + 10)
                         .attr('height', 16)
-                        .style('fill', 'rgba(1, 30, 56, 0.8)')
-                        .style('rx', 2)
                         .style('opacity', 0)
                         .transition()
                         .duration(300)
@@ -1713,7 +1746,7 @@
                         .style('opacity', 1);
                     
                     // Label
-                    milestoneGroup.append('text')
+                    individualGroup.append('text')
                         .attr('class', 'milestone-label')
                         .attr('x', labelX)
                         .attr('y', labelY)
@@ -1724,17 +1757,21 @@
                         .transition()
                         .duration(300)
                         .delay(50)
-                        .style('opacity', 1);
+                        .style('opacity', 0.7);
+                    
+                    // Adicionar evento de hover no grupo todo
+                    individualGroup
+                        .on('mouseover', (event) => showTooltip(event, milestone))
+                        .on('mouseout', hideTooltip);
                 });
             });
 
             // Dados atualizados no gráfico
         }
 
-        // Inicializar com dados completos
-        updateTimeRange(1.0);
-        updateVisualization(); // Garantir que marcos sejam visíveis
-
+        // Criar as linhas do gráfico ANTES de chamar updateTimeRange
+        // Isso garante que as linhas existam quando o slider for usado
+        
         // Event listener para o slider
         if (slider) {
             slider.addEventListener('input', function() {
@@ -1743,6 +1780,12 @@
                 updateVisualization();
             });
         }
+        
+        // Inicializar com dados completos DEPOIS de criar as linhas
+        setTimeout(() => {
+            updateTimeRange(1.0);
+            updateVisualization(); // Garantir que marcos sejam visíveis
+        }, 100);
 
         console.log('Timeline COVID-19 com controle temporal simplificado carregada!');
     </script>

@@ -4,34 +4,42 @@
   right: -5px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 2147483647 !important; /* Máximo possível para garantir sobreposição */
   cursor: pointer;
+  pointer-events: auto !important;
+  isolation: isolate; /* Cria novo contexto de empilhamento */
 }
+
+/* Garante que o botão lateral e seu conteúdo sempre recebem eventos */
+.side-pull-tab, .side-pull-tab * {
+  pointer-events: auto !important;
+}
+
 
 .pull-tab-content {
   background: linear-gradient(135deg, var(--salmao) 0%, var(--azul-royal) 100%);
-  padding: 15px 10px 15px 18px;
-  border-radius: 15px 0 0 15px;
+  padding: 10px 8px 10px 12px;
+  border-radius: 12px 0 0 12px;
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
 
 .pull-tab-text {
-  color: var(--off-white);
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: var(--azul-marinho);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 .pull-tab-arrow {
-  color: var(--off-white);
-  font-size: 1.2rem;
+  color: var(--azul-marinho);
+  font-size: 1rem;
   font-weight: bold;
   transform: rotate(90deg);
   animation: pulse-arrow 2s ease-in-out infinite;
@@ -62,7 +70,7 @@
 
 /* Hover effect */
 .side-pull-tab:hover .pull-tab-content {
-  transform: translateX(-7px);
+  transform: translateX(-5px);
   box-shadow: -6px 0 30px rgba(0, 0, 0, 0.4);
   background: linear-gradient(135deg, var(--azul-royal) 0%, var(--salmao) 100%);
 }
@@ -129,15 +137,20 @@
   line-height: 1.8;
 }
 
+/* Garantir que o botão fique sempre acima de qualquer elemento */
+.side-pull-tab {
+  z-index: 99999 !important;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .pull-tab-content {
-    padding: 15px 10px 15px 20px;
+    padding: 8px 6px 8px 10px;
   }
   
   .pull-tab-text {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
   }
   
   .overlay-content {
@@ -147,4 +160,17 @@
   .overlay-content h1 {
     font-size: 2rem;
   }
+}/* Garantir que o botão lateral funcione sempre */
+body:has(.tl-item.expanded-full) .side-pull-tab {
+  z-index: 2147483647 \!important;
+  pointer-events: auto \!important;
+}
+
+/* Criar camada invisível para garantir cliques */
+.side-pull-tab::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  z-index: 2147483647 \!important;
+  pointer-events: auto \!important;
 }

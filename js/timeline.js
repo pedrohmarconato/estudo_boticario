@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     title: 'Definição de Processos',
                     items: [
                         { text: 'Definição de processos otimizados', number: 'Processos', unit: 'novos fluxos' },
-                        { text: 'Redução do time-to-market', number: 'Menor', unit: 'tempo de campanha' }
+                        { text: 'Redução do time-to-market', number: 'Menor', unit: 'tempo de disponibilidade de novos dashboards' }
                     ]
                 },
                 {

@@ -34,8 +34,8 @@
             font-family: var(--font-primary);
             background: linear-gradient(135deg, var(--azul-marinho) 0%, #001a2e 100%);
             color: var(--off-white);
-            line-height: 1.5;
-            font-size: 14px;
+            line-height: 1.6;
+            font-size: 16px;
             height: 100vh;
             overflow: hidden;
         }
@@ -44,8 +44,8 @@
         .header {
             background: var(--off-white);
             backdrop-filter: blur(10px);
-            padding: 16px 40px;
-            border-bottom: 3px solid var(--salmao);
+            padding: 18px 50px;
+            border-bottom: 4px solid var(--salmao);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -54,8 +54,8 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            height: 80px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+            height: 85px;
         }
 
         .header-left {
@@ -65,7 +65,7 @@
         }
 
         .header-content h1 {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 700;
             color: var(--azul-marinho);
             letter-spacing: 0.3px;
@@ -74,7 +74,7 @@
         }
 
         .header-content p {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             color: var(--azul-royal);
             margin: 2px 0 0 0;
@@ -131,88 +131,89 @@
 
         /* Main Container */
         .page-container {
-            max-width: 1300px;
-            width: 90%;
-            height: calc(100vh - 80px);
-            margin: 80px auto 0;
-            padding: 20px 40px;
+            max-width: 1600px;
+            width: 95%;
+            height: calc(100vh - 85px);
+            margin: 85px auto 0;
+            padding: 28px 60px;
             display: grid;
             grid-template-rows: auto 1fr auto;
-            gap: 16px;
+            gap: 24px;
             overflow: hidden;
         }
 
         /* Executive Summary */
         .executive-summary {
-            background: rgba(245, 241, 235, 0.1);
+            background: rgba(1, 30, 56, 0.3);
+            border: 2px solid rgba(245, 241, 235, 0.4);
             border-left: 6px solid var(--salmao);
-            padding: 16px 24px;
-            border-radius: 8px;
+            padding: 24px 32px;
+            border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         .summary-title {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 700;
             color: var(--salmao);
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .summary-content {
-            font-size: 12px;
-            line-height: 1.5;
+            font-size: 15px;
+            line-height: 1.6;
             color: var(--off-white);
         }
 
         .summary-highlight {
             font-weight: 700;
-            color: var(--azul-royal);
+            color: var(--salmao);
         }
 
         /* Main Content Grid */
         .main-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
+            grid-template-columns: 1.8fr 1.2fr;
+            gap: 30px;
             min-height: 0;
-            overflow: hidden;
+            /* overflow: hidden; <- Removido para permitir que o conteúdo filho seja rolável */
         }
 
         /* Impact Analysis */
         .impact-section {
-            background: rgba(245, 241, 235, 0.1);
-            border: 1px solid rgba(245, 241, 235, 0.2);
-            border-radius: 8px;
-            padding: 16px;
+            background: rgba(1, 30, 56, 0.3);
+            border: 2px solid rgba(245, 241, 235, 0.4);
+            border-radius: 12px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            overflow-y: auto; /* Permite rolagem vertical se o conteúdo for muito grande */
         }
 
         .section-header {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 700;
             color: var(--off-white);
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 12px;
-            padding-bottom: 6px;
-            border-bottom: 3px solid var(--azul-royal);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--salmao);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .section-badge {
-            font-size: 10px;
-            background: var(--azul-royal);
-            color: white;
-            padding: 4px 10px;
+            font-size: 12px;
+            background: var(--salmao);
+            color: var(--azul-marinho);
+            padding: 6px 12px;
             border-radius: 12px;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: none;
         }
 
@@ -220,30 +221,31 @@
         .waterfall-chart {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
             flex: 1;
-            overflow: hidden;
+            max-height: 350px;
+            overflow-y: auto;
         }
 
         .waterfall-item {
             display: grid;
-            grid-template-columns: 140px 1fr 70px;
+            grid-template-columns: 130px 1fr 65px;
             align-items: center;
             gap: 12px;
             padding: 4px 0;
         }
 
         .waterfall-label {
-            font-size: 11px;
-            font-weight: 600;
+            font-size: 12px;
+            font-weight: 500;
             color: var(--off-white);
             text-align: right;
         }
 
         .waterfall-bar-container {
             position: relative;
-            height: 28px;
-            background: rgba(100, 116, 139, 0.1);
+            height: 26px;
+            background: rgba(100, 116, 139, 0.15);
             border-radius: 6px;
             overflow: hidden;
         }
@@ -254,9 +256,9 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            padding-right: 12px;
+            padding-right: 10px;
             font-size: 12px;
-            font-weight: 700;
+            font-weight: 600;
             color: white;
             border-radius: 6px;
             transition: all 0.6s ease;
@@ -274,7 +276,7 @@
 
         .waterfall-value {
             font-size: 12px;
-            font-weight: 700;
+            font-weight: 600;
             color: var(--off-white);
             text-align: center;
         }
@@ -283,15 +285,15 @@
         .insights-panel {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 16px;
             overflow: hidden;
         }
 
         .insight-card {
-            background: rgba(245, 241, 235, 0.1);
-            border: 1px solid rgba(245, 241, 235, 0.2);
-            border-radius: 8px;
-            padding: 12px;
+            background: rgba(1, 30, 56, 0.3);
+            border: 2px solid rgba(245, 241, 235, 0.4);
+            border-radius: 12px;
+            padding: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
@@ -318,7 +320,7 @@
         .insight-metric {
             font-size: 24px;
             font-weight: 700;
-            color: var(--azul-royal);
+            color: var(--salmao);
             margin: 6px 0;
             line-height: 1;
         }
@@ -333,28 +335,28 @@
         .pattern-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            margin-top: 8px;
+            gap: 12px;
+            margin-top: 12px;
         }
 
         .pattern-item {
-            background: rgba(38, 79, 236, 0.1);
-            border: 2px solid rgba(38, 79, 236, 0.2);
-            border-radius: 6px;
-            padding: 8px;
+            background: rgba(1, 30, 56, 0.3);
+            border: 2px solid rgba(245, 241, 235, 0.4);
+            border-radius: 8px;
+            padding: 12px;
             text-align: center;
         }
 
         .pattern-number {
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 700;
-            color: var(--azul-royal);
+            color: var(--salmao);
             display: block;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .pattern-label {
-            font-size: 8px;
+            font-size: 10px;
             color: rgba(245, 241, 235, 0.8);
             text-transform: uppercase;
             letter-spacing: 0.3px;
@@ -364,18 +366,18 @@
         .analysis-strip {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            padding: 12px;
-            background: rgba(245, 241, 235, 0.1);
-            border-radius: 8px;
-            border: 1px solid rgba(245, 241, 235, 0.2);
+            gap: 24px;
+            padding: 20px;
+            background: rgba(1, 30, 56, 0.3);
+            border-radius: 12px;
+            border: 2px solid rgba(245, 241, 235, 0.4);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .strip-item {
             text-align: center;
-            border-right: 1px solid var(--cinza-claro);
-            padding-right: 16px;
+            border-right: 2px solid rgba(245, 241, 235, 0.3);
+            padding-right: 20px;
         }
 
         .strip-item:last-child {
@@ -384,15 +386,15 @@
         }
 
         .strip-value {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 700;
             color: var(--salmao);
             display: block;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .strip-label {
-            font-size: 8px;
+            font-size: 10px;
             color: rgba(245, 241, 235, 0.8);
             text-transform: uppercase;
             letter-spacing: 0.3px;
@@ -404,7 +406,7 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 16px;
-            font-size: 10px;
+            font-size: 12px;
             color: rgba(245, 241, 235, 0.8);
             border-top: 1px solid rgba(226, 232, 240, 0.3);
         }
@@ -536,7 +538,6 @@
                 <div class="insights-panel">
                     <!-- Regional Pattern -->
                     <div class="insight-card">
-                        <div class="insight-icon">🗺️</div>
                         <h3 class="insight-title">Padrão de Propagação Regional</h3>
                         <div class="pattern-grid">
                             <div class="pattern-item">
@@ -556,7 +557,6 @@
 
                     <!-- Critical Factor -->
                     <div class="insight-card">
-                        <div class="insight-icon">⚡</div>
                         <h3 class="insight-title">Fator Crítico de Vulnerabilidade</h3>
                         <div class="insight-metric">60%</div>
                         <p class="insight-detail">
@@ -573,26 +573,6 @@
                             <strong>Tempo médio</strong> para ativação de protocolos de contingência nas empresas de melhor performance
                         </p>
                     </div>
-                </div>
-            </div>
-
-            <!-- Bottom Analysis Strip -->
-            <div class="analysis-strip">
-                <div class="strip-item">
-                    <span class="strip-value">12M</span>
-                    <span class="strip-label">Período Analisado</span>
-                </div>
-                <div class="strip-item">
-                    <span class="strip-value">27</span>
-                    <span class="strip-label">Estados Impactados</span>
-                </div>
-                <div class="strip-item">
-                    <span class="strip-value">7</span>
-                    <span class="strip-label">Setores Estudados</span>
-                </div>
-                <div class="strip-item">
-                    <span class="strip-value">95%</span>
-                    <span class="strip-label">Confiança Estatística</span>
                 </div>
             </div>
 

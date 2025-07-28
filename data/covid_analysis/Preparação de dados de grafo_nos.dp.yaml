@@ -1,0 +1,49 @@
+nodes:
+- id: generated-source-node
+  source:
+    table: {project: gen-lang-client-0397043036, dataset: covid_grafos_ml, table: grafo_nos}
+  generated:
+    sections:
+    - {type: SECTION_SOURCE_TABLE, label: Read from BigQuery table gen-lang-client-0397043036.covid_grafos_ml.grafo_nos}
+    outputSchema:
+      field:
+      - {name: node_id, type: STRING, mode: NULLABLE}
+      - {name: regiao, type: STRING, mode: NULLABLE}
+      - {name: latitude, type: FLOAT64, mode: NULLABLE}
+      - {name: longitude, type: FLOAT64, mode: NULLABLE}
+      - {name: casos_total, type: INT64, mode: NULLABLE}
+      - {name: obitos_total, type: INT64, mode: NULLABLE}
+      - {name: casos_per_100k, type: FLOAT64, mode: NULLABLE}
+      - {name: populacao, type: INT64, mode: NULLABLE}
+      - {name: workplace_avg, type: FLOAT64, mode: NULLABLE}
+      - {name: stringency_avg, type: FLOAT64, mode: NULLABLE}
+      - {name: categoria_entrada, type: STRING, mode: NULLABLE}
+      - {name: categoria_impacto, type: STRING, mode: NULLABLE}
+      - {name: cluster_id, type: INT64, mode: NULLABLE}
+      - {name: distancia_centroide, type: FLOAT64, mode: NULLABLE}
+    sourceGenerated:
+      sourceSchema:
+        tableSchema:
+          field:
+          - {name: node_id, type: STRING, mode: NULLABLE}
+          - {name: regiao, type: STRING, mode: NULLABLE}
+          - {name: latitude, type: FLOAT64, mode: NULLABLE}
+          - {name: longitude, type: FLOAT64, mode: NULLABLE}
+          - {name: casos_total, type: INT64, mode: NULLABLE}
+          - {name: obitos_total, type: INT64, mode: NULLABLE}
+          - {name: casos_per_100k, type: FLOAT64, mode: NULLABLE}
+          - {name: populacao, type: INT64, mode: NULLABLE}
+          - {name: workplace_avg, type: FLOAT64, mode: NULLABLE}
+          - {name: stringency_avg, type: FLOAT64, mode: NULLABLE}
+          - {name: categoria_entrada, type: STRING, mode: NULLABLE}
+          - {name: categoria_impacto, type: STRING, mode: NULLABLE}
+          - {name: cluster_id, type: INT64, mode: NULLABLE}
+          - {name: distancia_centroide, type: FLOAT64, mode: NULLABLE}
+generated:
+  validationErrors:
+  - {level: LEVEL_ERROR, description: Data preparation must have 1 destination table.
+      Please add a destination table to continue scheduling}
+  location: US
+  description: |
+    Select all columns from the 'grafo_nos' table within the specified dataset and project.
+configuration: {}

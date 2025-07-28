@@ -434,6 +434,7 @@ body {
   box-sizing: border-box;
   overflow: hidden; /* Sem scroll */
   transition: none !important; /* Sem transições */
+  pointer-events: auto; /* Permite cliques no conteúdo */
 }
 
 .tl-item.expanded-full:before {

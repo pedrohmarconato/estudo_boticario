@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cases de Sucesso & Framework - Bain & Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Boticário Brand Colors */
+            --azul-marinho: #011E38;
+            --off-white: #F5F1EB;
+            --azul-royal: #264FEC;
+            --salmao: #FFBC82;
+            
+            /* Supporting colors */
+            --cinza-claro: #e2e8f0;
+            --cinza-medio: #64748b;
+            --cinza-escuro: #334155;
+            --verde-suave: #38a169;
+            --amarelo-suave: #d69e2e;
+            
+            /* Typography */
+            --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, var(--azul-marinho) 0%, #001a2e 100%);
+            color: var(--off-white);
+            line-height: 1.6;
+            font-size: 16px;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: var(--off-white);
+            backdrop-filter: blur(10px);
+            padding: 18px 50px;
+            border-bottom: 4px solid var(--salmao);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+            height: 85px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .header-content h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--azul-marinho);
+            letter-spacing: 0.3px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .header-content p {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--azul-royal);
+            margin: 2px 0 0 0;
+            letter-spacing: 0.2px;
+        }
+
+        .header-right {
+            font-size: 12px;
+            color: var(--cinza-medio);
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .header-right span {
+            font-weight: 500;
+        }
+
+        /* Navigation */
+        .nav-lateral {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9999;
+            background: var(--azul-royal);
+            color: white;
+            border: none;
+            padding: 20px 16px;
+            font-size: 28px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(38, 79, 236, 0.4);
+        }
+
+        .nav-lateral:hover {
+            background: var(--azul-marinho);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .nav-lateral.prev {
+            left: 20px;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .nav-lateral.next {
+            right: 20px;
+            border-radius: 12px 0 0 12px;
+        }
+
+        .nav-lateral.disabled {
+            background: var(--cinza-medio);
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .nav-lateral.disabled:hover {
+            background: var(--cinza-medio);
+            transform: translateY(-50%);
+        }
+
+        /* Main Container */
+        .page-container {
+            max-width: 1600px;
+            width: 95%;
+            height: calc(100vh - 85px);
+            margin: 85px auto 0;
+            padding: 28px 60px;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 24px;
+            overflow: hidden;
+        }
+
+        /* Strategic Summary */
+        .strategic-summary {
+            background: rgba(1, 30, 56, 0.3);
+            border: 2px solid rgba(245, 241, 235, 0.4);
+            border-left: 6px solid var(--salmao);
+            padding: 24px 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .summary-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--salmao);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .summary-content {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--off-white);
+        }
+
+        .summary-highlight {
+            font-weight: 700;
+            color: var(--salmao);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 30px;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        /* Success Cases Section */
+        .success-cases {
+            background: rgba(1, 30, 56, 0.3);
+            border: 2px solid rgba(245, 241, 235, 0.4);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--off-white);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--salmao);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-badge {
+            font-size: 12px;
+            background: var(--salmao);
+            color: var(--azul-marinho);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-transform: none;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .case-card {
+            background: rgba(1, 30, 56, 0.2);
+            border: 2px solid rgba(245, 241, 235, 0.3);
+            border-radius: 10px;
+            padding: 16px;
+            transition: all 0.3s ease;
+            height: fit-content;
+        }
+
+        .case-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(245, 241, 235, 0.2);
+            border-color: rgba(245, 241, 235, 0.6);
+        }
+
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .case-company {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--verde-suave);
+        }
+
+        .case-result {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--salmao);
+        }
+
+        .case-sector {
+            font-size: 10px;
+            color: var(--cinza-medio);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+        }
+
+        .case-strategy {
+            font-size: 11px;
+            color: var(--off-white);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .case-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .metric-item {
+            background: rgba(245, 241, 235, 0.1);
+            padding: 6px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--salmao);
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 8px;
+            color: rgba(245, 241, 235, 0.8);
+            text-transform: uppercase;
+        }
+
+        .case-lesson {
+            font-size: 10px;
+            color: var(--salmao);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* Framework Section */
+        .framework-section {
+            background: rgba(1, 30, 56, 0.3);
+            border: 2px solid rgba(245, 241, 235, 0.4);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .framework-steps {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .framework-step {
+            background: rgba(1, 30, 56, 0.2);
+            border: 2px solid rgba(245, 241, 235, 0.3);
+            border-left: 4px solid var(--verde-suave);
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .framework-step:hover {
+            background: rgba(1, 30, 56, 0.3);
+            border-color: rgba(245, 241, 235, 0.5);
+            transform: translateX(3px);
+        }
+
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .step-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--verde-suave);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .step-timeframe {
+            font-size: 11px;
+            background: var(--verde-suave);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .step-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .action-item {
+            font-size: 10px;
+            color: var(--off-white);
+            padding: 8px;
+            background: rgba(1, 30, 56, 0.3);
+            border-radius: 6px;
+            border-left: 3px solid var(--salmao);
+            line-height: 1.4;
+        }
+
+        .action-metric {
+            font-weight: 700;
+            color: var(--salmao);
+        }
+
+        /* Bottom KPIs */
+        .kpi-strip {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background: rgba(1, 30, 56, 0.3);
+            border-radius: 12px;
+            border: 2px solid rgba(245, 241, 235, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .kpi-item {
+            text-align: center;
+            padding: 12px;
+            background: rgba(1, 30, 56, 0.2);
+            border: 2px solid rgba(245, 241, 235, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .kpi-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(245, 241, 235, 0.6);
+        }
+
+        .kpi-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--salmao);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .kpi-label {
+            font-size: 9px;
+            color: rgba(245, 241, 235, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            font-size: 12px;
+            color: rgba(245, 241, 235, 0.8);
+            border-top: 1px solid rgba(226, 232, 240, 0.3);
+        }
+
+        .footer .source {
+            font-weight: 400;
+        }
+
+        .footer .confidential {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <a href="estrategias-resiliencia.html" class="nav-lateral prev">‹</a>
+        <span class="nav-lateral next disabled">›</span>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="header-content">
+                    <h1>Cases de Sucesso & Framework de Preparação</h1>
+                    <p>Análise Detalhada de Estratégias Resilientes e Metodologia de Implementação</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <span>Julho 2025</span>
+            </div>
+        </header>
+        
+        <div class="page-container">
+            <!-- Strategic Summary -->
+            <div class="strategic-summary">
+                <h2 class="summary-title">Síntese de Melhores Práticas</h2>
+                <div class="summary-content">
+                    Análise de <span class="summary-highlight">150+ empresas brasileiras</span> durante COVID-19 revela que organizações 
+                    com <span class="summary-highlight">diversificação prévia de canais</span> e <span class="summary-highlight">reservas 
+                    financeiras estruturadas</span> reduziram perdas em até <span class="summary-highlight">68%</span>. 
+                    O diferencial competitivo não foi capital inicial, mas <span class="summary-highlight">velocidade de adaptação operacional</span> 
+                    e capacidade de <span class="summary-highlight">pivot estratégico</span> em menos de 30 dias.
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="main-grid">
+                <!-- Success Cases -->
+                <div class="success-cases">
+                    <div class="section-header">
+                        <span>Cases de Sucesso Detalhados</span>
+                        <span class="section-badge">Top Performers</span>
+                    </div>
+                    
+                    <div class="cases-grid">
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-company">Magazine Luiza</div>
+                                <div class="case-result">+66%</div>
+                            </div>
+                            <div class="case-sector">Varejo • E-commerce</div>
+                            <div class="case-strategy">
+                                <strong>Estratégia Digital-First:</strong> E-commerce cresceu 149% em 2020, representando 70% 
+                                das vendas pela primeira vez. Marketplace expandiu de 26 mil para 56 mil vendedores, 
+                                com app alcançando 30 milhões de usuários ativos mensais.
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">149%</span>
+                                    <span class="metric-label">↑ E-commerce 2020</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">30M</span>
+                                    <span class="metric-label">Usuários App</span>
+                                </div>
+                            </div>
+                            <div class="case-lesson">→ Ecossistema digital como proteção estrutural</div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-company">Natura & Co</div>
+                                <div class="case-result">+12.4%</div>
+                            </div>
+                            <div class="case-sector">Cosméticos • Venda Direta</div>
+                            <div class="case-strategy">
+                                <strong>Modelo Híbrido Resiliente:</strong> Rede de 1.6M consultoras digitalizadas + 
+                                vendas online triplicaram no 2º tri/2020. 80% das consultoras usam plataformas digitais, 
+                                com Super App permitindo criação de lojas virtuais próprias.
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">3x</span>
+                                    <span class="metric-label">↑ Vendas Online</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">80%</span>
+                                    <span class="metric-label">Consultoras Digital</span>
+                                </div>
+                            </div>
+                            <div class="case-lesson">→ Diversificação como blindagem operacional</div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-company">Carrefour Brasil</div>
+                                <div class="case-result">+18.3%</div>
+                            </div>
+                            <div class="case-sector">Supermercados • Alimentação</div>
+                            <div class="case-strategy">
+                                <strong>Aceleração Digital:</strong> E-commerce alimentar cresceu 377% no 2º tri/2020, 
+                                representando 7,7% das vendas vs 1% anterior. Lucro líquido saltou 75% para R$ 713 milhões 
+                                com 60% de novos clientes conquistados.
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">377%</span>
+                                    <span class="metric-label">↑ Food E-commerce</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">75%</span>
+                                    <span class="metric-label">↑ Lucro Líquido</span>
+                                </div>
+                            </div>
+                            <div class="case-lesson">→ Velocidade de adaptação operacional</div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-company">Stone Pagamentos</div>
+                                <div class="case-result">+28%</div>
+                            </div>
+                            <div class="case-sector">Fintech • Meios de Pagamento</div>
+                            <div class="case-strategy">
+                                <strong>Suporte ao Ecossistema:</strong> Antecipação automática de recebíveis, 
+                                crédito emergencial para 180 mil lojistas e soluções integradas de gestão financeira. 
+                                Expandiu para banking e marketplace de serviços.
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">R$ 2.1B</span>
+                                    <span class="metric-label">Crédito Liberado</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">85%</span>
+                                    <span class="metric-label">Clientes Ativos</span>
+                                </div>
+                            </div>
+                            <div class="case-lesson">→ Fortalecimento da base de clientes</div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-company">iFood</div>
+                                <div class="case-result">+158%</div>
+                            </div>
+                            <div class="case-sector">Delivery • Marketplace</div>
+                            <div class="case-strategy">
+                                <strong>Extensão Estratégica:</strong> Lançamento do iFood Mercado, parcerias com farmácias, 
+                                entregas em 15 minutos e criação de dark kitchens. Expandiu de restaurantes para 
+                                marketplace completo de conveniência urbana.
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">65M</span>
+                                    <span class="metric-label">Usuários Ativos</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">280K</span>
+                                    <span class="metric-label">Restaurantes</span>
+                                </div>
+                            </div>
+                            <div class="case-lesson">→ Extensão de proposta de valor</div>
+                        </div>
+
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-company">Americanas S.A.</div>
+                                <div class="case-result">+45%</div>
+                            </div>
+                            <div class="case-sector">Varejo • Omnichannel</div>
+                            <div class="case-strategy">
+                                <strong>Integração Total:</strong> Fusão completa entre físico e digital com estoque 
+                                unificado, ship-from-store em 1.800 lojas e marketplace robusto. Transformou lojas 
+                                em centros de fulfillment inteligente.
+                            </div>
+                            <div class="case-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">4.2x</span>
+                                    <span class="metric-label">↑ Online Sales</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">90%</span>
+                                    <span class="metric-label">Integração Omni</span>
+                                </div>
+                            </div>
+                            <div class="case-lesson">→ Sinergia físico-digital otimizada</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Framework Section -->
+                <div class="framework-section">
+                    <div class="section-header">
+                        <span>Framework de Preparação</span>
+                        <span class="section-badge">4 Fases</span>
+                    </div>
+                    
+                    <div class="framework-steps">
+                        <div class="framework-step">
+                            <div class="step-header">
+                                <div class="step-title">Diagnóstico & Baseline</div>
+                                <div class="step-timeframe">0-15 dias</div>
+                            </div>
+                            <div class="step-actions">
+                                <div class="action-item">
+                                    Auditoria completa de dependências críticas e <span class="action-metric">pontos únicos de falha</span>
+                                </div>
+                                <div class="action-item">
+                                    Mapeamento de vulnerabilidades por <span class="action-metric">região, segmento e canal</span>
+                                </div>
+                                <div class="action-item">
+                                    Benchmark com <span class="action-metric">top 3 concorrentes</span> mais resilientes
+                                </div>
+                                <div class="action-item">
+                                    Definição de KPIs de monitoramento e <span class="action-metric">alertas automáticos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="framework-step">
+                            <div class="step-header">
+                                <div class="step-title">Preparação Estrutural</div>
+                                <div class="step-timeframe">15-45 dias</div>
+                            </div>
+                            <div class="step-actions">
+                                <div class="action-item">
+                                    Diversificação mínima <span class="action-metric">35%</span> vendas online/delivery
+                                </div>
+                                <div class="action-item">
+                                    Reserva de caixa para <span class="action-metric">180 dias</span> de operação reduzida
+                                </div>
+                                <div class="action-item">
+                                    Contratos com cláusulas de <span class="action-metric">força maior e flexibilização</span>
+                                </div>
+                                <div class="action-item">
+                                    Infraestrutura para <span class="action-metric">80% trabalho remoto</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="framework-step">
+                            <div class="step-header">
+                                <div class="step-title">Resposta & Ativação</div>
+                                <div class="step-timeframe">45-90 dias</div>
+                            </div>
+                            <div class="step-actions">
+                                <div class="action-item">
+                                    Ativação quando epicentro atinge <span class="action-metric">&gt;30%</span> de impacto
+                                </div>
+                                <div class="action-item">
+                                    Redistribuição de estoque em <span class="action-metric">máximo 72h</span>
+                                </div>
+                                <div class="action-item">
+                                    Renegociação automática de <span class="action-metric">aluguéis e fornecedores</span>
+                                </div>
+                                <div class="action-item">
+                                    Comunicação unificada com <span class="action-metric">clientes e stakeholders</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="framework-step">
+                            <div class="step-header">
+                                <div class="step-title">Sustentação & Evolução</div>
+                                <div class="step-timeframe">90+ dias</div>
+                            </div>
+                            <div class="step-actions">
+                                <div class="action-item">
+                                    Modelo híbrido permanente com <span class="action-metric">30%</span> operação distribuída
+                                </div>
+                                <div class="action-item">
+                                    Centros operacionais em <span class="action-metric">mín. 3 regiões</span> diferentes
+                                </div>
+                                <div class="action-item">
+                                    Investimento tech para <span class="action-metric">resiliência digital completa</span>
+                                </div>
+                                <div class="action-item">
+                                    Consolidação de aprendizados como <span class="action-metric">vantagem competitiva</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom KPIs -->
+            <div class="kpi-strip">
+                <div class="kpi-item">
+                    <span class="kpi-value">35%</span>
+                    <span class="kpi-label">Diversificação Mínima</span>
+                </div>
+                <div class="kpi-item">
+                    <span class="kpi-value">180</span>
+                    <span class="kpi-label">Dias Reserva Caixa</span>
+                </div>
+                <div class="kpi-item">
+                    <span class="kpi-value">72h</span>
+                    <span class="kpi-label">Tempo Resposta</span>
+                </div>
+                <div class="kpi-item">
+                    <span class="kpi-value">68%</span>
+                    <span class="kpi-label">Redução de Perdas</span>
+                </div>
+                <div class="kpi-item">
+                    <span class="kpi-value">30%</span>
+                    <span class="kpi-label">Operação Distribuída</span>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="source">
+                    Fonte: B3 Financial Reports • McKinsey Global Institute • Harvard Business Review • BCG Resilience Database
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
