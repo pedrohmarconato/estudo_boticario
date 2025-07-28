@@ -58,7 +58,7 @@
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1000;
+            z-index: 100;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
@@ -73,7 +73,7 @@
             position: fixed;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 9999;
+            z-index: 200;
             background: var(--azul-royal);
             color: white;
             border: none;
@@ -429,8 +429,9 @@
         }
         
         .brazil-state {
-            stroke: #ffffff;
+            stroke: #F5F1EB;
             stroke-width: 0.8;
+            /* fill é controlado pelo D3.js, não pelo CSS */
             transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             cursor: pointer;
             opacity: 0.7;
@@ -882,7 +883,7 @@
             pointer-events: none;
             border: 1px solid var(--salmao);
             backdrop-filter: blur(10px);
-            z-index: 1000;
+            z-index: 5;
             max-width: 250px;
         }
 
@@ -939,16 +940,6 @@
         }
     .legend-overlay {
     display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.35);
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-.legend-overlay.active {
-    display: block;
-    opacity: 1;
 }
 
 /* Garante que o botão de abrir legenda fique acima do overlay */
@@ -989,6 +980,7 @@
         max-height: 60vh;
     }
 }
+
 </style>
 </head>
 <body>
@@ -1038,7 +1030,6 @@
         </aside>
 
         <!-- Legenda Lateral -->
-        <div class="legend-overlay" id="legend-overlay"></div>
         <aside class="legend-panel" id="legend-panel">
             <div class="legend-toggle-handle" id="legend-toggle">Legenda</div>
             <div class="legend-section">
@@ -1214,8 +1205,8 @@
     <script>
         // === CONFIGURAÇÕES GLOBAIS ===
         const CONFIG = {
-            width: window.innerWidth - 150, // Largura menos área da esquerda
-            height: window.innerHeight - 60, // Altura total menos header
+            width: Math.max(800, window.innerWidth - 150), // Largura mínima + área da esquerda
+            height: Math.max(600, window.innerHeight - 60), // Altura mínima + header
             clusters: {
                 1: { color: '#FF6B6B', name: 'Cluster Norte Isolado' },
                 2: { color: '#4ECDC4', name: 'Cluster São Paulo' },
@@ -1961,6 +1952,9 @@
                 
                 // Inicializar painel de informações
                 initializePeriodInfo();
+                
+                // Forçar atualização inicial das dimensões
+                window.dispatchEvent(new Event('resize'));
 
                 console.log('Visualização carregada com layout otimizado');
                 
@@ -1980,7 +1974,7 @@
             try {
                 // Lista de URLs de TopoJSON para tentar - começando com arquivo local
                 const topojsonUrls = [
-                    'data/br-states.json', // Arquivo local primeiro
+                    './br-states.json', // Arquivo local primeiro
                     'https://gist.githubusercontent.com/ruliana/1ccaaab05ea113b0dff3b22be3b4d637/raw/br-states.json',
                     'https://raw.githubusercontent.com/hekima/d3-map/master/data/br-states.json',
                     'https://servicodados.ibge.gov.br/api/v3/malhas/estados/BR?formato=application/json'
@@ -2068,6 +2062,9 @@
                 return;
             }
 
+            // Limpar mapa existente para evitar duplicação
+            g.selectAll('.map-group').remove();
+
             try {
                 let features;
                 
@@ -2115,7 +2112,11 @@
                 console.log(`Features encontradas: ${features.length}`);
                 if (features.length > 0) {
                     console.log('Primeira feature:', features[0]);
+                    console.log('Primeira feature geometria:', features[0].geometry);
                 }
+
+                // Projeção já foi configurada no setupSVG(), não precisa ajustar aqui
+                console.log('Usando projeção pré-configurada:', projection.scale(), projection.translate());
 
                 // Criar grupo para o mapa
                 const mapGroup = g.append('g').attr('class', 'map-group');
@@ -2127,15 +2128,19 @@
                     .append('path')
                     .attr('class', 'brazil-state')
                     .attr('d', path)
-                    .attr('fill', "#011E38") // azul-marinho
-                    .attr('stroke', "#FFBC82") // salmão
+                    .attr('fill', d => { // Preenchimento inicial com a cor do cluster
+                        const stateName = d.properties.NAME || d.properties.name;
+                        const clusterId = getStateCluster(stateName);
+                        return clusterId ? getClusterColor(clusterId) : '#011E38'; // Cor padrão
+                    })
+                    .attr('stroke', "#F5F1EB") // off-white
                     .attr('stroke-width', 1.5)
                     .attr('opacity', 0.95)
                     .on('mouseover', function(event, d) {
                         d3.select(this)
-                            .attr('fill', 'rgba(255, 188, 130, 0.1)')
-                            .attr('stroke', '#FFBC82')
-                            .attr('stroke-width', 3);
+                            .attr('fill', '#FFBC82') // Realce ao passar o mouse
+                            .attr('stroke', '#F5F1EB')
+                            .attr('stroke-width', 2);
                             
                         const stateName = d.properties.NAME || d.properties.name || d.properties.NOME || d.properties.NM_ESTADO || 'Estado';
                         showTooltip(event, {
@@ -2149,22 +2154,17 @@
                     })
                     .on('mouseout', function(event, d) {
                         const stateName = d.properties.NAME || d.properties.name || d.properties.NOME || d.properties.NM_ESTADO;
+                        const clusterId = getStateCluster(stateName);
+                        const color = clusterId ? getClusterColor(clusterId) : '#011E38';
+                        
                         d3.select(this)
-                            .attr('fill', "#011E38") // azul-marinho
-                            .attr('stroke', "#FFBC82") // salmão
+                            .attr('fill', color) // Restaura a cor original
+                            .attr('stroke', "#F5F1EB")
                             .attr('stroke-width', 1.5);
                         hideTooltip();
                     });
 
                 console.log(`Mapa desenhado com ${features.length} estados`);
-                
-                // Verificar se algum path foi criado
-                const pathCount = mapGroup.selectAll('.brazil-state').size();
-                console.log(`Paths SVG criados: ${pathCount}`);
-                
-                if (pathCount === 0) {
-                    throw new Error('Nenhum path SVG foi criado');
-                }
                 
             } catch (error) {
                 console.error('Erro ao desenhar mapa:', error);
@@ -2203,13 +2203,17 @@
         function drawFallbackMap() {
             console.log('Desenhando mapa fallback estilizado');
             
+            // Limpar mapa existente para evitar duplicação
+            g.selectAll('.map-group').remove();
+            
             // Forma aproximada do Brasil usando path
             const brazilOutline = "M200,150 L350,120 L450,140 L520,180 L580,220 L600,280 L590,350 L570,420 L540,480 L500,520 L450,540 L400,550 L350,545 L300,530 L250,500 L220,460 L200,400 L190,350 L195,300 L200,250 Z";
             
-            g.append('path')
+            const mapGroup = g.append('g').attr('class', 'map-group');
+            mapGroup.append('path')
                 .attr('d', brazilOutline)
-                .attr('fill', "#011E38") // azul-marinho
-                .attr('stroke', "#FFBC82") // salmão
+                .attr('fill', "none")
+                .attr('stroke', "#F5F1EB") // off-white
                 .attr('stroke-width', 2)
                 .attr('transform', `translate(${(CONFIG.width - 600) / 2}, ${(CONFIG.height - 500) / 2}) scale(${Math.min(CONFIG.width / 800, CONFIG.height / 600)})`);
                 
@@ -2228,11 +2232,14 @@
                 .attr('text-anchor', 'middle')
                 .attr('fill', "#666") // cinza
                 .attr('font-size', '12px')
-                .text('Aguardando dados geográficos oficiais');
         }
 
         // === DESENHO DO GRAFO ===
         function drawGraph() {
+            // Limpar grafo existente para evitar duplicação
+            g.selectAll('.edge-group').remove();
+            g.selectAll('.node-group').remove();
+            
             drawEdges();
             drawNodes();
         }
@@ -2478,12 +2485,12 @@
             CONFIG.height = window.innerHeight - 60;  // Altura total menos header
             
             if (svg) {
-                svg.attr('width', CONFIG.width).attr('height', CONFIG.height);
+                svg.attr('width', window.innerWidth).attr('height', window.innerHeight - 60);
             }
             if (projection) {
                 projection
-                    .scale(Math.min(CONFIG.width, CONFIG.height) * 0.8)
-                    .translate([CONFIG.width / 2, CONFIG.height / 2]); // Centralizado na área principal
+                    .scale(Math.min(window.innerWidth, window.innerHeight - 60) * 1.33)
+                    .translate([window.innerWidth * 0.59, (window.innerHeight - 60) / 2]);
             }
             if (g) {
                 drawBrazilMap();
@@ -2664,6 +2671,8 @@
 
         // Função para limpar todas as animações
         function clearAllAnimations() {
+            if (!g) return; // Verificar se g existe
+            
             // Remover todas as partículas
             g.selectAll('.traveling-particle').remove();
             
@@ -2939,5 +2948,7 @@
             }
         }, 3000);
     </script>
+<script>
+</script>
 </body>
 </html>
