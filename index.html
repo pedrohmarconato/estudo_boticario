@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Boticário - Estudos e Análises</title>
+    <style>
+        :root {
+            --azul-marinho: #011E38;
+            --off-white: #F5F1EB;
+            --azul-royal: #264FEC;
+            --salmao: #FFBC82;
+            --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, var(--azul-marinho) 0%, var(--azul-royal) 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem 0;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--salmao);
+        }
+        
+        .project-card p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Grupo Boticário</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.8;">Estudos, Análises e Projetos</p>
+    
+    <div class="projects-grid">
+        <a href="/carreira/" class="project-card">
+            <h3>🚀 Carreiras</h3>
+            <p>Portal de carreiras do Grupo Boticário com oportunidades e informações sobre nossa cultura organizacional.</p>
+        </a>
+        
+        <a href="/case-analise.html" class="project-card">
+            <h3>📊 Análise COVID-19</h3>
+            <p>Dashboard interativo com análise completa dos dados da pandemia COVID-19 no Brasil.</p>
+        </a>
+        
+        <a href="/mapa-epidemiologico.html" class="project-card">
+            <h3>🗺️ Mapa Epidemiológico</h3>
+            <p>Visualização geográfica dos dados epidemiológicos e impactos regionais da pandemia.</p>
+        </a>
+        
+        <a href="/contexto-historico.html" class="project-card">
+            <h3>📈 Contexto Histórico</h3>
+            <p>Análise temporal das medidas governamentais e seus impactos durante a pandemia.</p>
+        </a>
+    </div>
+</body>
+</html>
