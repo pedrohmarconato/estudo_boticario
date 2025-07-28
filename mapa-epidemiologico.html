@@ -1978,8 +1978,9 @@
         // === CARREGAMENTO DE DADOS ===
         async function loadData() {
             try {
-                // Lista de URLs de TopoJSON para tentar
+                // Lista de URLs de TopoJSON para tentar - começando com arquivo local
                 const topojsonUrls = [
+                    'data/br-states.json', // Arquivo local primeiro
                     'https://gist.githubusercontent.com/ruliana/1ccaaab05ea113b0dff3b22be3b4d637/raw/br-states.json',
                     'https://raw.githubusercontent.com/hekima/d3-map/master/data/br-states.json',
                     'https://servicodados.ibge.gov.br/api/v3/malhas/estados/BR?formato=application/json'
