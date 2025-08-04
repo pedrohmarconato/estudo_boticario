@@ -722,60 +722,6 @@
             </div>
         </div>
         
-        <!-- Visualização Interativa de Grafos COVID-19 -->
-        <div class="graph-visualization-container">
-            <div class="graph-header">
-                <h3 class="graph-title">Análise de Propagação COVID-19 por Estado</h3>
-                <div class="graph-controls">
-                    <div class="filter-chip active" data-filter="cases">
-                        <i class="fas fa-virus"></i> Casos
-                    </div>
-                    <div class="filter-chip" data-filter="deaths">
-                        <i class="fas fa-skull-crossbones"></i> Óbitos
-                    </div>
-                    <div class="filter-chip" data-filter="mobility">
-                        <i class="fas fa-walking"></i> Mobilidade
-                    </div>
-                </div>
-            </div>
-            
-            <div id="covid-graph-container" class="map-svg-container">
-                <div class="graph-loading">
-                    <div class="loading-spinner"></div>
-                    <p class="loading-text">Carregando visualização...</p>
-                </div>
-            </div>
-            
-            <!-- Controles de Timeline -->
-            <div class="timeline-controls">
-                <div class="timeline-header">
-                    <span class="timeline-title">Evolução Temporal</span>
-                    <span class="timeline-date" id="current-date">Mar 2020</span>
-                </div>
-                <div class="timeline-slider-container">
-                    <input type="range" id="timeline-slider" class="timeline-slider" 
-                           min="0" max="5" value="0" step="1">
-                    <div class="timeline-marks">
-                        <span class="timeline-mark">Mar</span>
-                        <span class="timeline-mark">Abr</span>
-                        <span class="timeline-mark">Mai</span>
-                        <span class="timeline-mark">Jun</span>
-                        <span class="timeline-mark">Jul</span>
-                        <span class="timeline-mark">Ago</span>
-                    </div>
-                </div>
-                <div class="control-buttons">
-                    <button class="control-btn" id="play-btn">
-                        <i class="fas fa-play"></i> Reproduzir
-                    </button>
-                    <button class="control-btn" id="reset-btn">
-                        <i class="fas fa-undo"></i> Reiniciar
-                    </button>
-                </div>
-            </div>
-            
-
-        </div>
         
     </div>
     
