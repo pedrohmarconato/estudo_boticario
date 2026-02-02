@@ -160,10 +160,12 @@
   .overlay-content h1 {
     font-size: 2rem;
   }
-}/* Garantir que o botão lateral funcione sempre */
+}
+
+/* Garantir que o botão lateral funcione sempre */
 body:has(.tl-item.expanded-full) .side-pull-tab {
-  z-index: 2147483647 \!important;
-  pointer-events: auto \!important;
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
 }
 
 /* Criar camada invisível para garantir cliques */
@@ -171,6 +173,70 @@ body:has(.tl-item.expanded-full) .side-pull-tab {
   content: '';
   position: absolute;
   inset: -10px;
-  z-index: 2147483647 \!important;
-  pointer-events: auto \!important;
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
+}
+
+/* Responsividade do Side Tab */
+@media screen and (min-width: 2560px) {
+  .pull-tab-content {
+    padding: 14px 12px 14px 16px;
+  }
+
+  .pull-tab-text {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+  }
+
+  .pull-tab-arrow {
+    font-size: 1.2rem;
+  }
+
+  .overlay-content {
+    padding: 120px 80px;
+    max-width: 1600px;
+  }
+
+  .overlay-content h1 {
+    font-size: 4rem;
+  }
+
+  .overlay-content p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pull-tab-content {
+    padding: 6px 5px 6px 8px;
+  }
+
+  .pull-tab-text {
+    font-size: 0.55rem;
+    letter-spacing: 0.6px;
+  }
+
+  .pull-tab-arrow {
+    font-size: 0.8rem;
+  }
+
+  .overlay-content {
+    padding: 60px 20px;
+  }
+
+  .overlay-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .overlay-content p {
+    font-size: 1rem;
+  }
+
+  .overlay-close-btn {
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
 }
