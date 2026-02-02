@@ -37,6 +37,8 @@ html {
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    overflow: hidden;
+    height: 100%;
 }
 
 body {
@@ -48,6 +50,8 @@ body {
     overflow: hidden;
     height: 100vh;
     height: 100dvh; /* Dynamic viewport height para mobile */
+    max-height: 100vh;
+    max-height: 100dvh;
     min-height: -webkit-fill-available;
 }
 

@@ -82,11 +82,12 @@
   left: 0;
   width: 100%;
   height: 100%;
+  height: 100dvh;
   background: var(--azul-marinho);
   z-index: 2000;
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: auto;
+  overflow: hidden; /* Remove scroll */
 }
 
 .new-page-overlay.active {
