@@ -33,12 +33,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
 html {
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    overflow: hidden;
-    height: 100%;
 }
 
 body {
@@ -47,12 +53,6 @@ body {
     line-height: 1.6;
     color: var(--dark-color);
     background-color: var(--light-color);
-    overflow: hidden;
-    height: 100vh;
-    height: 100dvh; /* Dynamic viewport height para mobile */
-    max-height: 100vh;
-    max-height: 100dvh;
-    min-height: -webkit-fill-available;
 }
 
 header {
