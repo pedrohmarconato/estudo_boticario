@@ -245,18 +245,19 @@
 /* Conteudo no estado expandido */
 .tl-item.expanded-full .tl-year,
 .tl-item.expanding .tl-year {
-    top: 30%;
-    left: 5%;
+    top: 25%;
+    left: 4%;
     transform: none;
     text-align: left;
+    max-width: 35%;
 }
 
 .tl-item.expanded-full .tl-content,
 .tl-item.expanding .tl-content {
-    top: 45%;
-    left: 5%;
+    top: 42%;
+    left: 4%;
     right: auto;
-    max-width: 350px;
+    max-width: 35%;
     text-align: left;
     opacity: 1;
     transform: translateY(0);
@@ -328,13 +329,14 @@
 
 .timeline-horizontal {
     position: absolute;
-    left: 30%;
-    right: 3%;
-    bottom: 5%;
+    left: 42%;
+    right: 2%;
+    top: 20%;
+    bottom: 8%;
     width: auto;
-    height: min(300px, 38vh);
+    height: auto;
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.95);
     transition: opacity 0.5s ease, transform 0.5s ease;
     z-index: 150;
 }
@@ -345,17 +347,7 @@
 }
 
 .timeline-track {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--salmao), var(--azul-royal), var(--salmao));
-    border-radius: 2px;
-}
-
-.timeline-track .timeline-point {
-    display: none; /* Esconde os pontos por enquanto */
+    display: none; /* Esconde a track por enquanto */
 }
 
 .timeline-point {
@@ -384,13 +376,10 @@
 
 .timeline-bullets {
     position: absolute;
-    top: 0;
-    bottom: 25px;
-    left: 0;
-    right: 0;
+    inset: 0;
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 12px;
     padding: 0;
     overflow: hidden;
 }
@@ -398,11 +387,16 @@
 .timeline-bullet {
     flex: 1;
     min-width: 0;
+    max-width: 33%;
     text-align: center;
     opacity: 0.9;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    background: rgba(1, 30, 56, 0.3);
+    border-radius: 8px;
+    padding: 10px 8px;
+    border: 1px solid rgba(255, 188, 130, 0.1);
 }
 
 .timeline-bullet-title {
@@ -422,11 +416,10 @@
 }
 
 .timeline-item-row {
-    background: rgba(1, 30, 56, 0.4);
-    border: 1px solid rgba(255, 188, 130, 0.15);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 4px 6px;
-    margin-bottom: 4px;
+    padding: 6px 8px;
+    margin-bottom: 6px;
     text-align: center;
 }
 
