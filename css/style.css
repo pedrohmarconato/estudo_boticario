@@ -1,115 +1,44 @@
+/* ===========================================
+   ESTILOS GLOBAIS - Grupo Boticário
+   =========================================== */
+
 :root {
-    /* Paleta de cores do Grupo Boticário */
+    /* Paleta de cores */
     --azul-marinho: #011E38;
     --off-white: #F5F1EB;
     --azul-royal: #264FEC;
     --salmao: #FFBC82;
 
-    /* Cores derivadas */
-    --dark-color: var(--azul-marinho);
-    --light-color: var(--off-white);
-
     /* Tipografia */
     --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-    /* Tamanhos responsivos */
-    --font-size-base: clamp(14px, 1vw, 18px);
-    --font-size-sm: clamp(12px, 0.875vw, 14px);
-    --font-size-lg: clamp(18px, 1.25vw, 24px);
-    --font-size-xl: clamp(24px, 2vw, 36px);
-    --font-size-xxl: clamp(32px, 3vw, 56px);
-
-    /* Espaçamentos responsivos */
-    --spacing-xs: clamp(4px, 0.5vw, 8px);
-    --spacing-sm: clamp(8px, 1vw, 16px);
-    --spacing-md: clamp(16px, 2vw, 32px);
-    --spacing-lg: clamp(24px, 3vw, 48px);
-    --spacing-xl: clamp(32px, 4vw, 64px);
+    /* Layout */
+    --header-height: 15vh;
+    --header-min-height: 120px;
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-}
-
 html {
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 body {
     font-family: var(--font-primary);
-    font-size: var(--font-size-base);
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.6;
-    color: var(--dark-color);
-    background-color: var(--light-color);
-}
-
-header {
-    background-color: var(--dark-color);
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--primary-color);
-}
-
-main {
-    margin-top: 60px;
-}
-
-.hero-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 99.5%, var(--secondary-color) 100%);
-    color: white;
-}
-
-.content-section {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.content-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-}
-
-footer {
-    background-color: var(--dark-color);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
+    color: var(--azul-marinho);
+    background-color: var(--off-white);
 }
