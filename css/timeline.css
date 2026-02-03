@@ -245,16 +245,18 @@
 /* Conteudo no estado expandido */
 .tl-item.expanded-full .tl-year,
 .tl-item.expanding .tl-year {
-    left: 15%;
-    transform: translateY(-50%);
+    top: 30%;
+    left: 5%;
+    transform: none;
     text-align: left;
 }
 
 .tl-item.expanded-full .tl-content,
 .tl-item.expanding .tl-content {
-    left: 15%;
+    top: 45%;
+    left: 5%;
     right: auto;
-    max-width: 400px;
+    max-width: 350px;
     text-align: left;
     opacity: 1;
     transform: translateY(0);
@@ -263,6 +265,7 @@
 .tl-item.expanded-full .tl-content p {
     text-align: justify;
     text-align-last: left;
+    font-size: 0.85rem;
 }
 
 /* Ocultar outros itens durante animacao */
@@ -277,28 +280,28 @@
 
 .navigation-container {
     position: absolute;
-    top: 20%;
-    right: 2rem;
+    top: 18%;
+    right: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
     z-index: 201;
 }
 
 .close-button,
 .next-button,
 .prev-button {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border: none;
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -325,10 +328,11 @@
 
 .timeline-horizontal {
     position: absolute;
-    right: 5%;
+    left: 30%;
+    right: 3%;
     bottom: 5%;
-    width: min(900px, 65vw);
-    height: min(350px, 40vh);
+    width: auto;
+    height: min(300px, 38vh);
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -343,10 +347,15 @@
 .timeline-track {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     height: 2px;
     background: linear-gradient(90deg, var(--salmao), var(--azul-royal), var(--salmao));
     border-radius: 2px;
+}
+
+.timeline-track .timeline-point {
+    display: none; /* Esconde os pontos por enquanto */
 }
 
 .timeline-point {
@@ -376,61 +385,67 @@
 .timeline-bullets {
     position: absolute;
     top: 0;
-    bottom: 30px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 10px;
-    padding: 0 10px;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0;
+    overflow: hidden;
 }
 
 .timeline-bullet {
+    flex: 1;
+    min-width: 0;
     text-align: center;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.timeline-bullet.active {
-    opacity: 1;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .timeline-bullet-title {
-    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    font-size: clamp(0.6rem, 0.9vw, 0.8rem);
     font-weight: 600;
-    color: var(--off-white);
+    color: var(--salmao);
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
 }
 
 .timeline-bullet-items {
-    max-width: 220px;
-    margin: 0 auto;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .timeline-item-row {
-    background: rgba(1, 30, 56, 0.3);
-    border: 1px solid rgba(255, 188, 130, 0.1);
-    border-radius: 6px;
-    padding: 5px 8px;
-    margin-bottom: 6px;
+    background: rgba(1, 30, 56, 0.4);
+    border: 1px solid rgba(255, 188, 130, 0.15);
+    border-radius: 4px;
+    padding: 4px 6px;
+    margin-bottom: 4px;
     text-align: center;
 }
 
 .timeline-item-text {
-    font-size: clamp(0.55rem, 0.8vw, 0.75rem);
-    color: rgba(245, 241, 235, 0.9);
-    margin-bottom: 2px;
+    font-size: clamp(0.5rem, 0.7vw, 0.65rem);
+    color: rgba(245, 241, 235, 0.85);
+    margin-bottom: 1px;
+    line-height: 1.2;
 }
 
 .timeline-item-number {
-    font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+    font-size: clamp(0.75rem, 1vw, 0.95rem);
     font-weight: 700;
     color: var(--salmao);
 }
 
 .timeline-item-unit {
-    font-size: clamp(0.5rem, 0.7vw, 0.65rem);
-    color: rgba(245, 241, 235, 0.7);
+    font-size: clamp(0.45rem, 0.6vw, 0.55rem);
+    color: rgba(245, 241, 235, 0.6);
     font-style: italic;
 }
 
