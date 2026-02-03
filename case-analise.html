@@ -3,678 +3,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Etapa - Case Especialista II</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/covid-graph.css">
+    <title>Case COVID-19 - Análise de Impactos</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS inline - Estilo Consultoria McKinsey/Bain */
         :root {
             --azul-marinho: #011E38;
             --off-white: #F5F1EB;
             --azul-royal: #264FEC;
             --salmao: #FFBC82;
-            --rosa-pink: #FF69B4;
-            --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --cinza-claro: #F8F9FA;
-            --cinza-medio: #6C757D;
-            --verde-consultoria: #0A6847;
+            --font: 'IBM Plex Sans', sans-serif;
         }
 
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: var(--font-primary);
-            background: linear-gradient(135deg, var(--azul-marinho) 0%, #003366 100%);
-            color: var(--off-white);
-            line-height: 1.4;
-            font-size: 14px;
-            min-height: 100vh;
+        html, body {
+            height: 100%;
+            overflow: hidden;
         }
 
-        /* Header - Estilo Consultoria */
-        .slide-header {
-            background: rgba(245, 241, 235, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 15px 40px;
-            border-bottom: 3px solid var(--salmao);
+        body {
+            font-family: var(--font);
+            background: linear-gradient(135deg, var(--azul-marinho) 0%, #003366 100%);
+            color: var(--off-white);
+        }
+
+        /* Header */
+        .header {
+            height: 8vh;
+            min-height: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            padding: 0 3%;
+            background: rgba(245, 241, 235, 0.98);
+            border-bottom: 3px solid var(--salmao);
         }
 
-        .slide-left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .back-button {
+        .header__back {
             background: var(--azul-royal);
             color: white;
-            border: none;
-            padding: 8px 16px;
-            font-size: 12px;
-            cursor: pointer;
             text-decoration: none;
-            font-weight: 500;
+            padding: 6px 14px;
             border-radius: 4px;
-            transition: all 0.3s ease;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: background 0.2s;
         }
 
-        .back-button:hover {
+        .header__back:hover {
             background: var(--azul-marinho);
-            transform: translateX(-2px);
         }
 
-        .slide-title {
-            font-size: 18px;
+        .header__title {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
             font-weight: 600;
             color: var(--azul-marinho);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin: 0;
         }
 
-        .slide-meta {
-            font-size: 12px;
-            color: var(--cinza-medio);
-            display: flex;
-            gap: 20px;
+        .header__meta {
+            font-size: 0.75rem;
+            color: #6C757D;
         }
 
-        /* Container Principal */
-        .slide-container {
-            margin-top: 70px;
-            padding: 30px 50px;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
+        /* Main */
+        .main {
+            height: 92vh;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            padding: 2% 4%;
+            gap: 2vh;
         }
 
-        /* Título Principal - Estilo McKinsey */
-        .slide-main-title {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--off-white);
-            margin-bottom: 12px;
-            line-height: 1.2;
+        /* Titulo */
+        .title-section {
             border-left: 4px solid var(--salmao);
             padding-left: 20px;
-            animation: slideInLeft 0.8s ease-out;
         }
 
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .title-section h1 {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            font-weight: 700;
+            margin-bottom: 5px;
         }
 
-        .slide-subtitle {
-            font-size: 20px;
+        .title-section p {
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
             color: var(--salmao);
-            margin-bottom: 50px;
-            padding-left: 24px;
-            font-weight: 500;
-            animation: slideInLeft 0.8s ease-out 0.2s both;
         }
 
-        /* Grid de Etapas - Estilo Consultoria */
-        .consulting-grid {
+        /* Grid de Cards */
+        .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 30px;
+            gap: 20px;
+            align-content: start;
         }
 
-        /* Cards de Etapa */
-        .etapa-card {
+        .card {
             background: rgba(245, 241, 235, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 188, 130, 0.3);
-            border-radius: 12px;
-            padding: 0;
-            opacity: 0;
-            transform: translateY(30px) scale(0.95);
-            animation: slideInUp 0.8s ease forwards;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            max-height: calc(80vh - 100px);
         }
 
-        .etapa-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-        }
-
-        .etapa-card:nth-child(1) { animation-delay: 0.1s; }
-        .etapa-card:nth-child(2) { animation-delay: 0.2s; }
-        .etapa-card:nth-child(3) { animation-delay: 0.3s; }
-
-        @keyframes slideInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        .etapa-header {
-            background: linear-gradient(135deg, var(--azul-royal) 0%, var(--azul-marinho) 100%);
+        .card__header {
+            background: linear-gradient(135deg, var(--azul-royal), var(--azul-marinho));
             color: white;
-            padding: 18px 25px;
-            font-size: 14px;
+            padding: 12px 18px;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border-bottom: 3px solid var(--salmao);
-            border-radius: 12px 12px 0 0;
         }
 
-        .etapa-content {
-            padding: 30px 25px;
+        .card__body {
+            padding: 18px;
             color: #2C3E50;
+            flex: 1;
+            overflow-y: auto;
         }
 
-        .etapa-title {
-            font-size: 18px;
+        .card__title {
+            font-size: clamp(0.9rem, 1.3vw, 1.1rem);
             font-weight: 700;
             color: var(--azul-marinho);
-            margin-bottom: 18px;
-            line-height: 1.3;
+            margin-bottom: 12px;
         }
 
-        /* Componentes Específicos - Estilo Consultoria */
+        /* Timing Grid */
         .timing-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin: 20px 0;
+            gap: 8px;
+            margin: 15px 0;
         }
 
         .timing-item {
             background: rgba(38, 79, 236, 0.1);
             border: 2px solid var(--azul-royal);
-            padding: 15px 12px;
+            padding: 10px;
             text-align: center;
-            border-radius: 8px;
-            transition: all 0.3s ease;
+            border-radius: 6px;
         }
 
-        .timing-item:hover {
-            background: rgba(38, 79, 236, 0.2);
-            transform: scale(1.05);
-        }
-
-        .timing-duration {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--azul-royal);
+        .timing-item strong {
             display: block;
-            margin-bottom: 6px;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            color: var(--azul-royal);
+            margin-bottom: 3px;
         }
 
-        .timing-item span:last-child {
-            font-size: 12px;
+        .timing-item span {
+            font-size: 0.7rem;
             color: #2C3E50;
-            font-weight: 600;
         }
 
-        .meta-info {
+        /* Info Box */
+        .info-box {
             background: rgba(255, 188, 130, 0.2);
             border-left: 4px solid var(--salmao);
-            padding: 15px 18px;
-            margin-top: 20px;
-            font-size: 13px;
-            color: #2C3E50;
-            border-radius: 0 8px 8px 0;
-            font-weight: 500;
+            padding: 12px;
+            font-size: 0.8rem;
+            border-radius: 0 6px 6px 0;
+            margin-top: 12px;
         }
 
-        .process-steps {
+        /* Data List */
+        .data-list {
+            background: rgba(38, 79, 236, 0.08);
+            border-radius: 6px;
+            padding: 12px;
+            margin-top: 12px;
+        }
+
+        .data-list h4 {
+            font-size: 0.8rem;
+            color: var(--azul-royal);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .data-list ul {
+            list-style: none;
+            font-size: 0.75rem;
+        }
+
+        .data-list li {
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(38, 79, 236, 0.1);
+        }
+
+        .data-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Steps */
+        .steps {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 20px;
+            gap: 8px;
+            margin-top: 12px;
         }
 
-        .process-step {
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             background: rgba(255, 188, 130, 0.15);
             border: 1px solid var(--salmao);
-            padding: 12px 15px;
-            font-size: 13px;
-            color: #2C3E50;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            font-weight: 500;
+            padding: 8px 10px;
+            border-radius: 5px;
+            font-size: 0.75rem;
         }
 
-        .process-step:hover {
-            background: rgba(255, 188, 130, 0.25);
-            transform: translateY(-2px);
-        }
-
-        .step-number {
-            background: linear-gradient(135deg, var(--salmao) 0%, var(--rosa-pink) 100%);
+        .step__num {
+            background: var(--salmao);
             color: white;
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
+            font-size: 0.65rem;
             font-weight: 700;
             flex-shrink: 0;
         }
 
-        .important-notes {
+        /* Deliverables */
+        .deliverables {
             background: rgba(255, 188, 130, 0.1);
-            border-left: 4px solid var(--salmao);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 12px 0;
         }
 
-        .important-notes h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+        .deliverables h4 {
+            font-size: 0.8rem;
             color: var(--salmao);
+            margin-bottom: 8px;
+            font-weight: 600;
         }
 
-        .important-notes ul {
+        .deliverables ul {
             list-style: none;
-            padding-left: 0;
+            font-size: 0.75rem;
         }
 
-        .important-notes li {
-            padding-left: 2rem;
-            margin-bottom: 0.8rem;
+        .deliverables li {
+            padding: 3px 0;
+            padding-left: 15px;
             position: relative;
         }
 
-        .important-notes li::before {
+        .deliverables li::before {
             content: '•';
             position: absolute;
-            left: 0.5rem;
-            color: var(--salmao);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .confidential-note {
-            font-weight: 600;
-            color: var(--salmao);
-            font-style: italic;
-            margin-top: 1rem;
-        }
-
-        /* Contextualização */
-        .contextualizacao h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: rgba(245, 241, 235, 0.7);
-            margin-bottom: 2rem;
-        }
-
-        .description-box {
-            background: rgba(38, 79, 236, 0.1);
-            border: 1px solid rgba(38, 79, 236, 0.3);
-            padding: 2rem;
-            border-radius: 12px;
-        }
-
-        /* Problemática */
-        .scenario-box {
-            background: rgba(255, 188, 130, 0.1);
-            border: 2px solid rgba(255, 188, 130, 0.3);
-            padding: 2.5rem;
-            border-radius: 16px;
-            margin-bottom: 3rem;
-        }
-
-        .scenario-box h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            left: 0;
             color: var(--salmao);
         }
 
-        .scenario-box strong {
-            color: var(--salmao);
-            font-weight: 600;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .step-card {
-            display: flex;
-            gap: 1.5rem;
-            padding: 2rem;
-            background: rgba(1, 30, 56, 0.3);
-            border-radius: 16px;
-            border: 1px solid rgba(255, 188, 130, 0.2);
-        }
-
-        .step-number {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: var(--salmao);
-            color: var(--azul-marinho);
-            font-size: 1.5rem;
-            font-weight: 700;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        .step-content h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
-            color: var(--salmao);
-        }
-
-        .source-info {
-            padding: 1.5rem;
-            background: rgba(38, 79, 236, 0.1);
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .source-link {
-            color: var(--azul-royal);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        /* Final Section */
-        .final-section {
-            background: linear-gradient(135deg, var(--salmao) 0%, var(--rosa-pink) 100%);
-            padding: 6rem 3rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        .final-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--off-white);
-            margin-bottom: 1rem;
-        }
-
-        .final-subtitle {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            color: var(--azul-marinho);
-        }
-
-        .final-department {
-            font-size: 1rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--azul-marinho);
-        }
-
-        /* Botão Próximo - Lateral Direita */
-        .next-page-container {
+        /* Navigation */
+        .nav-next {
             position: fixed;
-            right: 30px;
+            right: 20px;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 100;
-            animation: slideInRight 0.8s ease-out 1s both;
-        }
-        
-        .next-page-button {
-            background: rgba(245, 241, 235, 0.08);
-            border: 1px solid rgba(245, 241, 235, 0.2);
-            color: rgba(245, 241, 235, 0.6);
-            width: 56px;
-            height: 56px;
+            background: var(--azul-royal);
+            color: white;
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            backdrop-filter: blur(20px);
-            font-size: 0;
-            padding: 0;
-            position: relative;
-            box-shadow: 
-                0 4px 20px rgba(0, 0, 0, 0.1),
-                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(38, 79, 236, 0.4);
+            transition: all 0.3s ease;
+            z-index: 100;
         }
-        
-        .next-page-button::before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            border-radius: 50%;
-            padding: 1px;
-            background: linear-gradient(135deg, 
-                rgba(255, 188, 130, 0.4) 0%, 
-                rgba(255, 105, 180, 0.4) 100%);
-            -webkit-mask: 
-                linear-gradient(#fff 0 0) content-box, 
-                linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.4s ease;
+
+        .nav-next:hover {
+            background: var(--salmao);
+            transform: translateY(-50%) scale(1.1);
         }
-        
-        .next-page-button:hover {
-            background: rgba(245, 241, 235, 0.12);
-            border-color: transparent;
-            transform: translateX(-5px);
-            color: var(--off-white);
-            box-shadow: 
-                0 8px 30px rgba(255, 188, 130, 0.3),
-                inset 0 1px 1px rgba(255, 255, 255, 0.2);
-        }
-        
-        .next-page-button:hover::before {
-            opacity: 1;
-        }
-        
-        .next-page-button:active {
-            transform: translateX(-3px) scale(0.95);
-        }
-        
-        .next-page-button span:first-child {
-            display: none; /* Esconde o texto "Próximo" */
-        }
-        
-        .next-page-button .arrow {
-            font-size: 22px;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: block;
-            line-height: 1;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: 300;
-        }
-        
-        .next-page-button:hover .arrow {
-            transform: translate(-50%, -50%) translateX(4px);
-        }
-        
-        /* Animação de pulso suave */
-        @keyframes pulse {
-            0% {
-                box-shadow: 
-                    0 4px 20px rgba(0, 0, 0, 0.1),
-                    inset 0 1px 1px rgba(255, 255, 255, 0.1),
-                    0 0 0 0 rgba(255, 188, 130, 0.2);
+
+        /* Responsivo */
+        @media (max-width: 1024px) {
+            .cards {
+                grid-template-columns: 1fr;
             }
-            50% {
-                box-shadow: 
-                    0 4px 20px rgba(0, 0, 0, 0.1),
-                    inset 0 1px 1px rgba(255, 255, 255, 0.1),
-                    0 0 0 10px rgba(255, 188, 130, 0);
-            }
-            100% {
-                box-shadow: 
-                    0 4px 20px rgba(0, 0, 0, 0.1),
-                    inset 0 1px 1px rgba(255, 255, 255, 0.1),
-                    0 0 0 0 rgba(255, 188, 130, 0);
-            }
-        }
-        
-        .next-page-button {
-            animation: pulse 3s infinite;
-        }
-        
-        .next-page-button:hover {
-            animation: none;
-        }
-        
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateY(-50%) translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(-50%) translateX(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .card {
+                max-height: none;
             }
         }
 
-        /* Responsividade - Consultoria */
         @media (max-width: 768px) {
-            .consulting-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .main {
+                padding: 3%;
             }
-            
-            .slide-container {
-                padding: 20px;
-                margin-top: 80px;
-            }
-            
-            .slide-main-title {
-                font-size: 22px;
-            }
-            
+
             .timing-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .process-steps {
+
+            .steps {
                 grid-template-columns: 1fr;
-            }
-            
-            .next-page-container {
-                right: 20px;
-            }
-            
-            .next-page-button {
-                width: 50px;
-                height: 50px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Estilo Consultoria -->
-    <header class="slide-header">
-        <div class="slide-left">
-            <a href="index.html" class="back-button">← Voltar ao Portfolio</a>
-            <h1 class="slide-title">Case Especialista II - Exposição Loja</h1>
-        </div>
-        <div class="slide-meta">
-            <span>Gerência Estratégia de Exposição</span>
-            <span>Julho 2025</span>
-        </div>
+    <header class="header">
+        <a href="index.html" class="header__back">← Voltar</a>
+        <h1 class="header__title">Case Especialista II - Exposição Loja</h1>
+        <span class="header__meta">Julho 2025</span>
     </header>
 
-    <!-- Container Principal -->
-    <div class="slide-container">
-        <!-- Título Principal -->
-        <h1 class="slide-main-title">Impactos das restrições de mobilidade na pandemia: análise e recomendações para futuros cenários</h1>
-        <p class="slide-subtitle">Brasil 2020 - 2021</p>
+    <main class="main">
+        <section class="title-section">
+            <h1>Impactos das restrições de mobilidade na pandemia</h1>
+            <p>Análise e recomendações para futuros cenários - Brasil 2020-2021</p>
+        </section>
 
-        <!-- Grid de Etapas -->
-        <div class="consulting-grid">
-            <!-- Etapa 1 -->
-            <div class="etapa-card">
-                <div class="etapa-header">ETAPA 1 - ORIENTAÇÕES</div>
-                <div class="etapa-content">
-                    <h3 class="etapa-title">Estrutura da Apresentação</h3>
+        <div class="cards">
+            <!-- Card 1 -->
+            <article class="card">
+                <div class="card__header">Etapa 1 - Orientações</div>
+                <div class="card__body">
+                    <h2 class="card__title">Estrutura da Apresentação</h2>
+
                     <div class="timing-grid">
                         <div class="timing-item">
-                            <span class="timing-duration">15 min</span>
+                            <strong>15 min</strong>
                             <span>Apresentação pessoal</span>
                         </div>
                         <div class="timing-item">
-                            <span class="timing-duration">25 min</span>
+                            <strong>25 min</strong>
                             <span>Apresentação do case</span>
                         </div>
                         <div class="timing-item">
-                            <span class="timing-duration">10 min</span>
+                            <strong>10 min</strong>
                             <span>Perguntas finais</span>
                         </div>
                     </div>
-                    <div class="meta-info">
+
+                    <div class="info-box">
                         📋 Case em PDF para o recrutador antes da reunião
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Etapa 2 -->
-            <div class="etapa-card">
-                <div class="etapa-header">ETAPA 2 - CONTEXTUALIZAÇÃO</div>
-                <div class="etapa-content">
-                    <h3 class="etapa-title">Análise de Dados COVID-19</h3>
-                    <p style="font-size: 13px; color: #6C757D; margin-bottom: 15px; font-weight: 600;">Google BigQuery Public Datasets</p>
-                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 15px;">Datasets públicos com informações sobre casos, óbitos, mobilidade populacional e dados demográficos da pandemia.</p>
-                    
-                    <div style="background: rgba(38, 79, 236, 0.1); border-radius: 8px; padding: 15px; margin-top: 15px;">
-                        <h4 style="font-size: 14px; font-weight: 700; color: var(--azul-royal); margin-bottom: 10px;">Fontes de Dados:</h4>
-                        <ul style="font-size: 12px; color: #2C3E50; margin: 0; padding-left: 15px;">
+            <!-- Card 2 -->
+            <article class="card">
+                <div class="card__header">Etapa 2 - Contextualização</div>
+                <div class="card__body">
+                    <h2 class="card__title">Análise de Dados COVID-19</h2>
+                    <p style="font-size: 0.8rem; color: #6C757D; margin-bottom: 10px;">Google BigQuery Public Datasets</p>
+                    <p style="font-size: 0.8rem; line-height: 1.5;">Datasets públicos com informações sobre casos, óbitos, mobilidade populacional e dados demográficos.</p>
+
+                    <div class="data-list">
+                        <h4>Fontes de Dados:</h4>
+                        <ul>
                             <li>Casos confirmados por estado/município</li>
                             <li>Dados de mobilidade Google Community</li>
                             <li>Óbitos e internações hospitalares</li>
@@ -682,60 +383,47 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Etapa 3 -->
-            <div class="etapa-card">
-                <div class="etapa-header">ETAPA 3 - PROBLEMÁTICA</div>
-                <div class="etapa-content">
-                    <h3 class="etapa-title">Cenário do Case</h3>
-                    <p style="font-size: 14px; margin-bottom: 15px; line-height: 1.5;"><strong>Objetivo:</strong> Relatório analítico sobre impacto das restrições de mobilidade + recomendações estratégicas para futuros cenários pandêmicos.</p>
-                    
-                    <div style="background: rgba(255, 188, 130, 0.1); border-radius: 8px; padding: 15px; margin: 15px 0;">
-                        <h4 style="font-size: 14px; font-weight: 700; color: var(--salmao); margin-bottom: 10px;">Entregáveis:</h4>
-                        <ul style="font-size: 12px; color: #2C3E50; margin: 0; padding-left: 15px;">
+            <!-- Card 3 -->
+            <article class="card">
+                <div class="card__header">Etapa 3 - Problemática</div>
+                <div class="card__body">
+                    <h2 class="card__title">Cenário do Case</h2>
+                    <p style="font-size: 0.8rem; margin-bottom: 10px;"><strong>Objetivo:</strong> Relatório analítico sobre impacto das restrições + recomendações estratégicas.</p>
+
+                    <div class="deliverables">
+                        <h4>Entregáveis:</h4>
+                        <ul>
                             <li>Dashboard interativo com métricas-chave</li>
                             <li>Relatório executivo com insights</li>
                             <li>Modelo preditivo para cenários futuros</li>
                         </ul>
                     </div>
-                    
-                    <div class="process-steps">
-                        <div class="process-step">
-                            <div class="step-number">1</div>
+
+                    <div class="steps">
+                        <div class="step">
+                            <span class="step__num">1</span>
                             <span>Consultas SQL BigQuery</span>
                         </div>
-                        <div class="process-step">
-                            <div class="step-number">2</div>
+                        <div class="step">
+                            <span class="step__num">2</span>
                             <span>Análise correlação</span>
                         </div>
-                        <div class="process-step">
-                            <div class="step-number">3</div>
+                        <div class="step">
+                            <span class="step__num">3</span>
                             <span>Comparação regional</span>
                         </div>
-                        <div class="process-step">
-                            <div class="step-number">4</div>
+                        <div class="step">
+                            <span class="step__num">4</span>
                             <span>Visualizações BI</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
-        
-        
-    </div>
-    
-    <!-- Botão Próximo - Lateral Direita -->
-    <div class="next-page-container">
-        <button class="next-page-button" onclick="window.location.href='contexto-historico.html'" title="Próxima página">
-            <span>Próximo</span>
-            <span class="arrow">→</span>
-        </button>
-    </div>
-    
-    <!-- Scripts -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="js/covid-graph-simple.js"></script>
-    <script src="js/nova-etapa.js"></script>
+    </main>
+
+    <a href="contexto-historico.html" class="nav-next" title="Próxima página">→</a>
 </body>
 </html>
