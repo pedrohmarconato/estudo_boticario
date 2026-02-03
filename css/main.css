@@ -1,0 +1,416 @@
+/* ===========================================
+   VARIAVEIS E RESET
+   =========================================== */
+:root {
+    --azul-marinho: #011E38;
+    --off-white: #F5F1EB;
+    --azul-royal: #264FEC;
+    --salmao: #FFBC82;
+    --font: 'IBM Plex Sans', sans-serif;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--azul-marinho);
+    color: var(--off-white);
+}
+
+/* ===========================================
+   HEADER - 10% da altura
+   =========================================== */
+.header {
+    height: 10vh;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    background: var(--azul-marinho);
+    border-bottom: 1px solid rgba(255,188,130,0.2);
+}
+
+.header__title {
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+    font-weight: 500;
+    color: var(--salmao);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.header__name {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    font-weight: 500;
+    color: var(--salmao);
+}
+
+.header__role {
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    color: rgba(245,241,235,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ===========================================
+   MAIN - 90% da altura
+   =========================================== */
+.main {
+    height: 90vh;
+    position: relative;
+}
+
+/* ===========================================
+   TIMELINE - 4 colunas
+   =========================================== */
+.timeline {
+    display: flex;
+    height: 100%;
+    transition: opacity 0.4s ease;
+}
+
+.timeline.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ===========================================
+   CARDS
+   =========================================== */
+.card {
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: flex 0.4s ease;
+}
+
+.card:hover {
+    flex: 1.3;
+}
+
+.card__bg {
+    position: absolute;
+    inset: 0;
+    filter: grayscale(80%);
+    transition: filter 0.4s ease;
+}
+
+.card:hover .card__bg {
+    filter: grayscale(0%);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(1,30,56,0.7);
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::after {
+    opacity: 0.3;
+}
+
+.card__content {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+    width: 90%;
+}
+
+.card__period {
+    display: block;
+    font-size: clamp(0.6rem, 0.9vw, 0.8rem);
+    color: rgba(245,241,235,0.6);
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+}
+
+.card__company {
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card__position {
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    color: var(--salmao);
+    font-weight: 400;
+}
+
+/* ===========================================
+   DETAIL VIEW - Expandido
+   =========================================== */
+.detail {
+    position: absolute;
+    inset: 0;
+    background: var(--azul-marinho);
+    display: none;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 1fr auto;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.detail.active {
+    display: grid;
+    opacity: 1;
+}
+
+/* Botao fechar */
+.detail__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,75,75,0.9);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.detail__close:hover {
+    transform: scale(1.1);
+}
+
+/* Lado esquerdo - Info */
+.detail__left {
+    padding: 5% 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid rgba(255,188,130,0.2);
+}
+
+.detail__period {
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    color: rgba(245,241,235,0.6);
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+}
+
+.detail__company {
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--salmao);
+    padding-bottom: 10px;
+}
+
+.detail__position {
+    font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+    color: var(--salmao);
+    margin-bottom: 20px;
+}
+
+.detail__description {
+    font-size: clamp(0.8rem, 1vw, 0.95rem);
+    line-height: 1.6;
+    color: rgba(245,241,235,0.85);
+    text-align: justify;
+}
+
+/* Lado direito - Metricas */
+.detail__right {
+    padding: 3% 4%;
+    overflow: hidden;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    height: 100%;
+    align-content: center;
+}
+
+/* Cards de metrica */
+.metric {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,188,130,0.15);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.metric__title {
+    font-size: clamp(0.55rem, 0.8vw, 0.7rem);
+    color: var(--salmao);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.metric__item {
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.metric__item:last-child {
+    margin-bottom: 0;
+}
+
+.metric__label {
+    font-size: clamp(0.5rem, 0.7vw, 0.6rem);
+    color: rgba(245,241,235,0.7);
+    margin-bottom: 3px;
+}
+
+.metric__value {
+    font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+    font-weight: 700;
+    color: var(--salmao);
+}
+
+.metric__unit {
+    font-size: clamp(0.45rem, 0.6vw, 0.55rem);
+    color: rgba(245,241,235,0.5);
+    font-style: italic;
+}
+
+/* Navegacao */
+.detail__nav {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    border-top: 1px solid rgba(255,188,130,0.2);
+}
+
+.detail__nav-btn {
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--salmao);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--salmao);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.detail__nav-btn:hover {
+    background: var(--salmao);
+    color: var(--azul-marinho);
+}
+
+.detail__nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* ===========================================
+   SIDETAB
+   =========================================== */
+.sidetab {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.sidetab__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 8px;
+    background: linear-gradient(135deg, var(--salmao), var(--azul-royal));
+    color: var(--azul-marinho);
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    writing-mode: vertical-rl;
+    border-radius: 8px 0 0 8px;
+    transition: transform 0.3s ease;
+}
+
+.sidetab__link:hover {
+    transform: translateX(-5px);
+}
+
+/* ===========================================
+   RESPONSIVO
+   =========================================== */
+@media (max-width: 1024px) {
+    .metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .detail {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .detail__left {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,188,130,0.2);
+        padding: 4%;
+    }
+
+    .metrics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card__content {
+        bottom: 15%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .header__info {
+        align-items: center;
+    }
+
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+}

@@ -2,94 +2,94 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <title>Carreira - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Marconato - Timeline de Carreira</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/timeline.css">
-    <link rel="stylesheet" href="css/side-tab.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <section id="timeline">
-        
-        <div class="tl-item">
-            <div class="tl-bg" style="background: linear-gradient(135deg, #011E38 0%, #264FEC 100%)"></div>
-            
-            <div class="tl-year">
-                <p class="company">Grupo RBS</p>
-                <p class="position">Analista de mercado</p>
-                <p class="period">mar de 2019 - jul de 2020</p>
-            </div>
+    <!-- Header fixo -->
+    <header class="header">
+        <h1 class="header__title">Timeline de Carreira</h1>
+        <div class="header__info">
+            <span class="header__name">Pedro Marconato</span>
+            <span class="header__role">Especialista em Analytics</span>
+        </div>
+    </header>
 
-            <div class="tl-content">
-                <p>Conduzi análises de Brand Equity, automatizei relatórios estratégicos e identifiquei oportunidades tributárias significativas. Transformei processos manuais em soluções automatizadas, liberando horas semanais para análises de maior valor agregado.</p>
-            </div>
+    <!-- Container principal -->
+    <main class="main">
+        <!-- Vista inicial: 4 colunas -->
+        <div class="timeline" id="timeline">
+            <article class="card" data-index="0">
+                <div class="card__bg" style="background: linear-gradient(135deg, #011E38 0%, #264FEC 100%)"></div>
+                <div class="card__content">
+                    <span class="card__period">2019 - 2020</span>
+                    <h2 class="card__company">Grupo RBS</h2>
+                    <p class="card__position">Analista de Mercado</p>
+                </div>
+            </article>
+
+            <article class="card" data-index="1">
+                <div class="card__bg" style="background: linear-gradient(135deg, #264FEC 0%, #FFBC82 100%)"></div>
+                <div class="card__content">
+                    <span class="card__period">2020 - 2021</span>
+                    <h2 class="card__company">DBC Company</h2>
+                    <p class="card__position">Especialista em Dados</p>
+                </div>
+            </article>
+
+            <article class="card" data-index="2">
+                <div class="card__bg" style="background: linear-gradient(135deg, #FFBC82 0%, #F5F1EB 100%)"></div>
+                <div class="card__content">
+                    <span class="card__period">2021 - 2022</span>
+                    <h2 class="card__company">Lojas Renner</h2>
+                    <p class="card__position">Especialista em Dados</p>
+                </div>
+            </article>
+
+            <article class="card" data-index="3">
+                <div class="card__bg" style="background: linear-gradient(135deg, #F5F1EB 0%, #011E38 100%)"></div>
+                <div class="card__content">
+                    <span class="card__period">2022 - 2025</span>
+                    <h2 class="card__company">Lojas Renner</h2>
+                    <p class="card__position">Coordenador de CRM</p>
+                </div>
+            </article>
         </div>
 
-        <div class="tl-item">
-            <div class="tl-bg" style="background: linear-gradient(135deg, #264FEC 0%, #FFBC82 100%)"></div>
-            
-            <div class="tl-year">
-                <p class="company">DBC Company</p>
-                <p class="position">Especialista em dados</p>
-                <p class="period">jul de 2020 - jul de 2021</p>
+        <!-- Vista expandida -->
+        <div class="detail" id="detail">
+            <button class="detail__close" id="closeBtn">&times;</button>
+
+            <div class="detail__left">
+                <span class="detail__period" id="detailPeriod"></span>
+                <h2 class="detail__company" id="detailCompany"></h2>
+                <p class="detail__position" id="detailPosition"></p>
+                <p class="detail__description" id="detailDescription"></p>
             </div>
 
-            <div class="tl-content">
-                <p>Apoiei a reestruturação estratégica da área de CRM no cliente Realize, implementando metodologias ágeis (Kanban) e definindo processos que reduziram o time-to-market de dashboards e aumentaram a eficiência operacional.</p>
+            <div class="detail__right">
+                <div class="metrics" id="metrics"></div>
             </div>
+
+            <nav class="detail__nav">
+                <button class="detail__nav-btn" id="prevBtn">&larr;</button>
+                <button class="detail__nav-btn" id="nextBtn">&rarr;</button>
+            </nav>
         </div>
+    </main>
 
-        <div class="tl-item">
-            <div class="tl-bg" style="background: linear-gradient(135deg, #FFBC82 0%, #F5F1EB 100%)"></div>
-            
-            <div class="tl-year">
-                <p class="company">Lojas Renner S.A</p>
-                <p class="position">Especialista em dados</p>
-                <p class="period">jul de 2021 - set de 2022</p>
-            </div>
-
-            <div class="tl-content">
-                <p>Liderei a transformação digital e migração para plataforma Databricks, desenvolvendo soluções analíticas avançadas e implementando framework de Customer Centricity. Produzi dashboards estratégicos e criei modelos de segmentação para otimizar estratégias de comunicação.</p>
-            </div>
-        </div>
-
-        <div class="tl-item">
-            <div class="tl-bg" style="background: linear-gradient(135deg, #F5F1EB 0%, #011E38 100%)"></div>
-            
-            <div class="tl-year">
-                <p class="company">Lojas Renner S.A</p>
-                <p class="position">Coordenador de CRM</p>
-                <p class="period">set de 2022 - fev de 2025</p>
-            </div>
-
-            <div class="tl-content">
-                <p>Responsável por estratégias de CRM, gestão de orçamento e contratos, liderança de equipe e implementação de métricas de performance para maximizar resultados. Gerenciei comunicação com mais de 7 milhões de clientes mensalmente, otimizando canais e mensagens para aumentar engajamento e conversão.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tira lateral para nova etapa -->
-    <div class="side-pull-tab">
-        <div class="pull-tab-content">
-            <span class="pull-tab-text">Vamos para uma nova etapa</span>
-            <div class="pull-tab-arrow">→</div>
-        </div>
+    <!-- Side tab -->
+    <div class="sidetab">
+        <a href="case-analise.html" class="sidetab__link">
+            <span>Nova Etapa</span>
+            <span>&rarr;</span>
+        </a>
     </div>
 
-    <!-- Overlay para nova página -->
-    <div class="new-page-overlay" id="newPageOverlay">
-        <div class="overlay-close-btn" onclick="closeNewPage()">×</div>
-        <div class="overlay-content">
-            <h1>Nova Etapa</h1>
-            <p>Conteúdo da nova página aqui...</p>
-        </div>
-    </div>
-
-    <script src="js/timeline.js"></script>
-    <script src="js/dynamic-header.js"></script>
-    <script src="js/side-tab.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
